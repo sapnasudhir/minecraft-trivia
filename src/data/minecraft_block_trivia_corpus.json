@@ -390,7 +390,7 @@
         "id": "stone",
         "name": "Stone",
         "category": "Building Materials",
-        "textureUrl": "https://minecraft.wiki/images/Stone_JE5_BE3.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_stone.png",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -475,7 +475,7 @@
         "id": "oak_wood",
         "name": "Oak Wood",
         "category": "Building Materials",
-        "textureUrl": "https://minecraft.wiki/images/Oak_Wood_(UD)_JE7_BE2.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_oak-wood.png",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -568,7 +568,7 @@
         "id": "dark_oak_wood",
         "name": "Dark Oak Wood",
         "category": "Building Materials",
-        "textureUrl": "https://minecraft.wiki/images/Oak_Wood_(UD)_JE7_BE2.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_oak-wood.png",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -643,7 +643,7 @@
         "id": "blue_concrete",
         "name": "Blue Concrete",
         "category": "Building Materials",
-        "textureUrl": "https://minecraft.wiki/images/Blue_Concrete.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_blue-concrete.png",
         "properties": {
           "mechanical": {
             "hardness": 1.8,
@@ -735,7 +735,7 @@
         "id": "bricks",
         "name": "Bricks",
         "category": "Building Materials",
-        "textureUrl": "https://minecraft.wiki/images/Bricks_JE5_BE3.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_bricks.png",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -808,7 +808,7 @@
         "id": "glowstone",
         "name": "Glowstone",
         "category": "Decorative",
-        "textureUrl": "https://minecraft.wiki/images/Glowstone_JE4_BE2.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_glowstone.png",
         "properties": {
           "mechanical": {
             "hardness": 0.3,
@@ -1800,7 +1800,7 @@
         "id": "amethyst_block",
         "name": "Amethyst Block",
         "category": "Special",
-        "textureUrl": "https://minecraft.wiki/images/Amethyst_Block.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_amethyst-block.png",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
