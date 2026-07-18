@@ -1,8 +1,16 @@
+export type AnswerType =
+  | 'toolTier'
+  | 'blastResistance'
+  | 'yLevelRange'
+  | 'lightLevel'
+  | 'boolean'
+
 export interface TriviaHook {
   category: 'mechanical' | 'generation' | 'crafting' | 'special' | 'variants'
   difficulty: 'easy' | 'medium' | 'hard'
   questionSeed: string
   answer: string
+  answerType: AnswerType
 }
 
 export interface MechanicalProperties {

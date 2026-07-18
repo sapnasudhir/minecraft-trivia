@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'minecraft.wiki',
         pathname: '/images/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'raw.githubusercontent.com',
+        pathname: '/PrismarineJS/minecraft-assets/**',
+      },
     ],
   },
 };

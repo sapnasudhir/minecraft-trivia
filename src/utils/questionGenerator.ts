@@ -1,232 +1,143 @@
 import { GameQuestion } from '@/types/game'
-import { MinecraftBlock, TriviaHook } from '@/types/block'
-import { getCorpusBlocks } from '@/data/loaders'
-import { shuffleArray, getRandomElements, getRandomElement } from './answerShuffler'
+import { AnswerType, MinecraftBlock, TriviaHook } from '@/types/block'
+import { getRandomElements } from './answerShuffler'
 
-interface BlockWithHook {
-  block: MinecraftBlock
-  hook: TriviaHook
-}
-
-export function generateGameQuestions(count: number = 5): GameQuestion[] {
-  const blocks = getCorpusBlocks()
-  const selectedBlocksWithHooks = selectRandomBlocksWithHooks(blocks, count)
-
-  return selectedBlocksWithHooks.map((item, index) => {
-    const { block, hook } = item
-    const correctAnswer = hook.answer
-
-    const incorrectAnswers = generateIncorrectAnswers(
-      blocks,
-      block.id,
-      hook.category,
-      correctAnswer,
-      4
-    )
-
-    const allOptions = shuffleArray([correctAnswer, ...incorrectAnswers])
-    const correctAnswerIndex = allOptions.indexOf(correctAnswer)
-
-    const explanation = generateExplanation(block, hook)
-
-    return {
-      id: `${block.id}_${hook.category}_${index}`,
-      blockId: block.id,
-      blockName: block.name,
-      question: hook.questionSeed,
-      correctAnswer,
-      allOptions,
-      correctAnswerIndex,
-      imageUrl: block.textureUrl,
-      category: hook.category,
-      difficulty: hook.difficulty,
-      explanation,
-    }
-  })
-}
-
-function selectRandomBlocksWithHooks(
-  blocks: MinecraftBlock[],
-  count: number
-): BlockWithHook[] {
-  const result: BlockWithHook[] = []
-  const usedBlockIds = new Set<string>()
-
-  while (result.length < count && usedBlockIds.size < blocks.length) {
-    const randomBlock = getRandomElement(blocks)
-
-    if (!usedBlockIds.has(randomBlock.id)) {
-      usedBlockIds.add(randomBlock.id)
-      const randomHook = getRandomElement(randomBlock.trivia_hooks)
-      result.push({ block: randomBlock, hook: randomHook })
-    }
+/**
+ * Fetches a set of ready-to-serve questions from the DB-backed API. Distractor
+ * generation happens offline (see scripts/precompute_questions.ts, which
+ * reuses generateDistractors/generateExplanation below) -- this function
+ * just samples the precomputed question_bank, it doesn't generate anything.
+ */
+export async function generateGameQuestions(count: number = 5): Promise<GameQuestion[]> {
+  const res = await fetch(`/api/questions?count=${count}`)
+  if (!res.ok) {
+    throw new Error(`Failed to load questions: ${res.status}`)
   }
-
-  // If we couldn't get enough unique blocks, allow duplicate blocks with different hooks
-  while (result.length < count) {
-    const randomBlock = getRandomElement(blocks)
-    const unusedHooks = randomBlock.trivia_hooks.filter(
-      (hook) =>
-        !result.some(
-          (item) =>
-            item.block.id === randomBlock.id && item.hook === hook
-        )
-    )
-
-    if (unusedHooks.length > 0) {
-      const hook = getRandomElement(unusedHooks)
-      result.push({ block: randomBlock, hook })
-    } else {
-      // Fallback: allow same hook
-      const hook = getRandomElement(randomBlock.trivia_hooks)
-      result.push({ block: randomBlock, hook })
-    }
-  }
-
-  return result
+  return res.json()
 }
 
-function generateIncorrectAnswers(
-  allBlocks: MinecraftBlock[],
-  currentBlockId: string,
-  questionCategory: string,
+export interface HookAnswer {
+  entityId: string
+  answer: string
+}
+
+/**
+ * Generates distractors for a hook, drawing only from other blocks' hooks of
+ * the SAME answerType -- this is what guarantees a distractor is always the
+ * same kind of value as the correct answer (numbers with numbers, tool names
+ * with tool names), rather than a category-wide grab-bag of unrelated values.
+ *
+ * `sameTypeAnswers` must already be filtered to hooks sharing `answerType`
+ * with the hook being asked about (see scripts/precompute_questions.ts, which
+ * groups the full hook set by answerType once up front).
+ */
+export function generateDistractors(
+  currentEntityId: string,
   correctAnswer: string,
+  answerType: AnswerType,
+  sameTypeAnswers: HookAnswer[],
   count: number
 ): string[] {
-  const otherBlocks = allBlocks.filter((b) => b.id !== currentBlockId)
-
-  if (otherBlocks.length === 0) {
-    return generatePlaceholderAnswers(correctAnswer, count)
+  // Boolean questions get exactly one distractor: the opposite value. There's
+  // no "same type pool" concept here -- only two possible values exist.
+  if (answerType === 'boolean') {
+    return [correctAnswer === 'True' ? 'False' : 'True']
   }
 
-  const candidates: string[] = []
+  const candidates = Array.from(
+    new Set(
+      sameTypeAnswers
+        .filter((h) => h.entityId !== currentEntityId)
+        .map((h) => h.answer)
+        .filter((ans) => ans !== correctAnswer)
+    )
+  )
 
-  // Strategy 1: Extract property values from other blocks
-  candidates.push(...extractPropertyValues(otherBlocks, questionCategory))
-
-  // Strategy 2: Extract tool names and tier names
-  candidates.push(...extractToolValues(otherBlocks))
-
-  // Strategy 3: Extract Y-level values
-  candidates.push(...extractYLevelValues(otherBlocks))
-
-  // Strategy 4: Extract block names
-  candidates.push(...otherBlocks.map((b) => b.name))
-
-  // Filter and deduplicate
-  const filteredCandidates = Array.from(new Set(candidates))
-    .filter((ans) => ans !== correctAnswer && ans.length > 0)
-    .filter((ans) => !isTooSimilar(ans, correctAnswer))
-
-  if (filteredCandidates.length < count) {
-    filteredCandidates.push(...generatePlaceholderAnswers(correctAnswer, count))
+  if (candidates.length >= count) {
+    return getRandomElements(candidates, count)
   }
 
-  return getRandomElements(filteredCandidates, count)
+  // Thin-pool fallback: some answer types (e.g. yLevelRange, with only a
+  // couple of blocks resolved in the current corpus) don't have enough other
+  // real blocks to draw from. Rather than fall back to unrelated values or
+  // duplicate options, synthesize additional format-matched distractors by
+  // perturbing the correct answer -- still the same "kind" of value, just
+  // not tied to a specific other block.
+  const synthesized = synthesizeDistractors(
+    correctAnswer,
+    answerType,
+    count - candidates.length,
+    new Set([correctAnswer, ...candidates])
+  )
+  return [...candidates, ...synthesized]
 }
 
-function extractPropertyValues(
-  blocks: MinecraftBlock[],
-  category: string
-): string[] {
-  const values: string[] = []
-
-  blocks.forEach((block) => {
-    const { properties } = block
-
-    if (category === 'mechanical') {
-      values.push(properties.mechanical.toolRequired)
-      values.push(properties.mechanical.minToolTier)
-      values.push(properties.mechanical.maxStackSize.toString())
-      values.push(`Hardness: ${properties.mechanical.hardness}`)
-    }
-
-    if (category === 'generation') {
-      if (properties.generation.peakYLevel !== null) {
-        values.push(`Y: ${properties.generation.peakYLevel}`)
-      }
-      if (properties.generation.yLevelMin !== null && properties.generation.yLevelMax !== null) {
-        values.push(`Y: ${properties.generation.yLevelMin} to ${properties.generation.yLevelMax}`)
-      }
-      values.push(properties.generation.rarity)
-      values.push(properties.generation.spawnRate)
-      values.push(...properties.generation.biomes)
-    }
-
-    if (category === 'crafting') {
-      properties.crafting.recipes.forEach((recipe) => {
-        values.push(recipe.output)
-        if (typeof recipe.experience === 'string') {
-          values.push(recipe.experience)
-        }
-      })
-      if (properties.crafting.fortuneMaxDrop) {
-        values.push(`${properties.crafting.fortuneMaxDrop} items`)
-        values.push(
-          `Fortune ${properties.crafting.fortuneLevelForMax || 3}`
-        )
-      }
-    }
-
-    if (category === 'special') {
-      if (properties.special.luminous && properties.special.lightLevel) {
-        values.push(`Light level ${properties.special.lightLevel}`)
-      }
-    }
-  })
-
-  return values.filter((v) => v.length > 0)
-}
-
-function extractToolValues(blocks: MinecraftBlock[]): string[] {
-  const tools = new Set<string>()
-  blocks.forEach((block) => {
-    tools.add(block.properties.mechanical.toolRequired)
-    tools.add(block.properties.mechanical.minToolTier)
-  })
-  return Array.from(tools)
-}
-
-function extractYLevelValues(blocks: MinecraftBlock[]): string[] {
-  const yLevels: string[] = []
-  blocks.forEach((block) => {
-    if (block.properties.generation.peakYLevel !== null) {
-      yLevels.push(`Y: ${block.properties.generation.peakYLevel}`)
-    }
-  })
-  return yLevels
-}
-
-function generatePlaceholderAnswers(
+function synthesizeDistractors(
   correctAnswer: string,
-  count: number
+  answerType: AnswerType,
+  count: number,
+  used: Set<string>
 ): string[] {
-  const answers: string[] = []
-  const numbers = [1, 2, 3, 4, 5, 10, 15, 20, 50, 100]
+  const results: string[] = []
 
-  for (let i = 0; i < count; i++) {
-    answers.push(`Option ${i + 1}`)
+  if (answerType === 'blastResistance' || answerType === 'lightLevel') {
+    const match = correctAnswer.match(/(-?\d+(?:\.\d+)?)/)
+    if (!match || match.index === undefined) return results
+    const base = parseFloat(match[1])
+    const prefix = correctAnswer.slice(0, match.index)
+    const suffix = correctAnswer.slice(match.index + match[1].length)
+
+    let attempts = 0
+    while (results.length < count && attempts < 20) {
+      attempts++
+      const magnitude = Math.max(Math.abs(base), 1) * (0.2 + Math.random() * 0.4)
+      const offset = Math.random() < 0.5 ? -magnitude : magnitude
+      const candidateValue = Math.max(0, Math.round((base + offset) * 10) / 10)
+      const candidate = `${prefix}${candidateValue}${suffix}`
+      if (!used.has(candidate)) {
+        used.add(candidate)
+        results.push(candidate)
+      }
+    }
+  } else if (answerType === 'yLevelRange') {
+    const match = correctAnswer.match(/Y:\s*(-?\d+)\s*to\s*(-?\d+)/)
+    if (!match) return results
+    const a = parseInt(match[1], 10)
+    const b = parseInt(match[2], 10)
+
+    let attempts = 0
+    while (results.length < count && attempts < 20) {
+      attempts++
+      const shift = Math.round(10 + Math.random() * 40) * (Math.random() < 0.5 ? -1 : 1)
+      const candidate = `Y: ${a + shift} to ${b + shift}`
+      if (!used.has(candidate)) {
+        used.add(candidate)
+        results.push(candidate)
+      }
+    }
+  } else if (answerType === 'toolTier') {
+    const KNOWN_TOOLS = [
+      'Wooden Pickaxe',
+      'Stone Pickaxe',
+      'Iron Pickaxe',
+      'Diamond Pickaxe',
+      'Netherite Pickaxe',
+      'Copper Pickaxe',
+      'None',
+    ]
+    for (const tool of KNOWN_TOOLS) {
+      if (results.length >= count) break
+      if (!used.has(tool)) {
+        used.add(tool)
+        results.push(tool)
+      }
+    }
   }
 
-  return answers
+  return results
 }
 
-function isTooSimilar(str1: string, str2: string): boolean {
-  const normalize = (s: string) => s.toLowerCase().trim()
-  const s1 = normalize(str1)
-  const s2 = normalize(str2)
-
-  if (s1 === s2) return true
-
-  // Check if one is a substring of the other (loose matching)
-  if (s1.includes(s2) || s2.includes(s1)) {
-    return Math.abs(s1.length - s2.length) < 5
-  }
-
-  return false
-}
-
-function generateExplanation(
+export function generateExplanation(
   block: MinecraftBlock,
   hook: TriviaHook
 ): string {

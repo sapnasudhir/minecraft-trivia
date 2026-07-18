@@ -1,0 +1,1 @@
+ALTER TABLE "question_bank" ADD COLUMN "explanation" text;
