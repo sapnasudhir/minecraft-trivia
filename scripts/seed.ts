@@ -20,6 +20,7 @@ interface CorpusBlock {
     difficulty: string
     questionSeed: string
     answer: string
+    answerType: string
   }>
   sourceVersion?: string
 }
@@ -53,6 +54,7 @@ async function seed() {
         difficulty: hook.difficulty,
         questionSeed: hook.questionSeed,
         answer: hook.answer,
+        answerType: hook.answerType,
       })
     }
   }

@@ -78,19 +78,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Stone?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Stone?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Stone is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -158,19 +161,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Cobblestone?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Cobblestone?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Cobblestone is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -238,19 +244,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Bamboo Mosaic?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Bamboo Mosaic is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Bamboo Mosaic can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -313,25 +322,29 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Lava?",
-            "answer": "100.0"
+            "answer": "100.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "medium",
             "questionSeed": "At what Y-level range does Lava most commonly generate?",
-            "answer": "Y: -63 to -55"
+            "answer": "Y: -63 to -55",
+            "answerType": "yLevelRange"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Lava is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Lava emit?",
-            "answer": "Light level 15"
+            "answer": "Light level 15",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -399,25 +412,29 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Nether Gold Ore?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Nether Gold Ore?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "medium",
             "questionSeed": "At what Y-level range does Nether Gold Ore most commonly generate?",
-            "answer": "Y: 10 to 117"
+            "answer": "Y: 10 to 117",
+            "answerType": "yLevelRange"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Nether Gold Ore is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -485,13 +502,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Muddy Mangrove Roots?",
-            "answer": "0.7"
+            "answer": "0.7",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Muddy Mangrove Roots is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -559,19 +578,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Oak Wood?",
-            "answer": "2.0"
+            "answer": "2.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Oak Wood is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Oak Wood can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -639,19 +661,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Stripped Jungle Wood?",
-            "answer": "2.0"
+            "answer": "2.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Stripped Jungle Wood is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Stripped Jungle Wood can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -712,19 +737,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Dark Oak Leaves?",
-            "answer": "0.2"
+            "answer": "0.2",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Dark Oak Leaves is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Dark Oak Leaves can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -792,19 +820,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Dispenser?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Dispenser?",
-            "answer": "3.5"
+            "answer": "3.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Dispenser is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -865,13 +896,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Gray Bed?",
-            "answer": "0.2"
+            "answer": "0.2",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Gray Bed is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -939,13 +972,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Sticky Piston?",
-            "answer": "1.5"
+            "answer": "1.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Sticky Piston is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1013,19 +1048,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Orange Wool?",
-            "answer": "0.8"
+            "answer": "0.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Orange Wool is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Orange Wool can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1093,19 +1131,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Green Wool?",
-            "answer": "0.8"
+            "answer": "0.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Green Wool is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Green Wool can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1173,13 +1214,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of White Tulip?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: White Tulip is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1247,19 +1290,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Bookshelf?",
-            "answer": "1.5"
+            "answer": "1.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Bookshelf is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Bookshelf can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1329,13 +1375,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Pale Oak Shelf?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Pale Oak Shelf is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1404,13 +1452,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Chest?",
-            "answer": "2.5"
+            "answer": "2.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Chest is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1478,19 +1528,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Birch Sign?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Birch Sign is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Birch Sign can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1558,19 +1611,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Oak Sign?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Oak Sign is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Oak Sign can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1640,19 +1696,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Spruce Hanging Sign?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Spruce Hanging Sign is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Spruce Hanging Sign can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1722,19 +1781,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Spruce Hanging Sign?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Spruce Hanging Sign is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Spruce Hanging Sign can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1802,13 +1864,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Lever?",
-            "answer": "0.5"
+            "answer": "0.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Lever is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1876,19 +1940,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Bamboo Pressure Plate?",
-            "answer": "0.5"
+            "answer": "0.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Bamboo Pressure Plate is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Bamboo Pressure Plate can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -1956,13 +2023,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Clay?",
-            "answer": "0.6"
+            "answer": "0.6",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Clay is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2030,19 +2099,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Copper Torch?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Copper Torch is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Copper Torch emit?",
-            "answer": "Light level 14"
+            "answer": "Light level 14",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2103,13 +2175,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Lime Stained Glass?",
-            "answer": "0.3"
+            "answer": "0.3",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Lime Stained Glass is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2177,13 +2251,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Oak Trapdoor?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Oak Trapdoor is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2251,19 +2327,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Cracked Stone Bricks?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Cracked Stone Bricks?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Cracked Stone Bricks is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2331,13 +2410,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Red Mushroom Block?",
-            "answer": "0.2"
+            "answer": "0.2",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Red Mushroom Block is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2405,19 +2486,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Copper Chain?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Copper Chain?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Copper Chain is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2485,13 +2569,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Attached Pumpkin Stem?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Attached Pumpkin Stem is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2559,13 +2645,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Lily Pad?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Lily Pad is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2633,25 +2721,29 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Enchanting Table?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Enchanting Table?",
-            "answer": "1200.0"
+            "answer": "1200.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Enchanting Table is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Enchanting Table emit?",
-            "answer": "Light level 7"
+            "answer": "Light level 7",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2719,19 +2811,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Sandstone Stairs?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Sandstone Stairs?",
-            "answer": "0.8"
+            "answer": "0.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Sandstone Stairs is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2802,19 +2897,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Beacon?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Beacon is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Beacon emit?",
-            "answer": "Light level 15"
+            "answer": "Light level 15",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2882,13 +2980,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Potted Pale Oak Sapling?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Potted Pale Oak Sapling is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -2956,13 +3056,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Potted Pink Tulip?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Potted Pink Tulip is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3030,13 +3132,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Spruce Button?",
-            "answer": "0.5"
+            "answer": "0.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Spruce Button is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3105,13 +3209,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Wither Skeleton Skull?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Wither Skeleton Skull is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3179,25 +3285,29 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Anvil?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Anvil?",
-            "answer": "1200.0"
+            "answer": "1200.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Anvil is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Anvil is affected by gravity (falls when unsupported).",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3266,19 +3376,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Chiseled Quartz Block?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Chiseled Quartz Block?",
-            "answer": "0.8"
+            "answer": "0.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Chiseled Quartz Block is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3346,19 +3459,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Pink Terracotta?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Pink Terracotta?",
-            "answer": "4.2"
+            "answer": "4.2",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Pink Terracotta is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3419,13 +3535,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Magenta Stained Glass Pane?",
-            "answer": "0.3"
+            "answer": "0.3",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Magenta Stained Glass Pane is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3486,13 +3604,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Green Stained Glass Pane?",
-            "answer": "0.3"
+            "answer": "0.3",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Green Stained Glass Pane is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3560,19 +3680,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Prismarine?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Prismarine?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Prismarine is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3640,19 +3763,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of White Carpet?",
-            "answer": "0.1"
+            "answer": "0.1",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: White Carpet is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: White Carpet can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3720,19 +3846,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Brown Carpet?",
-            "answer": "0.1"
+            "answer": "0.1",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Brown Carpet is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Brown Carpet can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3793,13 +3922,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Tall Grass?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Tall Grass is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3867,19 +3998,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Purple Banner?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Purple Banner is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Purple Banner can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -3947,19 +4081,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Pink Banner?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Pink Banner is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Pink Banner can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4027,19 +4164,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Chiseled Red Sandstone?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Chiseled Red Sandstone?",
-            "answer": "0.8"
+            "answer": "0.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Chiseled Red Sandstone is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4107,19 +4247,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Bamboo Slab?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Bamboo Slab is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Bamboo Slab can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4187,19 +4330,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Quartz Slab?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Quartz Slab?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Quartz Slab is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4267,19 +4413,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Cherry Fence Gate?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Cherry Fence Gate is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Cherry Fence Gate can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4347,19 +4496,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Pale Oak Fence?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Pale Oak Fence is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Pale Oak Fence can catch fire.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4427,19 +4579,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of End Rod?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: End Rod is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does End Rod emit?",
-            "answer": "Light level 14"
+            "answer": "Light level 14",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4507,13 +4662,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Dirt Path?",
-            "answer": "0.65"
+            "answer": "0.65",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Dirt Path is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4581,13 +4738,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Orange Shulker Box?",
-            "answer": "2.0"
+            "answer": "2.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Orange Shulker Box is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4655,13 +4814,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Brown Shulker Box?",
-            "answer": "2.0"
+            "answer": "2.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Brown Shulker Box is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4729,19 +4890,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Light Gray Glazed Terracotta?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Light Gray Glazed Terracotta?",
-            "answer": "1.4"
+            "answer": "1.4",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Light Gray Glazed Terracotta is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4809,19 +4973,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Light Blue Concrete?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Light Blue Concrete?",
-            "answer": "1.8"
+            "answer": "1.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Light Blue Concrete is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4889,19 +5056,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Black Concrete?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Black Concrete?",
-            "answer": "1.8"
+            "answer": "1.8",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Black Concrete is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -4969,19 +5139,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Blue Concrete Powder?",
-            "answer": "0.5"
+            "answer": "0.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Blue Concrete Powder is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "hard",
             "questionSeed": "True or False: Blue Concrete Powder is affected by gravity (falls when unsupported).",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5049,19 +5222,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Dead Tube Coral Block?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Dead Tube Coral Block?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Dead Tube Coral Block is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5122,19 +5298,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Dead Bubble Coral?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Dead Bubble Coral?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Dead Bubble Coral is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5195,19 +5374,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Dead Fire Coral Fan?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Dead Fire Coral Fan?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Dead Fire Coral Fan is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5268,13 +5450,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Tube Coral Wall Fan?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Tube Coral Wall Fan is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5335,13 +5519,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Bubble Column?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Bubble Column is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5409,19 +5595,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Red Nether Brick Stairs?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Red Nether Brick Stairs?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Red Nether Brick Stairs is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5489,19 +5678,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Granite Slab?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Granite Slab?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Granite Slab is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5569,19 +5761,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Nether Brick Wall?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Nether Brick Wall?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Nether Brick Wall is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5649,13 +5844,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Cartography Table?",
-            "answer": "2.5"
+            "answer": "2.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Cartography Table is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5723,19 +5920,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Oxidized Copper Lantern?",
-            "answer": "3.5"
+            "answer": "3.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Oxidized Copper Lantern is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Oxidized Copper Lantern emit?",
-            "answer": "Light level 15"
+            "answer": "Light level 15",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5803,13 +6003,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Stripped Warped Hyphae?",
-            "answer": "2.0"
+            "answer": "2.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Stripped Warped Hyphae is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5877,19 +6079,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Shroomlight?",
-            "answer": "1.0"
+            "answer": "1.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Shroomlight is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Shroomlight emit?",
-            "answer": "Light level 15"
+            "answer": "Light level 15",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -5957,13 +6162,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Crimson Fence?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Crimson Fence is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6031,13 +6238,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Warped Door?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Warped Door is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6105,13 +6314,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Honeycomb Block?",
-            "answer": "0.6"
+            "answer": "0.6",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Honeycomb Block is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6179,19 +6390,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Blackstone Stairs?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Blackstone Stairs?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Blackstone Stairs is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6259,19 +6473,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Polished Blackstone Slab?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Polished Blackstone Slab?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Polished Blackstone Slab is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6339,13 +6556,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Light Blue Candle?",
-            "answer": "0.1"
+            "answer": "0.1",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Light Blue Candle is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6413,13 +6632,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Black Candle?",
-            "answer": "0.1"
+            "answer": "0.1",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Black Candle is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6487,13 +6708,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Cake with Cyan Candle?",
-            "answer": "0.5"
+            "answer": "0.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Cake with Cyan Candle is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6554,19 +6777,22 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Small Amethyst Bud?",
-            "answer": "1.5"
+            "answer": "1.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Small Amethyst Bud is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           },
           {
             "category": "special",
             "difficulty": "medium",
             "questionSeed": "What light level does Small Amethyst Bud emit?",
-            "answer": "Light level 1"
+            "answer": "Light level 1",
+            "answerType": "lightLevel"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6634,19 +6860,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Tuff Brick Slab?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Tuff Brick Slab?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Tuff Brick Slab is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6707,13 +6936,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Sculk Shrieker?",
-            "answer": "3.0"
+            "answer": "3.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Sculk Shrieker is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6781,19 +7012,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Oxidized Chiseled Copper?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Oxidized Chiseled Copper?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Oxidized Chiseled Copper is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6861,19 +7095,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Oxidized Cut Copper Slab?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Oxidized Cut Copper Slab?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Oxidized Cut Copper Slab is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -6941,19 +7178,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Waxed Oxidized Cut Copper Stairs?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Waxed Oxidized Cut Copper Stairs?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Waxed Oxidized Cut Copper Stairs is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7021,13 +7261,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Weathered Copper Door?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Weathered Copper Door is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7095,19 +7337,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Waxed Weathered Copper Trapdoor?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Waxed Weathered Copper Trapdoor?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Waxed Weathered Copper Trapdoor is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7175,19 +7420,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Weathered Copper Bulb?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Weathered Copper Bulb?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Weathered Copper Bulb is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7255,19 +7503,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Waxed Weathered Copper Chest?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Waxed Weathered Copper Chest?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Waxed Weathered Copper Chest is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7335,19 +7586,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Exposed Lightning Rod?",
-            "answer": "Copper Pickaxe"
+            "answer": "Copper Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Exposed Lightning Rod?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Exposed Lightning Rod is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7415,13 +7669,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Azalea?",
-            "answer": "0.0"
+            "answer": "0.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Azalea is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7489,13 +7745,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Rooted Dirt?",
-            "answer": "0.5"
+            "answer": "0.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Rooted Dirt is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7563,19 +7821,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Deepslate Tile Stairs?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Deepslate Tile Stairs?",
-            "answer": "6.0"
+            "answer": "6.0",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Deepslate Tile Stairs is renewable.",
-            "answer": "False"
+            "answer": "False",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7643,19 +7904,22 @@
             "category": "mechanical",
             "difficulty": "easy",
             "questionSeed": "What is the minimum tool tier required to mine Smooth Basalt?",
-            "answer": "Wooden Pickaxe"
+            "answer": "Wooden Pickaxe",
+            "answerType": "toolTier"
           },
           {
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Smooth Basalt?",
-            "answer": "4.2"
+            "answer": "4.2",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Smooth Basalt is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"
@@ -7723,13 +7987,15 @@
             "category": "mechanical",
             "difficulty": "medium",
             "questionSeed": "What is the blast resistance of Crafter?",
-            "answer": "3.5"
+            "answer": "3.5",
+            "answerType": "blastResistance"
           },
           {
             "category": "generation",
             "difficulty": "easy",
             "questionSeed": "True or False: Crafter is renewable.",
-            "answer": "True"
+            "answer": "True",
+            "answerType": "boolean"
           }
         ],
         "sourceVersion": "minecraft-data@1.21.11"

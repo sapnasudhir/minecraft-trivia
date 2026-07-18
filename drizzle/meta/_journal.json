@@ -15,6 +15,13 @@
       "when": 1784402332764,
       "tag": "0001_loud_old_lace",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1784406629414,
+      "tag": "0002_striped_red_wolf",
+      "breakpoints": true
     }
   ]
 }

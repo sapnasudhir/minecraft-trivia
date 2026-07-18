@@ -41,10 +41,12 @@ export const triviaHooks = pgTable(
     difficulty: text('difficulty').notNull(),
     questionSeed: text('question_seed').notNull(),
     answer: text('answer').notNull(),
+    answerType: text('answer_type').notNull(),
   },
   (table) => [
     index('idx_hooks_entity').on(table.entityId),
     index('idx_hooks_category_difficulty').on(table.category, table.difficulty),
+    index('idx_hooks_answer_type').on(table.answerType),
   ]
 )
 
