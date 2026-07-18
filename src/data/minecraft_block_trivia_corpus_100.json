@@ -18,7 +18,7 @@
         "id": "stone",
         "name": "Stone",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/stone.png",
+        "textureUrl": "https://minecraft.wiki/images/Stone_JE5_BE3.png?5780c",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -99,7 +99,7 @@
         "id": "cobblestone",
         "name": "Cobblestone",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/cobblestone.png",
+        "textureUrl": "https://minecraft.wiki/images/Cobblestone_JE5_BE3.png?25024",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -179,7 +179,7 @@
         "id": "bamboo_mosaic",
         "name": "Bamboo Mosaic",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/bamboo_mosaic.png",
+        "textureUrl": "https://minecraft.wiki/images/Bamboo_Mosaic_JE1_BE1.png?2d702",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -259,7 +259,7 @@
         "id": "lava",
         "name": "Lava",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/lava.png",
+        "textureUrl": "https://minecraft.wiki/images/Lava_JE19.gif?792cb",
         "properties": {
           "mechanical": {
             "hardness": 100.0,
@@ -340,7 +340,7 @@
         "id": "nether_gold_ore",
         "name": "Nether Gold Ore",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/nether_gold_ore.png",
+        "textureUrl": "https://minecraft.wiki/images/Nether_Gold_Ore_JE2_BE1.png?c7842",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -426,7 +426,7 @@
         "id": "muddy_mangrove_roots",
         "name": "Muddy Mangrove Roots",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/muddy_mangrove_roots.png",
+        "textureUrl": "https://minecraft.wiki/images/Muddy_Mangrove_Roots_JE1_BE1.png?14614",
         "properties": {
           "mechanical": {
             "hardness": 0.7,
@@ -500,7 +500,7 @@
         "id": "oak_wood",
         "name": "Oak Wood",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/oak_wood.png",
+        "textureUrl": "https://minecraft.wiki/images/Oak_Wood_%28UD%29_JE7_BE2.png?74743",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -580,7 +580,7 @@
         "id": "stripped_jungle_wood",
         "name": "Stripped Jungle Wood",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/stripped_jungle_wood.png",
+        "textureUrl": "https://minecraft.wiki/images/Stripped_Jungle_Wood_%28UD%29_JE1_BE1.png?9244c",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -660,7 +660,7 @@
         "id": "dark_oak_leaves",
         "name": "Dark Oak Leaves",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/dark_oak_leaves.png",
+        "textureUrl": "https://minecraft.wiki/images/Dark_Oak_Leaves.png?36253",
         "properties": {
           "mechanical": {
             "hardness": 0.2,
@@ -733,7 +733,7 @@
         "id": "dispenser",
         "name": "Dispenser",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/dispenser.png",
+        "textureUrl": "https://minecraft.wiki/images/Dispenser_%28S%29_JE4.png?a8e35",
         "properties": {
           "mechanical": {
             "hardness": 3.5,
@@ -813,7 +813,7 @@
         "id": "gray_bed",
         "name": "Gray Bed",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/gray_bed.png",
+        "textureUrl": "https://minecraft.wiki/images/Gray_Bed.png?c70aa",
         "properties": {
           "mechanical": {
             "hardness": 0.2,
@@ -880,7 +880,7 @@
         "id": "sticky_piston",
         "name": "Sticky Piston",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/sticky_piston.png",
+        "textureUrl": "https://minecraft.wiki/images/Sticky_Piston_%28U%29_JE4.png?b46dc",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -954,7 +954,7 @@
         "id": "orange_wool",
         "name": "Orange Wool",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/orange_wool.png",
+        "textureUrl": "https://minecraft.wiki/images/Orange_Wool_JE3_BE3.png?c3436",
         "properties": {
           "mechanical": {
             "hardness": 0.8,
@@ -1034,7 +1034,7 @@
         "id": "green_wool",
         "name": "Green Wool",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/green_wool.png",
+        "textureUrl": "https://minecraft.wiki/images/Green_Wool_JE3_BE3.png?53595",
         "properties": {
           "mechanical": {
             "hardness": 0.8,
@@ -1114,7 +1114,7 @@
         "id": "white_tulip",
         "name": "White Tulip",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/white_tulip.png",
+        "textureUrl": "https://minecraft.wiki/images/White_Tulip_JE7_BE2.png?d3bed",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -1188,7 +1188,7 @@
         "id": "bookshelf",
         "name": "Bookshelf",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/bookshelf.png",
+        "textureUrl": "https://minecraft.wiki/images/Bookshelf_JE4_BE2.png?9b143",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -1268,7 +1268,7 @@
         "id": "pale_oak_shelf",
         "name": "Pale Oak Shelf",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/pale_oak_shelf.png",
+        "textureUrl": "https://minecraft.wiki/images/Pale_Oak_Shelf_JE1_BE2.png?01b82",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -1344,7 +1344,7 @@
         "id": "chest",
         "name": "Chest",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/chest.png",
+        "textureUrl": "https://minecraft.wiki/images/Chest_%28S%29_JE2.png?6b608",
         "properties": {
           "mechanical": {
             "hardness": 2.5,
@@ -1419,7 +1419,7 @@
         "id": "birch_sign",
         "name": "Birch Sign",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/birch_sign.png",
+        "textureUrl": "https://minecraft.wiki/images/Birch_Sign_%280%29.png?bdec9",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -1499,7 +1499,7 @@
         "id": "oak_wall_sign",
         "name": "Oak Sign",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/oak_wall_sign.png",
+        "textureUrl": "https://minecraft.wiki/images/Oak_Sign_%280%29.png?530fb",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -1579,7 +1579,7 @@
         "id": "spruce_hanging_sign",
         "name": "Spruce Hanging Sign",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/spruce_hanging_sign.png",
+        "textureUrl": "https://minecraft.wiki/images/Spruce_Hanging_Sign_JE1_BE1.png?f4f4d",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -1661,7 +1661,7 @@
         "id": "spruce_wall_hanging_sign",
         "name": "Spruce Hanging Sign",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/spruce_wall_hanging_sign.png",
+        "textureUrl": "https://minecraft.wiki/images/Spruce_Hanging_Sign_JE1_BE1.png?f4f4d",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -1743,7 +1743,7 @@
         "id": "lever",
         "name": "Lever",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/lever.png",
+        "textureUrl": "https://minecraft.wiki/images/Wall_Lever_%28S%29_JE5-L3.png?039e0",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -1817,7 +1817,7 @@
         "id": "bamboo_pressure_plate",
         "name": "Bamboo Pressure Plate",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/bamboo_pressure_plate.png",
+        "textureUrl": "https://minecraft.wiki/images/Bamboo_Pressure_Plate_JE2_BE2.png?0b70a",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -1897,7 +1897,7 @@
         "id": "clay",
         "name": "Clay",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/clay.png",
+        "textureUrl": "https://minecraft.wiki/images/Clay_JE2_BE2.png?0c9e3",
         "properties": {
           "mechanical": {
             "hardness": 0.6,
@@ -1971,7 +1971,7 @@
         "id": "copper_wall_torch",
         "name": "Copper Torch",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/copper_wall_torch.png",
+        "textureUrl": "https://minecraft.wiki/images/Copper_Torch_JE2_BE2.png?2cdc5",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -2051,7 +2051,7 @@
         "id": "lime_stained_glass",
         "name": "Lime Stained Glass",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/lime_stained_glass.png",
+        "textureUrl": "https://minecraft.wiki/images/Lime_Stained_Glass_JE3_BE3.png?4394d",
         "properties": {
           "mechanical": {
             "hardness": 0.3,
@@ -2118,7 +2118,7 @@
         "id": "oak_trapdoor",
         "name": "Oak Trapdoor",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/oak_trapdoor.png",
+        "textureUrl": "https://minecraft.wiki/images/Oak_Trapdoor_JE4_BE2.png?5c6d0",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -2192,7 +2192,7 @@
         "id": "cracked_stone_bricks",
         "name": "Cracked Stone Bricks",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/cracked_stone_bricks.png",
+        "textureUrl": "https://minecraft.wiki/images/Cracked_Stone_Bricks_JE3_BE2.png?2e4f2",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -2272,7 +2272,7 @@
         "id": "red_mushroom_block",
         "name": "Red Mushroom Block",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/red_mushroom_block.png",
+        "textureUrl": "https://minecraft.wiki/images/Red_Mushroom_Block_%28ESU%29_JE2_BE2.png?3c3f9",
         "properties": {
           "mechanical": {
             "hardness": 0.2,
@@ -2346,7 +2346,7 @@
         "id": "copper_chain",
         "name": "Copper Chain",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/copper_chain.png",
+        "textureUrl": "https://minecraft.wiki/images/Copper_Chain_%28UD%29_JE1.png?b436c",
         "properties": {
           "mechanical": {
             "hardness": 5.0,
@@ -2426,7 +2426,7 @@
         "id": "attached_pumpkin_stem",
         "name": "Attached Pumpkin Stem",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/attached_pumpkin_stem.png",
+        "textureUrl": "https://minecraft.wiki/images/Attached_Pumpkin_Stem_%28W%29_JE5.png?0a6f0",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -2500,7 +2500,7 @@
         "id": "lily_pad",
         "name": "Lily Pad",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/lily_pad.png",
+        "textureUrl": "https://minecraft.wiki/images/Lily_Pad_JE3.png?2e58a",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -2574,7 +2574,7 @@
         "id": "enchanting_table",
         "name": "Enchanting Table",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/enchanting_table.png",
+        "textureUrl": "https://minecraft.wiki/images/Enchanting_Table_JE4_BE2.png?7a922",
         "properties": {
           "mechanical": {
             "hardness": 5.0,
@@ -2660,7 +2660,7 @@
         "id": "sandstone_stairs",
         "name": "Sandstone Stairs",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/sandstone_stairs.png",
+        "textureUrl": "https://minecraft.wiki/images/Sandstone_Stairs_%28N%29_JE6_BE3.png?8c7d8",
         "properties": {
           "mechanical": {
             "hardness": 0.8,
@@ -2740,7 +2740,7 @@
         "id": "beacon",
         "name": "Beacon",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/beacon.png",
+        "textureUrl": "https://minecraft.wiki/images/Beacon_JE6_BE2.png?684bf",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -2823,7 +2823,7 @@
         "id": "potted_pale_oak_sapling",
         "name": "Potted Pale Oak Sapling",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/potted_pale_oak_sapling.png",
+        "textureUrl": "https://minecraft.wiki/images/Potted_Pale_Oak_Sapling_JE1.png?be679",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -2897,7 +2897,7 @@
         "id": "potted_pink_tulip",
         "name": "Potted Pink Tulip",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/potted_pink_tulip.png",
+        "textureUrl": "https://minecraft.wiki/images/Potted_Pink_Tulip_JE5.png?bbe8f",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -2971,7 +2971,7 @@
         "id": "spruce_button",
         "name": "Spruce Button",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/spruce_button.png",
+        "textureUrl": "https://minecraft.wiki/images/Spruce_Button_JE5.png?55a92",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -3045,7 +3045,7 @@
         "id": "wither_skeleton_wall_skull",
         "name": "Wither Skeleton Skull",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/wither_skeleton_wall_skull.png",
+        "textureUrl": "https://minecraft.wiki/images/Wither_Skeleton_Skull_%28S%29_JE2.png?0a739",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -3120,7 +3120,7 @@
         "id": "anvil",
         "name": "Anvil",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/anvil.png",
+        "textureUrl": "https://minecraft.wiki/images/Anvil_%28N%29_JE3.png?d438e",
         "properties": {
           "mechanical": {
             "hardness": 5.0,
@@ -3206,7 +3206,7 @@
         "id": "chiseled_quartz_block",
         "name": "Chiseled Quartz Block",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/chiseled_quartz_block.png",
+        "textureUrl": "https://minecraft.wiki/images/Chiseled_Quartz_Block_%28UD%29_JE2_BE2.png?3a186",
         "properties": {
           "mechanical": {
             "hardness": 0.8,
@@ -3287,7 +3287,7 @@
         "id": "pink_terracotta",
         "name": "Pink Terracotta",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/pink_terracotta.png",
+        "textureUrl": "https://minecraft.wiki/images/Pink_Terracotta_JE1_BE1.png?f6a99",
         "properties": {
           "mechanical": {
             "hardness": 1.25,
@@ -3367,7 +3367,7 @@
         "id": "magenta_stained_glass_pane",
         "name": "Magenta Stained Glass Pane",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/magenta_stained_glass_pane.png",
+        "textureUrl": "https://minecraft.wiki/images/Magenta_Stained_Glass_Pane_%28EW%29_JE9.png?ac9bf",
         "properties": {
           "mechanical": {
             "hardness": 0.3,
@@ -3434,7 +3434,7 @@
         "id": "green_stained_glass_pane",
         "name": "Green Stained Glass Pane",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/green_stained_glass_pane.png",
+        "textureUrl": "https://minecraft.wiki/images/Green_Stained_Glass_Pane_%28EW%29_JE9.png?4c3c1",
         "properties": {
           "mechanical": {
             "hardness": 0.3,
@@ -3501,7 +3501,7 @@
         "id": "prismarine",
         "name": "Prismarine",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/prismarine.png",
+        "textureUrl": "https://minecraft.wiki/images/Prismarine_JE2_BE2.png?c5029",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -3581,7 +3581,7 @@
         "id": "white_carpet",
         "name": "White Carpet",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/white_carpet.png",
+        "textureUrl": "https://minecraft.wiki/images/White_Carpet_JE2_BE2.png?ec488",
         "properties": {
           "mechanical": {
             "hardness": 0.1,
@@ -3661,7 +3661,7 @@
         "id": "brown_carpet",
         "name": "Brown Carpet",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/brown_carpet.png",
+        "textureUrl": "https://minecraft.wiki/images/Brown_Carpet_JE2_BE2.png?57075",
         "properties": {
           "mechanical": {
             "hardness": 0.1,
@@ -3741,7 +3741,7 @@
         "id": "tall_grass",
         "name": "Tall Grass",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/tall_grass.png",
+        "textureUrl": "https://minecraft.wiki/images/Tall_Grass_JE4.png?b945f",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -3808,7 +3808,7 @@
         "id": "purple_banner",
         "name": "Purple Banner",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/purple_banner.png",
+        "textureUrl": "https://minecraft.wiki/images/Purple_Banner_JE2_BE2.png?c0021",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -3888,7 +3888,7 @@
         "id": "pink_wall_banner",
         "name": "Pink Banner",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/pink_wall_banner.png",
+        "textureUrl": "https://minecraft.wiki/images/Pink_Banner_JE2_BE2.png?f0922",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -3968,7 +3968,7 @@
         "id": "chiseled_red_sandstone",
         "name": "Chiseled Red Sandstone",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/chiseled_red_sandstone.png",
+        "textureUrl": "https://minecraft.wiki/images/Chiseled_Red_Sandstone_JE4_BE2.png?3fe71",
         "properties": {
           "mechanical": {
             "hardness": 0.8,
@@ -4048,7 +4048,7 @@
         "id": "bamboo_slab",
         "name": "Bamboo Slab",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/bamboo_slab.png",
+        "textureUrl": "https://minecraft.wiki/images/Bamboo_Slab_JE2_BE2.png?a8502",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -4128,7 +4128,7 @@
         "id": "quartz_slab",
         "name": "Quartz Slab",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/quartz_slab.png",
+        "textureUrl": "https://minecraft.wiki/images/Quartz_Slab_JE3_BE3.png?346eb",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -4208,7 +4208,7 @@
         "id": "cherry_fence_gate",
         "name": "Cherry Fence Gate",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/cherry_fence_gate.png",
+        "textureUrl": "https://minecraft.wiki/images/Cherry_Fence_Gate_JE1_BE1.png?30df9",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -4288,7 +4288,7 @@
         "id": "pale_oak_fence",
         "name": "Pale Oak Fence",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/pale_oak_fence.png",
+        "textureUrl": "https://minecraft.wiki/images/Pale_Oak_Fence_%28EW%29_JE1.png?13103",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -4368,7 +4368,7 @@
         "id": "end_rod",
         "name": "End Rod",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/end_rod.png",
+        "textureUrl": "https://minecraft.wiki/images/End_Rod_%28U%29_JE2_BE2.png?705c1",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -4448,7 +4448,7 @@
         "id": "dirt_path",
         "name": "Dirt Path",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/dirt_path.png",
+        "textureUrl": "https://minecraft.wiki/images/Dirt_Path_JE4_BE3.png?0309b",
         "properties": {
           "mechanical": {
             "hardness": 0.65,
@@ -4522,7 +4522,7 @@
         "id": "orange_shulker_box",
         "name": "Orange Shulker Box",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/orange_shulker_box.png",
+        "textureUrl": "https://minecraft.wiki/images/Orange_Shulker_Box_JE2_BE2.png?205aa",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -4596,7 +4596,7 @@
         "id": "brown_shulker_box",
         "name": "Brown Shulker Box",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/brown_shulker_box.png",
+        "textureUrl": "https://minecraft.wiki/images/Brown_Shulker_Box_JE2_BE2.png?e7e04",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -4670,7 +4670,7 @@
         "id": "light_gray_glazed_terracotta",
         "name": "Light Gray Glazed Terracotta",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/light_gray_glazed_terracotta.png",
+        "textureUrl": "https://minecraft.wiki/images/Light_Gray_Glazed_Terracotta_%28S%29_JE1_BE1.png?47d98",
         "properties": {
           "mechanical": {
             "hardness": 1.4,
@@ -4750,7 +4750,7 @@
         "id": "light_blue_concrete",
         "name": "Light Blue Concrete",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/light_blue_concrete.png",
+        "textureUrl": "https://minecraft.wiki/images/Light_Blue_Concrete.png?80b60",
         "properties": {
           "mechanical": {
             "hardness": 1.8,
@@ -4830,7 +4830,7 @@
         "id": "black_concrete",
         "name": "Black Concrete",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/black_concrete.png",
+        "textureUrl": "https://minecraft.wiki/images/Black_Concrete.png?448aa",
         "properties": {
           "mechanical": {
             "hardness": 1.8,
@@ -4910,7 +4910,7 @@
         "id": "blue_concrete_powder",
         "name": "Blue Concrete Powder",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/blue_concrete_powder.png",
+        "textureUrl": "https://minecraft.wiki/images/Blue_Concrete_Powder.png?e98fc",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -4990,7 +4990,7 @@
         "id": "dead_tube_coral_block",
         "name": "Dead Tube Coral Block",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/dead_tube_coral_block.png",
+        "textureUrl": "https://minecraft.wiki/images/Dead_Tube_Coral_Block_JE1_BE1.png?e65c2",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -5070,7 +5070,7 @@
         "id": "dead_bubble_coral",
         "name": "Dead Bubble Coral",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/dead_bubble_coral.png",
+        "textureUrl": "https://minecraft.wiki/images/Dead_Bubble_Coral_JE1_BE1.png?066d3",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -5143,7 +5143,7 @@
         "id": "dead_fire_coral_fan",
         "name": "Dead Fire Coral Fan",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/dead_fire_coral_fan.png",
+        "textureUrl": "https://minecraft.wiki/images/Dead_Fire_Coral_Fan_JE1.png?b28a0",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -5216,7 +5216,7 @@
         "id": "tube_coral_wall_fan",
         "name": "Tube Coral Wall Fan",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/tube_coral_wall_fan.png",
+        "textureUrl": "https://minecraft.wiki/images/Tube_Coral_Wall_Fan_%28S%29_JE2.png?ec4e5",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -5283,7 +5283,7 @@
         "id": "bubble_column",
         "name": "Bubble Column",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/bubble_column.png",
+        "textureUrl": "https://minecraft.wiki/images/Bubble_Column_JE1_BE1.png?b75d8",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -5350,7 +5350,7 @@
         "id": "red_nether_brick_stairs",
         "name": "Red Nether Brick Stairs",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/red_nether_brick_stairs.png",
+        "textureUrl": "https://minecraft.wiki/images/Red_Nether_Brick_Stairs_%28N%29_JE3_BE3.png?cbe64",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -5430,7 +5430,7 @@
         "id": "granite_slab",
         "name": "Granite Slab",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/granite_slab.png",
+        "textureUrl": "https://minecraft.wiki/images/Granite_Slab_JE1_BE1.png?44cbf",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -5510,7 +5510,7 @@
         "id": "nether_brick_wall",
         "name": "Nether Brick Wall",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/nether_brick_wall.png",
+        "textureUrl": "https://minecraft.wiki/images/Nether_Brick_Wall_%28ewU%29_JE3.png?3cb81",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -5590,7 +5590,7 @@
         "id": "cartography_table",
         "name": "Cartography Table",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/cartography_table.png",
+        "textureUrl": "https://minecraft.wiki/images/Cartography_Table_JE3_BE2.png?519d2",
         "properties": {
           "mechanical": {
             "hardness": 2.5,
@@ -5664,7 +5664,7 @@
         "id": "oxidized_copper_lantern",
         "name": "Oxidized Copper Lantern",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/oxidized_copper_lantern.png",
+        "textureUrl": "https://minecraft.wiki/images/Oxidized_Copper_Lantern_JE1_BE1.png?d96ec",
         "properties": {
           "mechanical": {
             "hardness": 3.5,
@@ -5744,7 +5744,7 @@
         "id": "stripped_warped_hyphae",
         "name": "Stripped Warped Hyphae",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/stripped_warped_hyphae.png",
+        "textureUrl": "https://minecraft.wiki/images/Stripped_Warped_Hyphae_%28UD%29_JE1_BE1.png?9abb5",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -5818,7 +5818,7 @@
         "id": "shroomlight",
         "name": "Shroomlight",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/shroomlight.png",
+        "textureUrl": "https://minecraft.wiki/images/Shroomlight_JE1.png?5c263",
         "properties": {
           "mechanical": {
             "hardness": 1.0,
@@ -5898,7 +5898,7 @@
         "id": "crimson_fence",
         "name": "Crimson Fence",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/crimson_fence.png",
+        "textureUrl": "https://minecraft.wiki/images/Crimson_Fence_%28EW%29_JE1.png?87f0e",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -5972,7 +5972,7 @@
         "id": "warped_door",
         "name": "Warped Door",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/warped_door.png",
+        "textureUrl": "https://minecraft.wiki/images/Warped_Door_JE3.png?c586a",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -6046,7 +6046,7 @@
         "id": "honeycomb_block",
         "name": "Honeycomb Block",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/honeycomb_block.png",
+        "textureUrl": "https://minecraft.wiki/images/Honeycomb_Block_JE1_BE1.png?ff510",
         "properties": {
           "mechanical": {
             "hardness": 0.6,
@@ -6120,7 +6120,7 @@
         "id": "blackstone_stairs",
         "name": "Blackstone Stairs",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/blackstone_stairs.png",
+        "textureUrl": "https://minecraft.wiki/images/Blackstone_Stairs_JE3.png?a1b7f",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -6200,7 +6200,7 @@
         "id": "polished_blackstone_slab",
         "name": "Polished Blackstone Slab",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/polished_blackstone_slab.png",
+        "textureUrl": "https://minecraft.wiki/images/Polished_Blackstone_Slab_JE1_BE1.png?7167f",
         "properties": {
           "mechanical": {
             "hardness": 2.0,
@@ -6280,7 +6280,7 @@
         "id": "light_blue_candle",
         "name": "Light Blue Candle",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/light_blue_candle.png",
+        "textureUrl": "https://minecraft.wiki/images/Light_Blue_Candle_JE1.png?eb118",
         "properties": {
           "mechanical": {
             "hardness": 0.1,
@@ -6354,7 +6354,7 @@
         "id": "black_candle",
         "name": "Black Candle",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/black_candle.png",
+        "textureUrl": "https://minecraft.wiki/images/Black_Candle_JE1.png?264e7",
         "properties": {
           "mechanical": {
             "hardness": 0.1,
@@ -6428,7 +6428,7 @@
         "id": "cyan_candle_cake",
         "name": "Cake with Cyan Candle",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/cyan_candle_cake.png",
+        "textureUrl": "https://minecraft.wiki/images/Cake_with_Cyan_Candle_JE1.png?f4268",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -6502,7 +6502,7 @@
         "id": "small_amethyst_bud",
         "name": "Small Amethyst Bud",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/small_amethyst_bud.png",
+        "textureUrl": "https://minecraft.wiki/images/Small_Amethyst_Bud_%28U%29_JE1_BE2.png?e17c2",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -6575,7 +6575,7 @@
         "id": "tuff_brick_slab",
         "name": "Tuff Brick Slab",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/tuff_brick_slab.png",
+        "textureUrl": "https://minecraft.wiki/images/Tuff_Brick_Slab_JE3_BE3.png?a876d",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -6655,7 +6655,7 @@
         "id": "sculk_shrieker",
         "name": "Sculk Shrieker",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/sculk_shrieker.png",
+        "textureUrl": "https://minecraft.wiki/images/Sculk_Shrieker_JE1_BE2.png?cbfa5",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -6722,7 +6722,7 @@
         "id": "oxidized_chiseled_copper",
         "name": "Oxidized Chiseled Copper",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/oxidized_chiseled_copper.png",
+        "textureUrl": "https://minecraft.wiki/images/Oxidized_Chiseled_Copper_JE1_BE1.png?9fff6",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -6802,7 +6802,7 @@
         "id": "oxidized_cut_copper_slab",
         "name": "Oxidized Cut Copper Slab",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/oxidized_cut_copper_slab.png",
+        "textureUrl": "https://minecraft.wiki/images/Oxidized_Cut_Copper_Slab_JE1_BE1.png?2408a",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -6882,7 +6882,7 @@
         "id": "waxed_oxidized_cut_copper_stairs",
         "name": "Waxed Oxidized Cut Copper Stairs",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/waxed_oxidized_cut_copper_stairs.png",
+        "textureUrl": "https://minecraft.wiki/images/Oxidized_Cut_Copper_Stairs_%28N%29_JE1_BE1.png?6d78c",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -6962,7 +6962,7 @@
         "id": "weathered_copper_door",
         "name": "Weathered Copper Door",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/weathered_copper_door.png",
+        "textureUrl": "https://minecraft.wiki/images/Weathered_Copper_Door_JE3_BE3.png?ec52b",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -7036,7 +7036,7 @@
         "id": "waxed_weathered_copper_trapdoor",
         "name": "Waxed Weathered Copper Trapdoor",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/waxed_weathered_copper_trapdoor.png",
+        "textureUrl": "https://minecraft.wiki/images/Weathered_Copper_Trapdoor_JE2_BE2.png?c354f",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -7116,7 +7116,7 @@
         "id": "weathered_copper_bulb",
         "name": "Weathered Copper Bulb",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/weathered_copper_bulb.png",
+        "textureUrl": "https://minecraft.wiki/images/Weathered_Copper_Bulb_JE1_BE1.png?0b0da",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -7196,7 +7196,7 @@
         "id": "waxed_weathered_copper_chest",
         "name": "Waxed Weathered Copper Chest",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/waxed_weathered_copper_chest.png",
+        "textureUrl": "https://minecraft.wiki/images/Weathered_Copper_Chest_%28S%29_BE1.png?d22d2",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -7276,7 +7276,7 @@
         "id": "exposed_lightning_rod",
         "name": "Exposed Lightning Rod",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/exposed_lightning_rod.png",
+        "textureUrl": "https://minecraft.wiki/images/Exposed_Lightning_Rod_%28U%29_JE1.png?63b1b",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -7356,7 +7356,7 @@
         "id": "azalea",
         "name": "Azalea",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/azalea.png",
+        "textureUrl": "https://minecraft.wiki/images/Azalea_JE2_BE2.png?8e29b",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -7430,7 +7430,7 @@
         "id": "rooted_dirt",
         "name": "Rooted Dirt",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/rooted_dirt.png",
+        "textureUrl": "https://minecraft.wiki/images/Rooted_Dirt_JE1_BE1.png?83182",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -7504,7 +7504,7 @@
         "id": "deepslate_tile_stairs",
         "name": "Deepslate Tile Stairs",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/deepslate_tile_stairs.png",
+        "textureUrl": "https://minecraft.wiki/images/Deepslate_Tile_Stairs_JE2_BE1.png?4b9ed",
         "properties": {
           "mechanical": {
             "hardness": 3.5,
@@ -7584,7 +7584,7 @@
         "id": "smooth_basalt",
         "name": "Smooth Basalt",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/smooth_basalt.png",
+        "textureUrl": "https://minecraft.wiki/images/Smooth_Basalt_JE1_BE1.png?e9359",
         "properties": {
           "mechanical": {
             "hardness": 1.25,
@@ -7664,7 +7664,7 @@
         "id": "crafter",
         "name": "Crafter",
         "category": "Block",
-        "textureUrl": "https://raw.githubusercontent.com/PrismarineJS/minecraft-assets/master/data/1.21.11/blocks/crafter.png",
+        "textureUrl": "https://minecraft.wiki/images/Crafter_JE4_BE3.png?3996e",
         "properties": {
           "mechanical": {
             "hardness": 1.5,

@@ -16,6 +16,8 @@ export async function generateGameQuestions(count: number = 5): Promise<GameQues
   return res.json()
 }
 
+const BOOLEAN_ANSWERS = new Set(['True', 'False'])
+
 export function generateIncorrectAnswers(
   allBlocks: MinecraftBlock[],
   currentBlockId: string,
@@ -23,6 +25,13 @@ export function generateIncorrectAnswers(
   correctAnswer: string,
   count: number
 ): string[] {
+  // True/False questions get exactly one distractor: the opposite value.
+  // Mixing in unrelated block-property distractors alongside True/False
+  // produces a nonsensical multiple-choice question.
+  if (BOOLEAN_ANSWERS.has(correctAnswer)) {
+    return [correctAnswer === 'True' ? 'False' : 'True']
+  }
+
   const otherBlocks = allBlocks.filter((b) => b.id !== currentBlockId)
 
   if (otherBlocks.length === 0) {
@@ -43,9 +52,11 @@ export function generateIncorrectAnswers(
   // Strategy 4: Extract block names
   candidates.push(...otherBlocks.map((b) => b.name))
 
-  // Filter and deduplicate
+  // Filter and deduplicate. True/False are excluded here too so they never
+  // leak in as a distractor for a non-boolean question.
   const filteredCandidates = Array.from(new Set(candidates))
     .filter((ans) => ans !== correctAnswer && ans.length > 0)
+    .filter((ans) => !BOOLEAN_ANSWERS.has(ans))
     .filter((ans) => !isTooSimilar(ans, correctAnswer))
 
   if (filteredCandidates.length < count) {
