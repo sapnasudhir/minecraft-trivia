@@ -28,10 +28,27 @@ export function StartScreen() {
 
         <button
           onClick={startGame}
-          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition duration-200 text-lg pixel-font"
+          className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-6 rounded-lg transition duration-200 text-lg pixel-font mb-6"
         >
           START GAME
         </button>
+
+        <div className="bg-yellow-400 rounded-lg p-6 animate-fade-in">
+          <ul className="text-gray-900 text-left space-y-3">
+            <li className="flex items-start">
+              <span className="mr-3 font-bold">✓</span>
+              <span className="font-semibold">5 questions per game</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 font-bold">✓</span>
+              <span className="font-semibold">Multiple choice answers</span>
+            </li>
+            <li className="flex items-start">
+              <span className="mr-3 font-bold">✓</span>
+              <span className="font-semibold">Test your block knowledge</span>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   )
