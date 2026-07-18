@@ -1,4 +1,4 @@
-{
+﻿{
   "corpus": {
     "metadata": {
       "title": "Minecraft Block Trivia Corpus",
@@ -884,7 +884,7 @@
         "id": "sea_lantern",
         "name": "Sea Lantern",
         "category": "Decorative",
-        "textureUrl": "https://minecraft.wiki/images/Sea_Lantern.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_sea-lantern.png",
         "properties": {
           "mechanical": {
             "hardness": 0.3,
@@ -956,7 +956,7 @@
         "id": "sculk",
         "name": "Sculk",
         "category": "Decorative",
-        "textureUrl": "https://minecraft.wiki/images/Sculk.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_sculk.png",
         "properties": {
           "mechanical": {
             "hardness": 0.2,
@@ -1026,7 +1026,7 @@
         "id": "redstone_dust",
         "name": "Redstone Dust",
         "category": "Functional/Mechanical",
-        "textureUrl": "https://minecraft.wiki/images/Redstone_Dust.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_redstone-dust.png",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -1106,7 +1106,7 @@
         "id": "piston",
         "name": "Piston",
         "category": "Functional/Mechanical",
-        "textureUrl": "https://minecraft.wiki/images/Piston.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_piston.png",
         "properties": {
           "mechanical": {
             "hardness": 1.5,
@@ -1179,7 +1179,7 @@
         "id": "hopper",
         "name": "Hopper",
         "category": "Functional/Mechanical",
-        "textureUrl": "https://minecraft.wiki/images/Hopper.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_hopper.png",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -1249,7 +1249,7 @@
         "id": "observer",
         "name": "Observer",
         "category": "Functional/Mechanical",
-        "textureUrl": "https://minecraft.wiki/images/Observer.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_observer.png",
         "properties": {
           "mechanical": {
             "hardness": 3.0,
@@ -1321,7 +1321,7 @@
         "id": "redstone_comparator",
         "name": "Redstone Comparator",
         "category": "Functional/Mechanical",
-        "textureUrl": "https://minecraft.wiki/images/Redstone_Comparator.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_redstone-comparator.png",
         "properties": {
           "mechanical": {
             "hardness": 0.0,
@@ -1378,7 +1378,7 @@
             "category": "mechanical",
             "difficulty": "hard",
             "questionSeed": "What two modes does a Redstone Comparator have?",
-            "answer": "Comparison mode (outputs if input ≥ side input) and Subtraction mode (outputs difference)"
+            "answer": "Comparison mode (outputs if input â‰¥ side input) and Subtraction mode (outputs difference)"
           },
           {
             "category": "mechanical",
@@ -1392,7 +1392,7 @@
         "id": "grass_block",
         "name": "Grass Block",
         "category": "Natural",
-        "textureUrl": "https://minecraft.wiki/images/Grass_Block.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_grass-block.png",
         "properties": {
           "mechanical": {
             "hardness": 0.6,
@@ -1468,7 +1468,7 @@
         "id": "sand",
         "name": "Sand",
         "category": "Natural",
-        "textureUrl": "https://minecraft.wiki/images/Sand.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_sand.png",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -1548,7 +1548,7 @@
         "id": "gravel",
         "name": "Gravel",
         "category": "Natural",
-        "textureUrl": "https://minecraft.wiki/images/Gravel.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_gravel.png",
         "properties": {
           "mechanical": {
             "hardness": 0.6,
@@ -1629,7 +1629,7 @@
         "id": "obsidian",
         "name": "Obsidian",
         "category": "Special",
-        "textureUrl": "https://minecraft.wiki/images/Obsidian.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_obsidian.png",
         "properties": {
           "mechanical": {
             "hardness": 50.0,
@@ -1717,7 +1717,7 @@
         "id": "ice",
         "name": "Ice",
         "category": "Special",
-        "textureUrl": "https://minecraft.wiki/images/Ice.png",
+        "textureUrl": "https://minecraft.wiki/images/BlockSprite_ice.png",
         "properties": {
           "mechanical": {
             "hardness": 0.5,
@@ -1888,3 +1888,4 @@
     "data_quality_notes": "All data extracted directly from minecraft.wiki; properties verified across wiki pages"
   }
 }
+
