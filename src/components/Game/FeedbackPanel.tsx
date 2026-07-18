@@ -8,7 +8,8 @@ interface FeedbackPanelProps {
   correctAnswer: string
   selectedAnswer: string
   explanation?: string
-  onNext: () => void
+  pointsEarned: number
+  onNext: () => void | Promise<void>
 }
 
 export function FeedbackPanel({
@@ -16,6 +17,7 @@ export function FeedbackPanel({
   correctAnswer,
   selectedAnswer,
   explanation,
+  pointsEarned,
   onNext,
 }: FeedbackPanelProps) {
   // Play sound when feedback panel appears
@@ -27,51 +29,50 @@ export function FeedbackPanel({
     }
   }, [isCorrect])
 
+  const pointsDisplay = isCorrect ? `+${pointsEarned}` : `${pointsEarned}`
+
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 mb-6 feedback-panel">
-      {/* Feedback header */}
-      <div className="mb-4">
+    <div
+      className="rounded-none p-3.5 mb-4"
+      style={{
+        background: '#fff8e7',
+        border: `2px solid ${isCorrect ? '#16a34a' : '#dc2626'}`,
+      }}
+    >
+      {/* Feedback header with points */}
+      <div className="mb-2">
         {isCorrect ? (
-          <div className={`flex items-center text-green-600 text-xl font-bold animate-bounce-sm`}>
-            <span className="text-3xl mr-3 animate-pulse-sm">✓</span>
-            Correct!
+          <div style={{ color: '#16a34a', fontWeight: 'bold' }}>
+            Correct! — {correctAnswer}
           </div>
         ) : (
-          <div className={`flex items-center text-red-600 text-xl font-bold`}>
-            <span className="text-3xl mr-3">✗</span>
-            Incorrect
+          <div style={{ color: '#dc2626', fontWeight: 'bold' }}>
+            Incorrect — {correctAnswer}
           </div>
         )}
       </div>
 
-      {/* Answer summary */}
-      <div className="space-y-3 mb-4">
-        {!isCorrect && (
-          <div>
-            <p className="text-sm text-gray-600 mb-1">Your answer:</p>
-            <p className="text-red-700 font-semibold">{selectedAnswer}</p>
-          </div>
-        )}
-        <div>
-          <p className="text-sm text-gray-600 mb-1">Correct answer:</p>
-          <p className="text-green-700 font-semibold">{correctAnswer}</p>
-        </div>
+      {/* Points display */}
+      <div
+        className="text-lg font-bold mb-2"
+        style={{
+          color: isCorrect ? '#16a34a' : '#dc2626',
+        }}
+      >
+        Points: {pointsDisplay}
       </div>
 
       {/* Explanation */}
       {explanation && (
-        <div className="bg-gray-50 rounded p-3 mb-4">
-          <p className="text-sm text-gray-700">{explanation}</p>
-        </div>
+        <p
+          style={{
+            fontSize: '13px',
+            color: '#5a3d1e',
+          }}
+        >
+          {explanation}
+        </p>
       )}
-
-      {/* Next button */}
-      <button
-        onClick={onNext}
-        className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-200"
-      >
-        Next Question
-      </button>
     </div>
   )
 }

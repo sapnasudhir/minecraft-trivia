@@ -17,6 +17,14 @@ export interface PlayerAnswer {
   selected: string
   correct: string
   isCorrect: boolean
+  pointsEarned: number
+}
+
+export interface FilledSlot {
+  type: 'block' | 'tool'
+  imageUrl?: string // block texture PNG URL
+  grad?: string // block gradient fallback
+  toolColor?: string // tool tier color
 }
 
 export interface GameState {
@@ -27,6 +35,9 @@ export interface GameState {
   score: number
   answers: PlayerAnswer[]
   totalQuestionsPerGame: number
+  filledSlots: (FilledSlot | null)[] // 8-element array for crafting grid
+  consecutiveCount: number // track correct/incorrect streak
+  lastResultWasCorrect?: boolean // track if previous answer was correct
 
   // Actions
   startGame: () => Promise<void>

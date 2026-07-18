@@ -27,27 +27,38 @@ export function AnswerOptions({
   }
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-2.5">
       {options.map((option, index) => {
         const isSelected = selectedIndex === index
         const isCorrect = index === correctIndex
         const showCorrect = isShowingFeedback && isCorrect
         const showIncorrect = isShowingFeedback && isSelected && !isCorrect
 
-        let buttonClass = 'bg-white border-2 border-gray-300 text-gray-800'
-        let animationClass = 'animate-fade-in'
+        let buttonStyle: React.CSSProperties = {
+          background: '#fff8e7',
+          border: '2px solid #8a6a3f',
+          color: '#4a3116',
+        }
 
         if (showCorrect) {
-          buttonClass = 'bg-green-100 border-2 border-green-500 text-green-900'
-          animationClass = 'answer-button correct'
+          buttonStyle = {
+            background: '#e3f2d8',
+            border: '2px solid #4a7a2e',
+            color: '#284d16',
+          }
         } else if (showIncorrect) {
-          buttonClass = 'bg-red-100 border-2 border-red-500 text-red-900'
-          animationClass = 'answer-button incorrect'
+          buttonStyle = {
+            background: '#f6dede',
+            border: '2px solid #a33',
+            color: '#6b1414',
+            animation: 'shakeX 0.4s',
+          }
         } else if (isSelected && !isShowingFeedback) {
-          buttonClass = 'bg-blue-100 border-2 border-blue-500 text-blue-900'
-          animationClass = 'answer-button selected'
-        } else {
-          animationClass = 'answer-button'
+          buttonStyle = {
+            background: '#f0dfae',
+            border: '2px solid #b8860b',
+            color: '#4a3116',
+          }
         }
 
         return (
@@ -55,22 +66,23 @@ export function AnswerOptions({
             key={index}
             onClick={() => handleSelectAnswer(index)}
             disabled={disabled}
-            className={`w-full p-4 rounded-lg font-semibold transition-all duration-200 text-left ${buttonClass} ${animationClass} ${
-              !disabled ? 'cursor-pointer hover:shadow-lg' : 'cursor-not-allowed'
-            }`}
+            className="w-full text-center font-semibold text-sm transition-all duration-200"
             style={{
-              animationDelay: `${index * 0.08}s`,
+              ...buttonStyle,
+              padding: '12px',
+              cursor: !disabled ? 'pointer' : 'not-allowed',
+              opacity: disabled && !showCorrect && !showIncorrect ? 0.6 : 1,
             }}
           >
-            <span className="inline-block mr-3 font-bold">
+            <span className="mr-2 font-bold">
               {String.fromCharCode(65 + index)}.
             </span>
             {option}
             {showCorrect && (
-              <span className="float-right text-lg">✓</span>
+              <span className="ml-2">✓</span>
             )}
             {showIncorrect && (
-              <span className="float-right text-lg">✗</span>
+              <span className="ml-2">✗</span>
             )}
           </button>
         )
