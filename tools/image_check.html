@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Block Image Check (100 blocks)</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #1e1e1e; color: #eee; margin: 0; padding: 20px; }
+  h1 { font-size: 18px; }
+  #summary { position: sticky; top: 0; background: #1e1e1e; padding: 10px 0; font-size: 16px; z-index: 10; border-bottom: 1px solid #444; }
+  #summary .ok-count { color: #4caf50; font-weight: bold; }
+  #summary .broken-count { color: #f44336; font-weight: bold; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; margin-top: 16px; }
+  .tile { background: #2a2a2a; border: 2px solid #444; border-radius: 6px; padding: 8px; text-align: center; }
+  .tile img { width: 64px; height: 64px; object-fit: contain; image-rendering: pixelated; background: #111; }
+  .tile .name { font-size: 11px; margin-top: 6px; word-break: break-word; }
+  .tile.ok { border-color: #4caf50; }
+  .tile.broken { border-color: #f44336; background: #3a1f1f; }
+  .tile.broken::after { content: "BROKEN"; display: block; color: #f44336; font-size: 10px; font-weight: bold; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div id="summary">
+    <h1>Block Image Check -- 100 blocks</h1>
+    <span id="counts">Loaded: <span class="ok-count">0</span> &nbsp; Broken: <span class="broken-count">0</span> &nbsp; Pending: 100</span>
+  </div>
+  <div class="grid">
+      <div class="tile" data-name="stone">
+        <img src="https://minecraft.wiki/images/Stone_JE5_BE3.png?5780c" alt="Stone"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Stone</div>
+      </div>
+      <div class="tile" data-name="cobblestone">
+        <img src="https://minecraft.wiki/images/Cobblestone_JE5_BE3.png?25024" alt="Cobblestone"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Cobblestone</div>
+      </div>
+      <div class="tile" data-name="bamboo_mosaic">
+        <img src="https://minecraft.wiki/images/Bamboo_Mosaic_JE1_BE1.png?2d702" alt="Bamboo Mosaic"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Bamboo Mosaic</div>
+      </div>
+      <div class="tile" data-name="lava">
+        <img src="https://minecraft.wiki/images/Lava_JE19.gif?792cb" alt="Lava"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Lava</div>
+      </div>
+      <div class="tile" data-name="nether_gold_ore">
+        <img src="https://minecraft.wiki/images/Nether_Gold_Ore_JE2_BE1.png?c7842" alt="Nether Gold Ore"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Nether Gold Ore</div>
+      </div>
+      <div class="tile" data-name="muddy_mangrove_roots">
+        <img src="https://minecraft.wiki/images/Muddy_Mangrove_Roots_JE1_BE1.png?14614" alt="Muddy Mangrove Roots"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Muddy Mangrove Roots</div>
+      </div>
+      <div class="tile" data-name="oak_wood">
+        <img src="https://minecraft.wiki/images/Oak_Wood_%28UD%29_JE7_BE2.png?74743" alt="Oak Wood"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Oak Wood</div>
+      </div>
+      <div class="tile" data-name="stripped_jungle_wood">
+        <img src="https://minecraft.wiki/images/Stripped_Jungle_Wood_%28UD%29_JE1_BE1.png?9244c" alt="Stripped Jungle Wood"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Stripped Jungle Wood</div>
+      </div>
+      <div class="tile" data-name="dark_oak_leaves">
+        <img src="https://minecraft.wiki/images/Dark_Oak_Leaves.png?36253" alt="Dark Oak Leaves"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Dark Oak Leaves</div>
+      </div>
+      <div class="tile" data-name="dispenser">
+        <img src="https://minecraft.wiki/images/Dispenser_%28S%29_JE4.png?a8e35" alt="Dispenser"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Dispenser</div>
+      </div>
+      <div class="tile" data-name="gray_bed">
+        <img src="https://minecraft.wiki/images/Gray_Bed.png?c70aa" alt="Gray Bed"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Gray Bed</div>
+      </div>
+      <div class="tile" data-name="sticky_piston">
+        <img src="https://minecraft.wiki/images/Sticky_Piston_%28U%29_JE4.png?b46dc" alt="Sticky Piston"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Sticky Piston</div>
+      </div>
+      <div class="tile" data-name="orange_wool">
+        <img src="https://minecraft.wiki/images/Orange_Wool_JE3_BE3.png?c3436" alt="Orange Wool"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Orange Wool</div>
+      </div>
+      <div class="tile" data-name="green_wool">
+        <img src="https://minecraft.wiki/images/Green_Wool_JE3_BE3.png?53595" alt="Green Wool"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Green Wool</div>
+      </div>
+      <div class="tile" data-name="white_tulip">
+        <img src="https://minecraft.wiki/images/White_Tulip_JE7_BE2.png?d3bed" alt="White Tulip"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">White Tulip</div>
+      </div>
+      <div class="tile" data-name="bookshelf">
+        <img src="https://minecraft.wiki/images/Bookshelf_JE4_BE2.png?9b143" alt="Bookshelf"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Bookshelf</div>
+      </div>
+      <div class="tile" data-name="pale_oak_shelf">
+        <img src="https://minecraft.wiki/images/Pale_Oak_Shelf_JE1_BE2.png?01b82" alt="Pale Oak Shelf"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Pale Oak Shelf</div>
+      </div>
+      <div class="tile" data-name="chest">
+        <img src="https://minecraft.wiki/images/Chest_%28S%29_JE2.png?6b608" alt="Chest"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Chest</div>
+      </div>
+      <div class="tile" data-name="birch_sign">
+        <img src="https://minecraft.wiki/images/Birch_Sign_%280%29.png?bdec9" alt="Birch Sign"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Birch Sign</div>
+      </div>
+      <div class="tile" data-name="oak_wall_sign">
+        <img src="https://minecraft.wiki/images/Oak_Sign_%280%29.png?530fb" alt="Oak Sign"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Oak Sign</div>
+      </div>
+      <div class="tile" data-name="spruce_hanging_sign">
+        <img src="https://minecraft.wiki/images/Spruce_Hanging_Sign_JE1_BE1.png?f4f4d" alt="Spruce Hanging Sign"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Spruce Hanging Sign</div>
+      </div>
+      <div class="tile" data-name="spruce_wall_hanging_sign">
+        <img src="https://minecraft.wiki/images/Spruce_Hanging_Sign_JE1_BE1.png?f4f4d" alt="Spruce Hanging Sign"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Spruce Hanging Sign</div>
+      </div>
+      <div class="tile" data-name="lever">
+        <img src="https://minecraft.wiki/images/Wall_Lever_%28S%29_JE5-L3.png?039e0" alt="Lever"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Lever</div>
+      </div>
+      <div class="tile" data-name="bamboo_pressure_plate">
+        <img src="https://minecraft.wiki/images/Bamboo_Pressure_Plate_JE2_BE2.png?0b70a" alt="Bamboo Pressure Plate"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Bamboo Pressure Plate</div>
+      </div>
+      <div class="tile" data-name="clay">
+        <img src="https://minecraft.wiki/images/Clay_JE2_BE2.png?0c9e3" alt="Clay"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Clay</div>
+      </div>
+      <div class="tile" data-name="copper_wall_torch">
+        <img src="https://minecraft.wiki/images/Copper_Torch_JE2_BE2.png?2cdc5" alt="Copper Torch"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Copper Torch</div>
+      </div>
+      <div class="tile" data-name="lime_stained_glass">
+        <img src="https://minecraft.wiki/images/Lime_Stained_Glass_JE3_BE3.png?4394d" alt="Lime Stained Glass"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Lime Stained Glass</div>
+      </div>
+      <div class="tile" data-name="oak_trapdoor">
+        <img src="https://minecraft.wiki/images/Oak_Trapdoor_JE4_BE2.png?5c6d0" alt="Oak Trapdoor"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Oak Trapdoor</div>
+      </div>
+      <div class="tile" data-name="cracked_stone_bricks">
+        <img src="https://minecraft.wiki/images/Cracked_Stone_Bricks_JE3_BE2.png?2e4f2" alt="Cracked Stone Bricks"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Cracked Stone Bricks</div>
+      </div>
+      <div class="tile" data-name="red_mushroom_block">
+        <img src="https://minecraft.wiki/images/Red_Mushroom_Block_%28ESU%29_JE2_BE2.png?3c3f9" alt="Red Mushroom Block"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Red Mushroom Block</div>
+      </div>
+      <div class="tile" data-name="copper_chain">
+        <img src="https://minecraft.wiki/images/Copper_Chain_%28UD%29_JE1.png?b436c" alt="Copper Chain"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Copper Chain</div>
+      </div>
+      <div class="tile" data-name="attached_pumpkin_stem">
+        <img src="https://minecraft.wiki/images/Attached_Pumpkin_Stem_%28W%29_JE5.png?0a6f0" alt="Attached Pumpkin Stem"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Attached Pumpkin Stem</div>
+      </div>
+      <div class="tile" data-name="lily_pad">
+        <img src="https://minecraft.wiki/images/Lily_Pad_JE3.png?2e58a" alt="Lily Pad"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Lily Pad</div>
+      </div>
+      <div class="tile" data-name="enchanting_table">
+        <img src="https://minecraft.wiki/images/Enchanting_Table_JE4_BE2.png?7a922" alt="Enchanting Table"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Enchanting Table</div>
+      </div>
+      <div class="tile" data-name="sandstone_stairs">
+        <img src="https://minecraft.wiki/images/Sandstone_Stairs_%28N%29_JE6_BE3.png?8c7d8" alt="Sandstone Stairs"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Sandstone Stairs</div>
+      </div>
+      <div class="tile" data-name="beacon">
+        <img src="https://minecraft.wiki/images/Beacon_JE6_BE2.png?684bf" alt="Beacon"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Beacon</div>
+      </div>
+      <div class="tile" data-name="potted_pale_oak_sapling">
+        <img src="https://minecraft.wiki/images/Potted_Pale_Oak_Sapling_JE1.png?be679" alt="Potted Pale Oak Sapling"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Potted Pale Oak Sapling</div>
+      </div>
+      <div class="tile" data-name="potted_pink_tulip">
+        <img src="https://minecraft.wiki/images/Potted_Pink_Tulip_JE5.png?bbe8f" alt="Potted Pink Tulip"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Potted Pink Tulip</div>
+      </div>
+      <div class="tile" data-name="spruce_button">
+        <img src="https://minecraft.wiki/images/Spruce_Button_JE5.png?55a92" alt="Spruce Button"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Spruce Button</div>
+      </div>
+      <div class="tile" data-name="wither_skeleton_wall_skull">
+        <img src="https://minecraft.wiki/images/Wither_Skeleton_Skull_%28S%29_JE2.png?0a739" alt="Wither Skeleton Skull"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Wither Skeleton Skull</div>
+      </div>
+      <div class="tile" data-name="anvil">
+        <img src="https://minecraft.wiki/images/Anvil_%28N%29_JE3.png?d438e" alt="Anvil"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Anvil</div>
+      </div>
+      <div class="tile" data-name="chiseled_quartz_block">
+        <img src="https://minecraft.wiki/images/Chiseled_Quartz_Block_%28UD%29_JE2_BE2.png?3a186" alt="Chiseled Quartz Block"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Chiseled Quartz Block</div>
+      </div>
+      <div class="tile" data-name="pink_terracotta">
+        <img src="https://minecraft.wiki/images/Pink_Terracotta_JE1_BE1.png?f6a99" alt="Pink Terracotta"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Pink Terracotta</div>
+      </div>
+      <div class="tile" data-name="magenta_stained_glass_pane">
+        <img src="https://minecraft.wiki/images/Magenta_Stained_Glass_Pane_%28EW%29_JE9.png?ac9bf" alt="Magenta Stained Glass Pane"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Magenta Stained Glass Pane</div>
+      </div>
+      <div class="tile" data-name="green_stained_glass_pane">
+        <img src="https://minecraft.wiki/images/Green_Stained_Glass_Pane_%28EW%29_JE9.png?4c3c1" alt="Green Stained Glass Pane"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Green Stained Glass Pane</div>
+      </div>
+      <div class="tile" data-name="prismarine">
+        <img src="https://minecraft.wiki/images/Prismarine_JE2_BE2.png?c5029" alt="Prismarine"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Prismarine</div>
+      </div>
+      <div class="tile" data-name="white_carpet">
+        <img src="https://minecraft.wiki/images/White_Carpet_JE2_BE2.png?ec488" alt="White Carpet"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">White Carpet</div>
+      </div>
+      <div class="tile" data-name="brown_carpet">
+        <img src="https://minecraft.wiki/images/Brown_Carpet_JE2_BE2.png?57075" alt="Brown Carpet"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Brown Carpet</div>
+      </div>
+      <div class="tile" data-name="tall_grass">
+        <img src="https://minecraft.wiki/images/Tall_Grass_JE4.png?b945f" alt="Tall Grass"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Tall Grass</div>
+      </div>
+      <div class="tile" data-name="purple_banner">
+        <img src="https://minecraft.wiki/images/Purple_Banner_JE2_BE2.png?c0021" alt="Purple Banner"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Purple Banner</div>
+      </div>
+      <div class="tile" data-name="pink_wall_banner">
+        <img src="https://minecraft.wiki/images/Pink_Banner_JE2_BE2.png?f0922" alt="Pink Banner"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Pink Banner</div>
+      </div>
+      <div class="tile" data-name="chiseled_red_sandstone">
+        <img src="https://minecraft.wiki/images/Chiseled_Red_Sandstone_JE4_BE2.png?3fe71" alt="Chiseled Red Sandstone"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Chiseled Red Sandstone</div>
+      </div>
+      <div class="tile" data-name="bamboo_slab">
+        <img src="https://minecraft.wiki/images/Bamboo_Slab_JE2_BE2.png?a8502" alt="Bamboo Slab"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Bamboo Slab</div>
+      </div>
+      <div class="tile" data-name="quartz_slab">
+        <img src="https://minecraft.wiki/images/Quartz_Slab_JE3_BE3.png?346eb" alt="Quartz Slab"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Quartz Slab</div>
+      </div>
+      <div class="tile" data-name="cherry_fence_gate">
+        <img src="https://minecraft.wiki/images/Cherry_Fence_Gate_JE1_BE1.png?30df9" alt="Cherry Fence Gate"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Cherry Fence Gate</div>
+      </div>
+      <div class="tile" data-name="pale_oak_fence">
+        <img src="https://minecraft.wiki/images/Pale_Oak_Fence_%28EW%29_JE1.png?13103" alt="Pale Oak Fence"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Pale Oak Fence</div>
+      </div>
+      <div class="tile" data-name="end_rod">
+        <img src="https://minecraft.wiki/images/End_Rod_%28U%29_JE2_BE2.png?705c1" alt="End Rod"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">End Rod</div>
+      </div>
+      <div class="tile" data-name="dirt_path">
+        <img src="https://minecraft.wiki/images/Dirt_Path_JE4_BE3.png?0309b" alt="Dirt Path"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Dirt Path</div>
+      </div>
+      <div class="tile" data-name="orange_shulker_box">
+        <img src="https://minecraft.wiki/images/Orange_Shulker_Box_JE2_BE2.png?205aa" alt="Orange Shulker Box"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Orange Shulker Box</div>
+      </div>
+      <div class="tile" data-name="brown_shulker_box">
+        <img src="https://minecraft.wiki/images/Brown_Shulker_Box_JE2_BE2.png?e7e04" alt="Brown Shulker Box"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Brown Shulker Box</div>
+      </div>
+      <div class="tile" data-name="light_gray_glazed_terracotta">
+        <img src="https://minecraft.wiki/images/Light_Gray_Glazed_Terracotta_%28S%29_JE1_BE1.png?47d98" alt="Light Gray Glazed Terracotta"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Light Gray Glazed Terracotta</div>
+      </div>
+      <div class="tile" data-name="light_blue_concrete">
+        <img src="https://minecraft.wiki/images/Light_Blue_Concrete.png?80b60" alt="Light Blue Concrete"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Light Blue Concrete</div>
+      </div>
+      <div class="tile" data-name="black_concrete">
+        <img src="https://minecraft.wiki/images/Black_Concrete.png?448aa" alt="Black Concrete"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Black Concrete</div>
+      </div>
+      <div class="tile" data-name="blue_concrete_powder">
+        <img src="https://minecraft.wiki/images/Blue_Concrete_Powder.png?e98fc" alt="Blue Concrete Powder"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Blue Concrete Powder</div>
+      </div>
+      <div class="tile" data-name="dead_tube_coral_block">
+        <img src="https://minecraft.wiki/images/Dead_Tube_Coral_Block_JE1_BE1.png?e65c2" alt="Dead Tube Coral Block"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Dead Tube Coral Block</div>
+      </div>
+      <div class="tile" data-name="dead_bubble_coral">
+        <img src="https://minecraft.wiki/images/Dead_Bubble_Coral_JE1_BE1.png?066d3" alt="Dead Bubble Coral"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Dead Bubble Coral</div>
+      </div>
+      <div class="tile" data-name="dead_fire_coral_fan">
+        <img src="https://minecraft.wiki/images/Dead_Fire_Coral_Fan_JE1.png?b28a0" alt="Dead Fire Coral Fan"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Dead Fire Coral Fan</div>
+      </div>
+      <div class="tile" data-name="tube_coral_wall_fan">
+        <img src="https://minecraft.wiki/images/Tube_Coral_Wall_Fan_%28S%29_JE2.png?ec4e5" alt="Tube Coral Wall Fan"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Tube Coral Wall Fan</div>
+      </div>
+      <div class="tile" data-name="bubble_column">
+        <img src="https://minecraft.wiki/images/Bubble_Column_JE1_BE1.png?b75d8" alt="Bubble Column"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Bubble Column</div>
+      </div>
+      <div class="tile" data-name="red_nether_brick_stairs">
+        <img src="https://minecraft.wiki/images/Red_Nether_Brick_Stairs_%28N%29_JE3_BE3.png?cbe64" alt="Red Nether Brick Stairs"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Red Nether Brick Stairs</div>
+      </div>
+      <div class="tile" data-name="granite_slab">
+        <img src="https://minecraft.wiki/images/Granite_Slab_JE1_BE1.png?44cbf" alt="Granite Slab"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Granite Slab</div>
+      </div>
+      <div class="tile" data-name="nether_brick_wall">
+        <img src="https://minecraft.wiki/images/Nether_Brick_Wall_%28ewU%29_JE3.png?3cb81" alt="Nether Brick Wall"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Nether Brick Wall</div>
+      </div>
+      <div class="tile" data-name="cartography_table">
+        <img src="https://minecraft.wiki/images/Cartography_Table_JE3_BE2.png?519d2" alt="Cartography Table"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Cartography Table</div>
+      </div>
+      <div class="tile" data-name="oxidized_copper_lantern">
+        <img src="https://minecraft.wiki/images/Oxidized_Copper_Lantern_JE1_BE1.png?d96ec" alt="Oxidized Copper Lantern"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Oxidized Copper Lantern</div>
+      </div>
+      <div class="tile" data-name="stripped_warped_hyphae">
+        <img src="https://minecraft.wiki/images/Stripped_Warped_Hyphae_%28UD%29_JE1_BE1.png?9abb5" alt="Stripped Warped Hyphae"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Stripped Warped Hyphae</div>
+      </div>
+      <div class="tile" data-name="shroomlight">
+        <img src="https://minecraft.wiki/images/Shroomlight_JE1.png?5c263" alt="Shroomlight"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Shroomlight</div>
+      </div>
+      <div class="tile" data-name="crimson_fence">
+        <img src="https://minecraft.wiki/images/Crimson_Fence_%28EW%29_JE1.png?87f0e" alt="Crimson Fence"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Crimson Fence</div>
+      </div>
+      <div class="tile" data-name="warped_door">
+        <img src="https://minecraft.wiki/images/Warped_Door_JE3.png?c586a" alt="Warped Door"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Warped Door</div>
+      </div>
+      <div class="tile" data-name="honeycomb_block">
+        <img src="https://minecraft.wiki/images/Honeycomb_Block_JE1_BE1.png?ff510" alt="Honeycomb Block"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Honeycomb Block</div>
+      </div>
+      <div class="tile" data-name="blackstone_stairs">
+        <img src="https://minecraft.wiki/images/Blackstone_Stairs_JE3.png?a1b7f" alt="Blackstone Stairs"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Blackstone Stairs</div>
+      </div>
+      <div class="tile" data-name="polished_blackstone_slab">
+        <img src="https://minecraft.wiki/images/Polished_Blackstone_Slab_JE1_BE1.png?7167f" alt="Polished Blackstone Slab"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Polished Blackstone Slab</div>
+      </div>
+      <div class="tile" data-name="light_blue_candle">
+        <img src="https://minecraft.wiki/images/Light_Blue_Candle_JE1.png?eb118" alt="Light Blue Candle"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Light Blue Candle</div>
+      </div>
+      <div class="tile" data-name="black_candle">
+        <img src="https://minecraft.wiki/images/Black_Candle_JE1.png?264e7" alt="Black Candle"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Black Candle</div>
+      </div>
+      <div class="tile" data-name="cyan_candle_cake">
+        <img src="https://minecraft.wiki/images/Cake_with_Cyan_Candle_JE1.png?f4268" alt="Cake with Cyan Candle"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Cake with Cyan Candle</div>
+      </div>
+      <div class="tile" data-name="small_amethyst_bud">
+        <img src="https://minecraft.wiki/images/Small_Amethyst_Bud_%28U%29_JE1_BE2.png?e17c2" alt="Small Amethyst Bud"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Small Amethyst Bud</div>
+      </div>
+      <div class="tile" data-name="tuff_brick_slab">
+        <img src="https://minecraft.wiki/images/Tuff_Brick_Slab_JE3_BE3.png?a876d" alt="Tuff Brick Slab"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Tuff Brick Slab</div>
+      </div>
+      <div class="tile" data-name="sculk_shrieker">
+        <img src="https://minecraft.wiki/images/Sculk_Shrieker_JE1_BE2.png?cbfa5" alt="Sculk Shrieker"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Sculk Shrieker</div>
+      </div>
+      <div class="tile" data-name="oxidized_chiseled_copper">
+        <img src="https://minecraft.wiki/images/Oxidized_Chiseled_Copper_JE1_BE1.png?9fff6" alt="Oxidized Chiseled Copper"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Oxidized Chiseled Copper</div>
+      </div>
+      <div class="tile" data-name="oxidized_cut_copper_slab">
+        <img src="https://minecraft.wiki/images/Oxidized_Cut_Copper_Slab_JE1_BE1.png?2408a" alt="Oxidized Cut Copper Slab"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Oxidized Cut Copper Slab</div>
+      </div>
+      <div class="tile" data-name="waxed_oxidized_cut_copper_stairs">
+        <img src="https://minecraft.wiki/images/Oxidized_Cut_Copper_Stairs_%28N%29_JE1_BE1.png?6d78c" alt="Waxed Oxidized Cut Copper Stairs"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Waxed Oxidized Cut Copper Stairs</div>
+      </div>
+      <div class="tile" data-name="weathered_copper_door">
+        <img src="https://minecraft.wiki/images/Weathered_Copper_Door_JE3_BE3.png?ec52b" alt="Weathered Copper Door"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Weathered Copper Door</div>
+      </div>
+      <div class="tile" data-name="waxed_weathered_copper_trapdoor">
+        <img src="https://minecraft.wiki/images/Weathered_Copper_Trapdoor_JE2_BE2.png?c354f" alt="Waxed Weathered Copper Trapdoor"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Waxed Weathered Copper Trapdoor</div>
+      </div>
+      <div class="tile" data-name="weathered_copper_bulb">
+        <img src="https://minecraft.wiki/images/Weathered_Copper_Bulb_JE1_BE1.png?0b0da" alt="Weathered Copper Bulb"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Weathered Copper Bulb</div>
+      </div>
+      <div class="tile" data-name="waxed_weathered_copper_chest">
+        <img src="https://minecraft.wiki/images/Weathered_Copper_Chest_%28S%29_BE1.png?d22d2" alt="Waxed Weathered Copper Chest"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Waxed Weathered Copper Chest</div>
+      </div>
+      <div class="tile" data-name="exposed_lightning_rod">
+        <img src="https://minecraft.wiki/images/Exposed_Lightning_Rod_%28U%29_JE1.png?63b1b" alt="Exposed Lightning Rod"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Exposed Lightning Rod</div>
+      </div>
+      <div class="tile" data-name="azalea">
+        <img src="https://minecraft.wiki/images/Azalea_JE2_BE2.png?8e29b" alt="Azalea"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Azalea</div>
+      </div>
+      <div class="tile" data-name="rooted_dirt">
+        <img src="https://minecraft.wiki/images/Rooted_Dirt_JE1_BE1.png?83182" alt="Rooted Dirt"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Rooted Dirt</div>
+      </div>
+      <div class="tile" data-name="deepslate_tile_stairs">
+        <img src="https://minecraft.wiki/images/Deepslate_Tile_Stairs_JE2_BE1.png?4b9ed" alt="Deepslate Tile Stairs"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Deepslate Tile Stairs</div>
+      </div>
+      <div class="tile" data-name="smooth_basalt">
+        <img src="https://minecraft.wiki/images/Smooth_Basalt_JE1_BE1.png?e9359" alt="Smooth Basalt"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Smooth Basalt</div>
+      </div>
+      <div class="tile" data-name="crafter">
+        <img src="https://minecraft.wiki/images/Crafter_JE4_BE3.png?3996e" alt="Crafter"
+             onload="this.closest('.tile').classList.add('ok'); updateCount()"
+             onerror="this.closest('.tile').classList.add('broken'); updateCount()">
+        <div class="name">Crafter</div>
+      </div>
+  </div>
+  <script>
+    let ok = 0, broken = 0;
+    const total = 100;
+    function updateCount() {
+      ok = document.querySelectorAll('.tile.ok').length;
+      broken = document.querySelectorAll('.tile.broken').length;
+      const pending = total - ok - broken;
+      document.querySelector('.ok-count').textContent = ok;
+      document.querySelector('.broken-count').textContent = broken;
+      document.getElementById('counts').innerHTML =
+        `Loaded: <span class="ok-count">${ok}</span> &nbsp; Broken: <span class="broken-count">${broken}</span> &nbsp; Pending: ${pending}`;
+    }
+  </script>
+</body>
+</html>
