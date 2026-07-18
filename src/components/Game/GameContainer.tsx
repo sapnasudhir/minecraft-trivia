@@ -8,9 +8,7 @@ import { GameOverScreen } from './GameOverScreen'
 export function GameContainer() {
   const gameStatus = useGameStore((state) => state.gameStatus)
   const score = useGameStore((state) => state.score)
-  const totalQuestionsPerGame = useGameStore(
-    (state) => state.totalQuestionsPerGame
-  )
+  const answers = useGameStore((state) => state.answers)
   const startGame = useGameStore((state) => state.startGame)
   const resetGame = useGameStore((state) => state.resetGame)
 
@@ -37,7 +35,7 @@ export function GameContainer() {
         <button
           onClick={() => {
             resetGame()
-            startGame()
+            void startGame()
           }}
           className="bg-white text-red-700 font-bold py-3 px-6 rounded-lg"
         >
@@ -55,7 +53,7 @@ export function GameContainer() {
     return (
       <GameOverScreen
         score={score}
-        totalQuestions={totalQuestionsPerGame}
+        totalQuestions={answers.length}
       />
     )
   }
