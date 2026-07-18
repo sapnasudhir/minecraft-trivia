@@ -1,89 +1,19 @@
 import { GameQuestion } from '@/types/game'
 import { MinecraftBlock, TriviaHook } from '@/types/block'
-import { getCorpusBlocks } from '@/data/loaders'
-import { shuffleArray, getRandomElements, getRandomElement } from './answerShuffler'
+import { getRandomElements } from './answerShuffler'
 
-interface BlockWithHook {
-  block: MinecraftBlock
-  hook: TriviaHook
-}
-
-export function generateGameQuestions(count: number = 5): GameQuestion[] {
-  const blocks = getCorpusBlocks()
-  const selectedBlocksWithHooks = selectRandomBlocksWithHooks(blocks, count)
-
-  return selectedBlocksWithHooks.map((item, index) => {
-    const { block, hook } = item
-    const correctAnswer = hook.answer
-
-    const incorrectAnswers = generateIncorrectAnswers(
-      blocks,
-      block.id,
-      hook.category,
-      correctAnswer,
-      4
-    )
-
-    const allOptions = shuffleArray([correctAnswer, ...incorrectAnswers])
-    const correctAnswerIndex = allOptions.indexOf(correctAnswer)
-
-    const explanation = generateExplanation(block, hook)
-
-    return {
-      id: `${block.id}_${hook.category}_${index}`,
-      blockId: block.id,
-      blockName: block.name,
-      question: hook.questionSeed,
-      correctAnswer,
-      allOptions,
-      correctAnswerIndex,
-      imageUrl: block.textureUrl,
-      category: hook.category,
-      difficulty: hook.difficulty,
-      explanation,
-    }
-  })
-}
-
-function selectRandomBlocksWithHooks(
-  blocks: MinecraftBlock[],
-  count: number
-): BlockWithHook[] {
-  const result: BlockWithHook[] = []
-  const usedBlockIds = new Set<string>()
-
-  while (result.length < count && usedBlockIds.size < blocks.length) {
-    const randomBlock = getRandomElement(blocks)
-
-    if (!usedBlockIds.has(randomBlock.id)) {
-      usedBlockIds.add(randomBlock.id)
-      const randomHook = getRandomElement(randomBlock.trivia_hooks)
-      result.push({ block: randomBlock, hook: randomHook })
-    }
+/**
+ * Fetches a set of ready-to-serve questions from the DB-backed API. Distractor
+ * generation happens offline (see scripts/precompute_questions.ts, which
+ * reuses generateIncorrectAnswers/generateExplanation below) -- this function
+ * just samples the precomputed question_bank, it doesn't generate anything.
+ */
+export async function generateGameQuestions(count: number = 5): Promise<GameQuestion[]> {
+  const res = await fetch(`/api/questions?count=${count}`)
+  if (!res.ok) {
+    throw new Error(`Failed to load questions: ${res.status}`)
   }
-
-  // If we couldn't get enough unique blocks, allow duplicate blocks with different hooks
-  while (result.length < count) {
-    const randomBlock = getRandomElement(blocks)
-    const unusedHooks = randomBlock.trivia_hooks.filter(
-      (hook) =>
-        !result.some(
-          (item) =>
-            item.block.id === randomBlock.id && item.hook === hook
-        )
-    )
-
-    if (unusedHooks.length > 0) {
-      const hook = getRandomElement(unusedHooks)
-      result.push({ block: randomBlock, hook })
-    } else {
-      // Fallback: allow same hook
-      const hook = getRandomElement(randomBlock.trivia_hooks)
-      result.push({ block: randomBlock, hook })
-    }
-  }
-
-  return result
+  return res.json()
 }
 
 export function generateIncorrectAnswers(

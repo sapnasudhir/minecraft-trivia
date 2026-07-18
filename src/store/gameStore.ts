@@ -19,16 +19,21 @@ export const useGameStore = create<GameState>((set, get) => ({
     set({ questions })
   },
 
-  startGame: () => {
-    const questions = generateGameQuestions(TOTAL_QUESTIONS_PER_GAME)
-    set({
-      gameStatus: 'playing',
-      questions,
-      currentQuestionIndex: 0,
-      score: 0,
-      answers: [],
-      selectedAnswerIndex: null,
-    })
+  startGame: async () => {
+    set({ gameStatus: 'loading' })
+    try {
+      const questions = await generateGameQuestions(TOTAL_QUESTIONS_PER_GAME)
+      set({
+        gameStatus: 'playing',
+        questions,
+        currentQuestionIndex: 0,
+        score: 0,
+        answers: [],
+        selectedAnswerIndex: null,
+      })
+    } catch {
+      set({ gameStatus: 'error' })
+    }
   },
 
   selectAnswer: (index: number) => {

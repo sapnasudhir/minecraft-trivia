@@ -20,7 +20,7 @@ export interface PlayerAnswer {
 }
 
 export interface GameState {
-  gameStatus: 'idle' | 'playing' | 'feedback' | 'finished'
+  gameStatus: 'idle' | 'loading' | 'playing' | 'feedback' | 'finished' | 'error'
   currentQuestionIndex: number
   questions: GameQuestion[]
   selectedAnswerIndex: number | null
@@ -29,7 +29,7 @@ export interface GameState {
   totalQuestionsPerGame: number
 
   // Actions
-  startGame: () => void
+  startGame: () => Promise<void>
   selectAnswer: (index: number) => void
   showFeedback: () => void
   nextQuestion: () => void
