@@ -8,6 +8,13 @@
       "when": 1784401312360,
       "tag": "0000_lazy_stryfe",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1784402332764,
+      "tag": "0001_loud_old_lace",
+      "breakpoints": true
     }
   ]
 }

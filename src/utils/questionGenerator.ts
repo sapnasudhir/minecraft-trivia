@@ -86,7 +86,7 @@ function selectRandomBlocksWithHooks(
   return result
 }
 
-function generateIncorrectAnswers(
+export function generateIncorrectAnswers(
   allBlocks: MinecraftBlock[],
   currentBlockId: string,
   questionCategory: string,
@@ -226,7 +226,7 @@ function isTooSimilar(str1: string, str2: string): boolean {
   return false
 }
 
-function generateExplanation(
+export function generateExplanation(
   block: MinecraftBlock,
   hook: TriviaHook
 ): string {

@@ -62,6 +62,7 @@ export const questionBank = pgTable(
     correctAnswer: text('correct_answer').notNull(),
     options: jsonb('options').notNull(),
     correctIndex: smallint('correct_index').notNull(),
+    explanation: text('explanation'),
     createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
   },
   (table) => [
