@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 @import "tailwindcss";
 
 :root {
@@ -23,4 +25,182 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #__next {
+  width: 100%;
+  height: 100%;
+}
+
+/* Minecraft pixel font styles */
+.pixel-font {
+  font-family: 'Press Start 2P', cursive;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Remove default button styles */
+button {
+  font-family: inherit;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes correctPulse {
+  0% {
+    background-color: inherit;
+  }
+  50% {
+    background-color: rgba(34, 197, 94, 0.3);
+  }
+  100% {
+    background-color: inherit;
+  }
+}
+
+@keyframes incorrectShake {
+  0%, 100% {
+    transform: translateX(0);
+    background-color: inherit;
+  }
+  25% {
+    transform: translateX(-5px);
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+  75% {
+    transform: translateX(5px);
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+}
+
+/* Animation utilities */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+.animate-pulse-sm {
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.animate-bounce-sm {
+  animation: bounce 0.6s ease-in-out;
+}
+
+/* Button animations */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(0px);
+}
+
+/* Answer button animations */
+.answer-button {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.answer-button.selected {
+  animation: pulse 0.4s ease-out;
+}
+
+.answer-button.correct {
+  animation: correctPulse 0.6s ease-in-out;
+}
+
+.answer-button.incorrect {
+  animation: incorrectShake 0.6s ease-in-out;
+}
+
+/* Feedback animations */
+.feedback-panel {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Score animation */
+.score-update {
+  animation: pulse 0.5s ease-out;
+}
+
+/* Question card animation */
+.question-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Progress bar animation */
+.progress-bar {
+  transition: width 0.4s ease-in-out;
 }
