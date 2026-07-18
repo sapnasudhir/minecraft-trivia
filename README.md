@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Minecraft Block Trivia
+
+A Next.js web game that quizzes players on Minecraft block knowledge — 5 random multiple-choice questions per game, drawn from a corpus of blocks stored in Neon Postgres.
+
+**Live**: https://minecraft-trivia.vercel.app
 
 ## Getting Started
 
-First, run the development server:
+Requires a Neon Postgres database (or any Postgres instance) with the schema in `src/db/schema.ts` migrated in, and a `DATABASE_URL` in `.env.local`.
 
 ```bash
+npm install
+
+# Apply migrations, seed the corpus, and precompute questions
+node --env-file=.env.local node_modules/drizzle-kit/bin.cjs migrate
+node --env-file=.env.local -r tsx/cjs scripts/seed.ts
+node --env-file=.env.local -r tsx/cjs scripts/precompute_questions.ts
+
+# Run the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to play.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## How it's built
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Corpus**: Neon Postgres — `entities`, `trivia_hooks`, `question_bank` tables (see `src/db/schema.ts`)
+- **Data pipeline**: Python ETL in the sibling `ArivMinecraftTrivia/pipeline/` folder — pulls mechanical properties from [PrismarineJS/minecraft-data](https://github.com/PrismarineJS/minecraft-data), generation fields (Y-level, rarity) from minecraft.wiki, and resolves images via the wiki's File: namespace
+- **Questions**: precomputed offline (`scripts/precompute_questions.ts`) with distractors drawn only from same-type values, so every option is contextually consistent — served via `GET /api/questions`, nothing bundled into the client
+- **Game UI**: Zustand for state, Tailwind for styling, Web Audio API for sound (no audio files)
+
+See `CLAUDE.md` for a fuller developer guide and `prd.md` for the product/architecture spec.
+
+## Deployment
+
+Auto-deploys to Vercel on push to `master`. Environment variables (`DATABASE_URL` etc.) must be configured in the Vercel project's Environment Variables settings for each environment (Production/Preview/Development) you use.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Drizzle ORM](https://orm.drizzle.team/)
+- [Neon](https://neon.tech/)

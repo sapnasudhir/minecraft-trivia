@@ -1,10 +1,12 @@
 ﻿# prd.md - Minecraft Block Trivia Technical Product Requirements
 
 ## Executive Summary
-Minecraft Block Trivia is a web-based React/Next.js game that delivers randomized Minecraft block knowledge quizzes to players. The MVP supports 25 blocks with dynamic question generation, real-time scoring, and responsive mobile/desktop UI.
+Minecraft Block Trivia is a web-based React/Next.js game that delivers randomized Minecraft block knowledge quizzes to players. The corpus (100 blocks, DB-backed) lives in Neon Postgres; questions are precomputed offline and served via an API route. Non-boolean questions show 3 options, True/False questions show 2 — distractors are guaranteed contextually consistent with the correct answer's type.
 
 **Live**: https://minecraft-trivia.vercel.app
 **Repository**: https://github.com/sapnasudhir/minecraft-trivia
+
+**Status**: The "Phase 2: Scaling" architecture originally described later in this doc as a future plan has been implemented (Postgres + Drizzle, server-side question generation, `/api/questions`). See "Completed" under Future Roadmap for what shipped and what's still ahead.
 
 ## Architecture Overview
 
@@ -18,52 +20,70 @@ Minecraft Block Trivia is a web-based React/Next.js game that delivers randomize
 | **Audio** | Web Audio API | No external files needed, low latency, built into browser |
 | **Images** | Next.js Image + WebP | Auto-optimization, lazy loading, responsive srcset |
 | **Deployment** | Vercel | Free tier, auto-scaling, GitHub integration, edge caching |
-| **Database** | None (MVP) | Game state lives in browser; no persistence required |
+| **Database** | Neon Postgres + Drizzle ORM | Serverless, scales to zero, JSONB for flexible per-entity-type properties |
+| **Data pipeline** | Python (requests, wikitextparser) | ETL: PrismarineJS/minecraft-data for mechanical properties, wiki scraping for generation fields, wiki File: namespace for images |
 
 ### Project Structure
 `
 minecraft-trivia/
+├── app/
+│   ├── layout.tsx              # Root layout with metadata
+│   ├── page.tsx                # Entry point (renders GameContainer)
+│   ├── globals.css             # Global styles + animations
+│   └── api/questions/route.ts  # GET /api/questions?count=5 -- serves precomputed questions
+│
 ├── src/
-│   ├── app/
-│   │   ├── layout.tsx          # Root layout with metadata
-│   │   ├── page.tsx            # Entry point (renders GameContainer)
-│   │   └── globals.css         # Global styles + animations
-│   │
 │   ├── components/Game/
-│   │   ├── GameContainer.tsx   # Routes between screens based on game status
+│   │   ├── GameContainer.tsx   # Routes between screens based on game status (incl. loading/error)
 │   │   ├── StartScreen.tsx     # Landing: title, hero image, features, START button
 │   │   ├── GameScreen.tsx      # Main game loop: question, answers, score
 │   │   ├── QuestionCard.tsx    # Question display with block image
-│   │   ├── AnswerOptions.tsx   # 5 clickable answer buttons
+│   │   ├── AnswerOptions.tsx   # 3 (or 2 for True/False) clickable answer buttons
 │   │   ├── FeedbackPanel.tsx   # Correct/incorrect feedback + explanation
 │   │   ├── ScoreBoard.tsx      # Live score + accuracy display
 │   │   └── GameOverScreen.tsx  # Final score, performance message, play again
 │   │
 │   ├── data/
-│   │   ├── minecraft_block_trivia_corpus.json  # 25 blocks with all properties
-│   │   └── loaders.ts          # Corpus loading + validation
+│   │   └── minecraft_block_trivia_corpus_100.json  # Pipeline output; read only by scripts/seed.ts
+│   │
+│   ├── db/
+│   │   ├── schema.ts           # Drizzle schema: entities, trivia_hooks, question_bank
+│   │   └── index.ts            # Neon serverless DB client
 │   │
 │   ├── store/
-│   │   └── gameStore.ts        # Zustand store (game state + actions)
+│   │   └── gameStore.ts        # Zustand store (game state + actions; startGame() is async)
 │   │
 │   ├── types/
-│   │   ├── block.ts            # Block, TriviaHook, Properties interfaces
-│   │   └── game.ts             # GameQuestion, GameState, PlayerAnswer
+│   │   ├── block.ts            # Block, TriviaHook (incl. answerType), Properties interfaces
+│   │   └── game.ts             # GameQuestion, GameState (incl. loading/error), PlayerAnswer
 │   │
 │   └── utils/
-│       ├── questionGenerator.ts # Core: transforms hooks → 5-option MC questions
+│       ├── questionGenerator.ts # generateGameQuestions() fetches from API; generateDistractors()/generateExplanation() are the offline-reusable pieces
 │       ├── answerShuffler.ts   # Fisher-Yates shuffle algorithm
 │       └── sounds.ts           # Web Audio API sound synthesis
+│
+├── scripts/
+│   ├── seed.ts                  # Loads corpus JSON into entities/trivia_hooks
+│   └── precompute_questions.ts  # Generates all question_bank rows offline (same-answerType distractors)
+│
+├── tools/
+│   ├── generate_image_check.py  # Regenerates image_check.html from the current corpus
+│   └── image_check.html         # Dev-only diagnostic page -- not part of the app
+│
+├── drizzle/                    # Generated SQL migrations + snapshots
 │
 ├── public/
 │   ├── minecraft-hero.png      # StartScreen hero image
 │   └── gameover-hero.png       # GameOverScreen hero image
 │
 ├── next.config.ts             # Image domain config (minecraft.wiki)
+├── drizzle.config.ts          # Drizzle Kit config (points at DATABASE_URL)
 ├── tailwind.config.ts         # Tailwind customization (animations, fonts)
 ├── tsconfig.json              # TypeScript path aliases (@/...)
-└── package.json               # Dependencies: Next.js, React, Tailwind, Zustand
+└── package.json               # Dependencies: Next.js, React, Tailwind, Zustand, Drizzle, Neon
 `
+
+**Sibling folder (separate from this repo, not committed here)**: `ArivMinecraftTrivia/pipeline/` — the Python ETL pipeline (`fetch_minecraft_data.py`, `wiki_scraper.py`, `texture_resolver.py`, `merge.py`, `select_blocks.py`) that produces the corpus JSON consumed by `scripts/seed.ts`.
 
 ## Data Model
 
@@ -101,23 +121,29 @@ Each block entry contains:
       "category": "mechanical",
       "difficulty": "easy",
       "questionSeed": "What is the minimum tool tier required to mine Diamond Ore?",
-      "answer": "Iron Pickaxe (or better)"
+      "answer": "Iron Pickaxe (or better)",
+      "answerType": "toolTier"
     },
     ...
   ]
 }
 `
 
+This JSON is the pipeline's *output artifact* — the app itself never reads it at runtime. `scripts/seed.ts` loads it once into Postgres (`entities` + `trivia_hooks` tables); the game only ever talks to the DB via `/api/questions`.
+
+**`answerType`** (added post-launch) tags each hook with what *kind* of value its answer is — `toolTier` | `blastResistance` | `yLevelRange` | `lightLevel` | `boolean`. This is what makes distractor generation contextually consistent: a distractor for a `blastResistance` question is only ever sampled from other blocks' `blastResistance` answers, never from an unrelated field.
+
 **Key Constraints**:
-- 25 blocks in MVP (expandable to 300+ in Phase 2)
-- 3-5 trivia hooks per block = 75-125 potential questions
-- All texture URLs must use BlockSprite_block-name.png format
-- Corpus file size: ~1.5 MB (gzips to ~200 KB)
+- 100 blocks currently (Release 2 target: 10,000 records across Blocks + Mobs + Structures)
+- 2-5 trivia hooks per block (266 total hooks → 266 precomputed questions)
+- Non-boolean questions: 3 total options. Boolean (`answerType: 'boolean'`) questions: 2 total options
+- Texture URLs are resolved per-block via the wiki's File: namespace, not a fixed filename pattern (see `pipeline/texture_resolver.py`)
+- Thin-pool answerTypes (e.g. `yLevelRange` has only 2 real blocks currently) fall back to a numeric-perturbation synthesis rather than reusing unrelated values
 
 ### Game State (Zustand Store)
 `	ypescript
 interface GameState {
-  gameStatus: 'idle' | 'playing' | 'feedback' | 'finished'
+  gameStatus: 'idle' | 'loading' | 'playing' | 'feedback' | 'finished' | 'error'
   currentQuestionIndex: number
   questions: GameQuestion[]
   selectedAnswerIndex: number | null
@@ -126,7 +152,7 @@ interface GameState {
   totalQuestionsPerGame: number
 
   // Actions
-  startGame: () => void
+  startGame: () => Promise<void>
   selectAnswer: (index: number) => void
   showFeedback: () => void
   nextQuestion: () => void
@@ -136,7 +162,9 @@ interface GameState {
 `
 
 **State Transitions**:
-- idle → playing: user clicks START GAME
+- idle → loading: user clicks START GAME (`startGame()` fetches `/api/questions`)
+- loading → playing: fetch succeeds
+- loading → error: fetch fails (e.g. DB unreachable) — GameContainer shows a Retry button
 - playing → feedback: user selects answer + clicks SUBMIT
 - feedback → playing: user clicks NEXT QUESTION (Q1-Q4)
 - feedback → finished: user clicks NEXT QUESTION after Q5
@@ -145,88 +173,90 @@ interface GameState {
 ## Question Generation Algorithm
 
 ### Overview
-Transform trivia hooks into 5-option multiple-choice questions with plausible distractors.
+Questions are generated **offline** (`scripts/precompute_questions.ts`), not per-request. The runtime API just samples the precomputed `question_bank` table — this was a deliberate switch away from the original "generate on every game start" design, since Minecraft block facts don't change between deploys and there's no benefit to runtime regeneration, only cost.
 
-### Process
-1. **Block Selection**: Randomly pick 5 blocks from corpus
-2. **Hook Selection**: Pick 1 random hook from each block
-3. **Incorrect Answers**: For each question, generate 4 distractors:
-   - Extract property values from OTHER blocks (mining tools, Y-levels, block names, crafting yields)
-   - Filter to avoid obvious duplicates or semantically identical answers
-   - Return up to 4 plausible alternatives
-4. **Shuffle**: Randomize the position of correct answer among 5 options using Fisher-Yates
-5. **Output**: Return GameQuestion with correct position recorded
+### Process (offline, run after any corpus change)
+1. Load every `trivia_hooks` row, grouped by `answerType` (toolTier / blastResistance / yLevelRange / lightLevel / boolean)
+2. For each hook:
+   - **Boolean** (`answerType: 'boolean'`): the single distractor is just the opposite value (True↔False). No sampling needed — 2 total options.
+   - **Everything else**: sample 2 distractors from *other blocks' hooks sharing the exact same `answerType`* — this is what guarantees every option is the same kind of value as the correct answer. 3 total options.
+   - **Thin-pool fallback**: if fewer than 2 same-type candidates exist (e.g. `yLevelRange` currently has only 2 resolved blocks total), synthesize additional distractors by perturbing the correct value in the same format (e.g. `Y: -63 to 16` → `Y: -40 to 30`) rather than falling back to an unrelated value or a duplicate option
+   - If even that can't produce enough valid distractors, the hook is skipped (no question generated for it) rather than shipping a broken one
+3. Shuffle final options (Fisher-Yates), record the correct index
+4. Insert into `question_bank` with the question text, options, correct index, and a short explanation
 
-### Distractor Strategy
-**Goal**: Answers should be plausible but wrong—hard enough to require block knowledge.
+### Runtime (`GET /api/questions?count=5`)
+1. `SELECT DISTINCT ON (entity_id) ... ORDER BY entity_id, RANDOM()` — one random question per block
+2. `ORDER BY RANDOM() LIMIT 5` on that set — samples 5 of those, so no single game repeats a block
+3. Maps DB rows to the `GameQuestion` shape and returns JSON — no distractor logic runs at request time at all
 
-**Sources of Distractors**:
-- Tool names from other blocks' minToolTier
-- Y-level ranges from other blocks' generation data
-- Block names (players might confuse similar blocks)
-- Crafting yield amounts or stack sizes
-
-**Filtering**:
-- Remove exact duplicates
-- Avoid answers that are substrings of the correct answer
-- Prefer answers from different property categories
+### Why answerType-based distractors
+An earlier version pulled distractors from a category-wide grab-bag (all "mechanical" property values mixed together), which produced nonsense like a blast-resistance number question showing a tool name or a stray `"Hardness: 2"` string as an option. Tagging each hook with its specific answer shape at generation time and sampling only within that shape eliminates that failure mode by construction.
 
 **Example**:
 `
-Question: "What is the minimum tool tier to mine Diamond Ore?"
-Correct: "Iron Pickaxe (or better)"
+Question: "What is the blast resistance of Diamond Ore?"
+Correct: "3.0"
+Options (all blastResistance-typed): ["3.0", "6.0", "1200.0"]
 
-Distractor Sources:
-- "Wooden Pickaxe" ← from Amethyst Block minToolTier
-- "Stone Pickaxe" ← from Stone minToolTier
-- "Shovel" ← from Sand minToolTier
-- "No tool required" ← placeholder when insufficient alternatives
+Question: "True or False: Diamond Ore is renewable."
+Correct: "False"
+Options (boolean, always exactly these 2): ["False", "True"]
 `
 
 ## Performance & Scaling
 
-### MVP Performance (25 blocks)
-- **Question Generation**: < 100ms client-side
-- **Page Load**: First paint < 1s on 4G
-- **Bundle Size**: ~280 KB (gzipped)
-- **Database**: None (corpus bundled in client)
-- **Concurrent Users**: Unlimited (static site, CDN-served)
+### Current Performance (100 blocks, DB-backed)
+- **Question Generation**: 0ms at request time — precomputed offline, runtime is a `SELECT ... ORDER BY RANDOM() LIMIT 5`
+- **API Response**: sub-100ms typical (Neon serverless, single query with a join)
+- **Bundle Size**: no corpus data in the client bundle at all (verified via build output inspection) — only the game UI code
+- **Database**: Neon Postgres, 100 entities / 266 trivia_hooks / 266 question_bank rows
+- **Concurrent Users**: scales with Neon's serverless connection pooling; no app-level bottleneck at this data size
 
-### Scaling to 300+ blocks (Phase 2)
-Current architecture will struggle at 300+ blocks:
-- Corpus JSON: ~18 MB → 2.2 MB gzipped (still large for client)
-- Question generation: O(n) scans per question (1000 blocks × 5 options × 5 questions = 25K property lookups)
-- Better approach: **server-side generation + API caching**
+### Scaling to 10,000 records (Release 2: Blocks + Mobs + Structures)
+The DB-backed architecture (this section used to describe a future plan; it's now implemented) handles 100 → 10,000 rows the same way — `ORDER BY RANDOM() LIMIT n` stays sub-50ms up to roughly 100k rows on Neon. What actually needs to grow for Release 2:
+- Python pipeline needs mob (`minecraft-data` entities.json) and structure (wiki-only, no structured dataset found) extractor modules, sharing the same checkpoint/merge/writer infrastructure
+- `question_bank`/`trivia_hooks` need mob-specific (health, attack, AI behavior) and structure-specific (loot table, biome, size) answerTypes and hook templates
+- `/api/questions` needs optional `type`/`category` query params for "blocks only" vs "mixed" game modes — response shape stays identical, so no component changes needed
+- No caching layer (Redis/Vercel KV) needed yet — would conflict with "fresh random questions every game" and isn't justified until measured latency requires it
 
-**Recommended Phase 2 Architecture**:
-- Move corpus to Postgres (Neon)
-- Generate questions server-side at request time
-- Cache question bank in Redis or Neon (pre-generated × difficulty)
-- API endpoint: /api/questions returns 5 random questions
-- Client calls API on game start, not bundled JSON
-
-### Database Schema (Future)
+### Database Schema (Current)
 `sql
+CREATE TYPE entity_type AS ENUM ('block', 'mob', 'structure');
+
 CREATE TABLE entities (
   id TEXT PRIMARY KEY,          -- "diamond_ore"
-  type TEXT NOT NULL,           -- "block" | "mob" | "structure"
+  type entity_type NOT NULL,    -- 'block' today; 'mob'/'structure' in Release 2
   name TEXT NOT NULL,
   category TEXT NOT NULL,
-  properties JSONB NOT NULL,    -- Mechanical, generation, etc.
   image_url TEXT,
+  properties JSONB NOT NULL,    -- Mechanical, generation, etc.
   source_version TEXT,
-  created_at TIMESTAMPTZ DEFAULT now()
+  created_at TIMESTAMPTZ DEFAULT now(),
+  updated_at TIMESTAMPTZ DEFAULT now()
+);
+
+CREATE TABLE trivia_hooks (
+  id SERIAL PRIMARY KEY,
+  entity_id TEXT NOT NULL REFERENCES entities(id) ON DELETE CASCADE,
+  category TEXT NOT NULL,       -- "mechanical", "generation", etc.
+  difficulty TEXT NOT NULL,     -- "easy", "medium", "hard"
+  question_seed TEXT NOT NULL,
+  answer TEXT NOT NULL,
+  answer_type TEXT NOT NULL     -- "toolTier" | "blastResistance" | "yLevelRange" | "lightLevel" | "boolean"
 );
 
 CREATE TABLE question_bank (
   id SERIAL PRIMARY KEY,
-  entity_id TEXT NOT NULL REFERENCES entities(id),
-  category TEXT NOT NULL,       -- "mechanical", "generation", etc.
-  difficulty TEXT NOT NULL,     -- "easy", "medium", "hard"
+  entity_id TEXT NOT NULL REFERENCES entities(id) ON DELETE CASCADE,
+  entity_type entity_type NOT NULL,
+  category TEXT NOT NULL,
+  difficulty TEXT NOT NULL,
   question_text TEXT NOT NULL,
   correct_answer TEXT NOT NULL,
-  options JSONB NOT NULL,       -- 5-element shuffled array
+  options JSONB NOT NULL,       -- 2-element (boolean) or 3-element (everything else) shuffled array
   correct_index SMALLINT NOT NULL,
+  explanation TEXT,
   created_at TIMESTAMPTZ DEFAULT now()
 );
 `
@@ -300,12 +330,12 @@ pm run build
 - User feedback: None built-in (future: Sentry integration)
 
 ## API Endpoints (Current)
-None—the game is a static SPA. All data is bundled and processed client-side.
+- `GET /api/questions?count=5` → returns `count` random precomputed questions (one per unique block), `force-dynamic` (never cached — must stay random every call)
 
-**Future Endpoints** (Phase 2):
-- GET /api/questions?difficulty=easy&category=mechanical → 5 questions
-- POST /api/scores → Save game result (requires auth)
-- GET /api/leaderboard → Top scores
+**Future Endpoints**:
+- `GET /api/questions?difficulty=easy&category=mechanical&type=mob` → filtered game modes (Release 2)
+- `POST /api/scores` → Save game result (requires auth)
+- `GET /api/leaderboard` → Top scores
 
 ## Browser Support
 - Chrome 90+
@@ -324,10 +354,16 @@ None—the game is a static SPA. All data is bundled and processed client-side.
 
 ## Testing Strategy
 
-### Unit Tests
-- questionGenerator.test.ts: Verify 5 options generated, shuffling works
-- nswerShuffler.test.ts: Fisher-Yates randomness
-- Corpus validation: All blocks load, no missing properties
+No automated test suite exists yet (aspirational, not yet built):
+
+### Unit Tests (planned)
+- questionGenerator.test.ts: verify 3 options (2 for boolean) generated, options are same-answerType, shuffling works
+- answerShuffler.test.ts: Fisher-Yates randomness
+- Corpus/DB validation: all entities load, no missing properties, every trivia_hook has a valid answerType
+
+### Manual verification (what is actually done today)
+- After any pipeline/schema change: query question_bank directly to confirm option counts and that every option matches the correct answer's shape
+- tools/generate_image_check.py -- regenerate and visually scan for broken images
 
 ### Integration Tests
 - Game flow: Start → Q1 → ... → Q5 → Game Over → Play Again
@@ -343,26 +379,33 @@ None—the game is a static SPA. All data is bundled and processed client-side.
 
 ## Known Issues & Limitations
 
-### MVP Limitations
+### Current Limitations
 - No persistent high scores (game state resets on page reload)
 - No user accounts or authentication
-- No difficulty selector (all questions mixed)
-- No category filter (random across all blocks)
-- Question generation is O(n) per game (scales poorly to 1000+ blocks)
-- Images must be manually committed to /public
+- No difficulty selector in the UI (all questions mixed) — data already supports it, `question_bank.difficulty` is populated
+- No category filter in the UI — same, `question_bank.category` already exists
+- Only 100 of ~1,200+ blocks covered; Mobs/Structures not started
+- `yLevelRange` answerType has only 2 real blocks resolved (Lava, Nether Gold Ore) — most Y-level questions for other blocks rely on the numeric-perturbation fallback rather than a second real block
 
 ### Known Bugs
 - None currently (deployed & tested)
 
 ## Future Roadmap
 
-### Phase 2: Scaling to 300+ Blocks (Q4 2026)
-- [ ] Migrate corpus to Postgres + Drizzle ORM
-- [ ] Implement server-side question generation
+### Completed (Phase A — DB-backed scaling)
+- [x] Migrate corpus to Postgres + Drizzle ORM
+- [x] Implement server-side (precomputed offline) question generation
+- [x] `GET /api/questions` endpoint, no corpus data bundled to client
+- [x] Reduce to 3 options (2 for True/False) with contextually-consistent (same-answerType) distractors
+- [x] Expand corpus from 25 → 100 blocks via automated Python ETL pipeline (minecraft-data + wiki)
+- [x] Fix broken block images via wiki-based texture resolution (54/100 were broken before the fix)
+
+### Phase 2: Scaling to 10,000 Records (Release 2)
 - [ ] Add difficulty selector (easy/medium/hard games)
 - [ ] Add category filter (ores-only game, building-only game, etc.)
-- [ ] Expand corpus to all ~300 Minecraft blocks
-- [ ] Add mob trivia (health, attack, AI behavior)
+- [ ] Expand corpus to all ~1,200+ Minecraft blocks
+- [ ] Add mob trivia (health, attack, AI behavior) — minecraft-data's entities.json + minecraft-assets skins
+- [ ] Add structure trivia (loot tables, generation biome, size) — wiki-only, no structured dataset available
 
 ### Phase 3: User Engagement (Q1 2027)
 - [ ] User authentication (OAuth via Discord/Microsoft)
@@ -382,14 +425,18 @@ None—the game is a static SPA. All data is bundled and processed client-side.
 - [ ] Twitch extension (play live on stream)
 
 ## Success Metrics
-- **MVP**: Game playable, all 25 blocks covered, no errors
-- **Phase 2**: 300+ blocks, < 200ms question generation, < 50ms API response
+- **MVP**: Game playable, all 25 blocks covered, no errors — ✅ achieved
+- **Phase A (DB scaling)**: 100 blocks, DB-backed, precomputed questions — ✅ achieved
+- **Phase 2 (Release 2)**: 1,200+ blocks + Mobs + Structures (10,000 records), < 50ms API response — target
 - **Phase 3**: 1000+ DAU, 50+ top leaderboard churn, 20% daily return rate
 - **Phase 4**: 5000+ DAU, avg playtime > 10 minutes, community-driven content
 
 ## References
-- Corpus data source: https://minecraft.wiki/w/Block
-- Texture source: https://minecraft.wiki/images/ (BlockSprite_*.png)
+- Mechanical/special properties: https://github.com/PrismarineJS/minecraft-data
+- Textures (blocks + mobs): https://github.com/PrismarineJS/minecraft-assets
+- Generation fields (Y-level, rarity) + image fallback: https://minecraft.wiki/ (scraped via MediaWiki API; no Cargo/Semantic MediaWiki available — confirmed live)
 - Next.js docs: https://nextjs.org/docs
 - Tailwind docs: https://tailwindcss.com/docs
 - Zustand docs: https://github.com/pmndrs/zustand
+- Drizzle ORM docs: https://orm.drizzle.team/
+- Neon docs: https://neon.tech/docs
