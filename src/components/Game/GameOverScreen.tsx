@@ -45,8 +45,8 @@ export function GameOverScreen({ score, totalQuestions }: GameOverScreenProps) {
 
         <div className="relative w-full max-w-md aspect-video mb-8 animate-fade-in">
           <Image
-            src="/minecraft-hero.png"
-            alt="Minecraft Hero"
+            src="/gameover-hero.png"
+            alt="Game Over Hero"
             fill
             className="object-cover rounded-lg"
             priority
