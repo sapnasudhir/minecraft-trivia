@@ -16,6 +16,10 @@ This is a Next.js-based web game where players test their Minecraft block knowle
 
 ## Important Notes for Claude
 
+### Plan Storage
+- Whenever a plan is created for this project (e.g. via plan mode), save/copy the final plan as a `.md` file into the local `plans/` folder at the repo root, named `YYYY-MM-DD-short-slug.md`.
+- `plans/` is gitignored (local-only) — it's a working history of plans for this project, not published to GitHub.
+
 ### Branch Strategy
 - **Production**: master branch is deployed to Vercel automatically
 - **Development**: Use phase-a-db-scaling for feature work if needed
