@@ -50,9 +50,9 @@
     "semantic_hash": "ad4194c56791e2ce0727f227ec2d14ce"
   },
   "drizzle/meta/_journal.json": {
-    "mtime": 1784466054.4652364,
-    "ast_hash": "c2df94755689f098c355e6a1d976b583",
-    "semantic_hash": "c2df94755689f098c355e6a1d976b583"
+    "mtime": 1784483543.2042525,
+    "ast_hash": "d8dbb8df16c462c5bf174efc7babcac3",
+    "semantic_hash": ""
   },
   "eslint.config.mjs": {
     "mtime": 1784466054.4662328,
@@ -100,14 +100,14 @@
     "semantic_hash": "7c5ee7b5f582ac420fa93366e4476ca7"
   },
   "src/components/Game/GameContainer.tsx": {
-    "mtime": 1784466054.5462985,
-    "ast_hash": "774b275f03075b2c57d474d96bd519c6",
-    "semantic_hash": "774b275f03075b2c57d474d96bd519c6"
+    "mtime": 1784482665.6024773,
+    "ast_hash": "f5e57dfc91992ffd868a69a6ad4c09df",
+    "semantic_hash": ""
   },
   "src/components/Game/GameOverScreen.tsx": {
-    "mtime": 1784466054.5472937,
-    "ast_hash": "2ed26164f792e3bcb241cd5b7806426e",
-    "semantic_hash": "2ed26164f792e3bcb241cd5b7806426e"
+    "mtime": 1784485293.147579,
+    "ast_hash": "056da05d7b06918f9fb50e2cf6fbfcda",
+    "semantic_hash": ""
   },
   "src/components/Game/GameScreen.tsx": {
     "mtime": 1784466054.5482967,
@@ -125,9 +125,9 @@
     "semantic_hash": "281b79bdfab26ecec960858894664b39"
   },
   "src/components/Game/StartScreen.tsx": {
-    "mtime": 1784466054.5522964,
-    "ast_hash": "9febd8e8e78554765752a65f475a3490",
-    "semantic_hash": "9febd8e8e78554765752a65f475a3490"
+    "mtime": 1784482632.510944,
+    "ast_hash": "32f24d65b30cbd43a5d97b307f4d1e67",
+    "semantic_hash": ""
   },
   "src/data/minecraft_block_trivia_corpus_100.json": {
     "mtime": 1784466054.5552914,
@@ -140,14 +140,14 @@
     "semantic_hash": "0582a4ad4730f44030ffbbf9971974e9"
   },
   "src/db/schema.ts": {
-    "mtime": 1784466054.5603006,
-    "ast_hash": "8f18fb90852b9df1f2ca3cb9a785eef2",
-    "semantic_hash": "8f18fb90852b9df1f2ca3cb9a785eef2"
+    "mtime": 1784482482.9000404,
+    "ast_hash": "5615feffae727bc98db8c1968a81cd11",
+    "semantic_hash": ""
   },
   "src/store/gameStore.ts": {
-    "mtime": 1784466054.562296,
-    "ast_hash": "9a6f0c7441abc2710c12a87b5d86a899",
-    "semantic_hash": "9a6f0c7441abc2710c12a87b5d86a899"
+    "mtime": 1784483027.5093813,
+    "ast_hash": "5006159075f57932512eb106ad5869ee",
+    "semantic_hash": ""
   },
   "src/types/block.ts": {
     "mtime": 1784466054.563296,
@@ -155,9 +155,9 @@
     "semantic_hash": "dbb9c59a44d73edca8f4043ac53a5ad7"
   },
   "src/types/game.ts": {
-    "mtime": 1784466054.5652936,
-    "ast_hash": "834d3b66410c1ac615e72a416d66f736",
-    "semantic_hash": "834d3b66410c1ac615e72a416d66f736"
+    "mtime": 1784483001.17234,
+    "ast_hash": "76096fd8ee3a991d125cd38bffb1e26f",
+    "semantic_hash": ""
   },
   "src/utils/answerShuffler.ts": {
     "mtime": 1784466054.5672956,
@@ -190,14 +190,14 @@
     "semantic_hash": "9346a4897ff955555ddedb7bebf77adb"
   },
   "CLAUDE.md": {
-    "mtime": 1784480740.989078,
-    "ast_hash": "e818d1e56c30380fa58b9aeb05afbb7f",
+    "mtime": 1784482781.458433,
+    "ast_hash": "fa893e472ef51cb8b0cdcd011e9b2c8c",
     "semantic_hash": ""
   },
   "GameRules.md": {
-    "mtime": 1784466926.3962004,
-    "ast_hash": "c1ac72d8e5eccd6ab672823fb235ad60",
-    "semantic_hash": "c1ac72d8e5eccd6ab672823fb235ad60"
+    "mtime": 1784485854.0009613,
+    "ast_hash": "135997ed07f733e2de24c72c98708091",
+    "semantic_hash": ""
   },
   "README.md": {
     "mtime": 1784466054.4327295,
@@ -210,8 +210,8 @@
     "semantic_hash": "12ac75295345e6b3b944248bdab518f6"
   },
   "prd.md": {
-    "mtime": 1784480734.9081664,
-    "ast_hash": "07d8ec8de66deb6cd3efbad778179610",
+    "mtime": 1784482897.3071272,
+    "ast_hash": "727374734d42a28bde720e91bf721e08",
     "semantic_hash": ""
   },
   "tools/image_check.html": {
@@ -257,6 +257,31 @@
   ".claude/Agents/github-issue-workflow.md": {
     "mtime": 1784480715.5905652,
     "ast_hash": "ac0aa7e243ff6c6745cd16fed0eb1356",
+    "semantic_hash": ""
+  },
+  "app/api/leaderboard/route.ts": {
+    "mtime": 1784482985.32676,
+    "ast_hash": "78315eb9b85fb4119d569b3067cc10b5",
+    "semantic_hash": ""
+  },
+  "drizzle/0003_remarkable_the_captain.sql": {
+    "mtime": 1784483543.2052574,
+    "ast_hash": "504ea1112438acc8fab3face4449bc95",
+    "semantic_hash": ""
+  },
+  "drizzle/meta/0003_snapshot.json": {
+    "mtime": 1784483543.2022607,
+    "ast_hash": "3d8552a07d471bd0815c9b897b72c2d7",
+    "semantic_hash": ""
+  },
+  "src/components/Game/LeaderboardScreen.tsx": {
+    "mtime": 1784485845.649802,
+    "ast_hash": "307bcc2e8f30befc03775ef0abddf06f",
+    "semantic_hash": ""
+  },
+  "src/utils/leaderboard.ts": {
+    "mtime": 1784482995.6241748,
+    "ast_hash": "1fc76ddb3acc6778b6e74404dbf4524d",
     "semantic_hash": ""
   }
 }
