@@ -37,15 +37,202 @@
   },
   "nodes": [
     {
+      "label": "github-issue-workflow.md",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "github-issue-workflow.md"
+    },
+    {
+      "label": "GitHub Issue Workflow",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "github issue workflow"
+    },
+    {
+      "label": "1. Trigger",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_1_trigger",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "1. trigger"
+    },
+    {
+      "label": "2. Fetch the issue",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_2_fetch_the_issue",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "2. fetch the issue"
+    },
+    {
+      "label": "3. Work directly in the existing checked-out repo",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_3_work_directly_in_the_existing_checked_out_repo",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "3. work directly in the existing checked-out repo"
+    },
+    {
+      "label": "4. Branch",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_4_branch",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "4. branch"
+    },
+    {
+      "label": "5. Make the changes",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_5_make_the_changes",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "5. make the changes"
+    },
+    {
+      "label": "6. Commit & push",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_6_commit_push",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "6. commit & push"
+    },
+    {
+      "label": "7. Open the PR",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_7_open_the_pr",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "7. open the pr"
+    },
+    {
+      "label": "8. QA on the Vercel preview",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "8. qa on the vercel preview"
+    },
+    {
+      "label": "9. Structured PR QA (self-review, before merge)",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "9. structured pr qa (self-review, before merge)"
+    },
+    {
+      "label": "10. Documentation & tooling refresh \u2014 before merge",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "10. documentation & tooling refresh \u2014 before merge"
+    },
+    {
+      "label": "11. Merge \u2014 always ask first",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_11_merge_always_ask_first",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "11. merge \u2014 always ask first"
+    },
+    {
+      "label": "12. Confirm prod deploy",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_12_confirm_prod_deploy",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "12. confirm prod deploy"
+    },
+    {
+      "label": "13. Close the issue",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_13_close_the_issue",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "13. close the issue"
+    },
+    {
+      "label": "14. Cleanup",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_14_cleanup",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "14. cleanup"
+    },
+    {
+      "label": "Why this exists",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_why_this_exists",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "why this exists"
+    },
+    {
       "label": "GameOverScreen.tsx",
       "file_type": "code",
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gameoverscreen.tsx"
+      "norm_label": "gameoverscreen.tsx",
+      "id": "src_components_game_gameoverscreen"
     },
     {
       "label": "GameOverScreenProps",
@@ -53,10 +240,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_gameoverscreenprops",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gameoverscreenprops"
+      "norm_label": "gameoverscreenprops",
+      "id": "src_components_game_gameoverscreen_gameoverscreenprops"
     },
     {
       "label": "ConfettiPiece",
@@ -64,10 +251,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_confettipiece",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "confettipiece"
+      "norm_label": "confettipiece",
+      "id": "src_components_game_gameoverscreen_confettipiece"
     },
     {
       "label": "CONFETTI_COLORS",
@@ -75,10 +262,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_confetti_colors",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "confetti_colors"
+      "norm_label": "confetti_colors",
+      "id": "src_components_game_gameoverscreen_confetti_colors"
     },
     {
       "label": "GameOverScreen()",
@@ -86,10 +273,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_gameoverscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gameoverscreen()"
+      "norm_label": "gameoverscreen()",
+      "id": "src_components_game_gameoverscreen_gameoverscreen"
     },
     {
       "label": "GameScreen.tsx",
@@ -97,10 +284,10 @@
       "source_file": "src/components/Game/GameScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_gamescreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamescreen.tsx"
+      "norm_label": "gamescreen.tsx",
+      "id": "src_components_game_gamescreen"
     },
     {
       "label": "GameScreen()",
@@ -108,10 +295,10 @@
       "source_file": "src/components/Game/GameScreen.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "src_components_game_gamescreen_gamescreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamescreen()"
+      "norm_label": "gamescreen()",
+      "id": "src_components_game_gamescreen_gamescreen"
     },
     {
       "label": "LeaderboardScreen.tsx",
@@ -119,10 +306,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboardscreen.tsx"
+      "norm_label": "leaderboardscreen.tsx",
+      "id": "src_components_game_leaderboardscreen"
     },
     {
       "label": "LeaderboardScreenProps",
@@ -130,10 +317,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_leaderboardscreenprops",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboardscreenprops"
+      "norm_label": "leaderboardscreenprops",
+      "id": "src_components_game_leaderboardscreen_leaderboardscreenprops"
     },
     {
       "label": "RANK_BADGE_COLORS",
@@ -141,10 +328,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_rank_badge_colors",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "rank_badge_colors"
+      "norm_label": "rank_badge_colors",
+      "id": "src_components_game_leaderboardscreen_rank_badge_colors"
     },
     {
       "label": "formatTimestamp()",
@@ -152,10 +339,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_formattimestamp",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "formattimestamp()"
+      "norm_label": "formattimestamp()",
+      "id": "src_components_game_leaderboardscreen_formattimestamp"
     },
     {
       "label": "LeaderboardScreen()",
@@ -163,10 +350,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_leaderboardscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboardscreen()"
+      "norm_label": "leaderboardscreen()",
+      "id": "src_components_game_leaderboardscreen_leaderboardscreen"
     },
     {
       "label": "StartScreen.tsx",
@@ -174,10 +361,10 @@
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_startscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "startscreen.tsx"
+      "norm_label": "startscreen.tsx",
+      "id": "src_components_game_startscreen"
     },
     {
       "label": "StartScreenProps",
@@ -185,10 +372,10 @@
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_components_game_startscreen_startscreenprops",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "startscreenprops"
+      "norm_label": "startscreenprops",
+      "id": "src_components_game_startscreen_startscreenprops"
     },
     {
       "label": "StartScreen()",
@@ -196,10 +383,10 @@
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "src_components_game_startscreen_startscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "startscreen()"
+      "norm_label": "startscreen()",
+      "id": "src_components_game_startscreen_startscreen"
     },
     {
       "label": "route.ts",
@@ -2116,193 +2303,6 @@
       "id": "ref_node_modules"
     },
     {
-      "label": "github-issue-workflow.md",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "github-issue-workflow.md",
-      "id": "claude_agents_github_issue_workflow"
-    },
-    {
-      "label": "GitHub Issue Workflow",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "github issue workflow",
-      "id": "claude_agents_github_issue_workflow_github_issue_workflow"
-    },
-    {
-      "label": "1. Trigger",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "1. trigger",
-      "id": "claude_agents_github_issue_workflow_1_trigger"
-    },
-    {
-      "label": "2. Fetch the issue",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "2. fetch the issue",
-      "id": "claude_agents_github_issue_workflow_2_fetch_the_issue"
-    },
-    {
-      "label": "3. Clone into a fresh per-issue subfolder",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "3. clone into a fresh per-issue subfolder",
-      "id": "claude_agents_github_issue_workflow_3_clone_into_a_fresh_per_issue_subfolder"
-    },
-    {
-      "label": "4. Branch",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "4. branch",
-      "id": "claude_agents_github_issue_workflow_4_branch"
-    },
-    {
-      "label": "5. Make the changes",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L23",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "5. make the changes",
-      "id": "claude_agents_github_issue_workflow_5_make_the_changes"
-    },
-    {
-      "label": "6. Commit & push",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "6. commit & push",
-      "id": "claude_agents_github_issue_workflow_6_commit_push"
-    },
-    {
-      "label": "7. Open the PR",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "7. open the pr",
-      "id": "claude_agents_github_issue_workflow_7_open_the_pr"
-    },
-    {
-      "label": "8. QA on the Vercel preview",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "8. qa on the vercel preview",
-      "id": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview"
-    },
-    {
-      "label": "9. Structured PR QA (self-review, before merge)",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L42",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "9. structured pr qa (self-review, before merge)",
-      "id": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge"
-    },
-    {
-      "label": "10. Documentation & tooling refresh \u2014 before merge",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "10. documentation & tooling refresh \u2014 before merge",
-      "id": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge"
-    },
-    {
-      "label": "11. Merge \u2014 always ask first",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "11. merge \u2014 always ask first",
-      "id": "claude_agents_github_issue_workflow_11_merge_always_ask_first"
-    },
-    {
-      "label": "12. Confirm prod deploy",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "12. confirm prod deploy",
-      "id": "claude_agents_github_issue_workflow_12_confirm_prod_deploy"
-    },
-    {
-      "label": "13. Close the issue",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L70",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "13. close the issue",
-      "id": "claude_agents_github_issue_workflow_13_close_the_issue"
-    },
-    {
-      "label": "14. Cleanup",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "14. cleanup",
-      "id": "claude_agents_github_issue_workflow_14_cleanup"
-    },
-    {
-      "label": "Why this exists",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L77",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "why this exists",
-      "id": "claude_agents_github_issue_workflow_why_this_exists"
-    },
-    {
       "label": "AGENTS.md \u2014 Next.js Agent Rules Note",
       "file_type": "document",
       "source_file": "AGENTS.md",
@@ -2949,6 +2949,182 @@
   ],
   "links": [
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_11_merge_always_ask_first",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_12_confirm_prod_deploy",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_13_close_the_issue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L72",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_14_cleanup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_1_trigger",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_2_fetch_the_issue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_3_work_directly_in_the_existing_checked_out_repo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_4_branch",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_5_make_the_changes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_6_commit_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_7_open_the_pr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_why_this_exists",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -2997,9 +3173,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_confetti_colors",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_confetti_colors"
     },
     {
       "relation": "contains",
@@ -3008,9 +3184,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_confettipiece",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_confettipiece"
     },
     {
       "relation": "contains",
@@ -3019,9 +3195,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_gameoverscreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_gameoverscreen"
     },
     {
       "relation": "contains",
@@ -3030,9 +3206,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_gameoverscreenprops",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_gameoverscreenprops"
     },
     {
       "relation": "imports",
@@ -3085,9 +3261,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gamescreen",
-      "target": "src_components_game_gamescreen_gamescreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_gamescreen_gamescreen"
     },
     {
       "relation": "imports",
@@ -3120,9 +3296,9 @@
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_formattimestamp",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_formattimestamp"
     },
     {
       "relation": "contains",
@@ -3131,9 +3307,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_leaderboardscreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_leaderboardscreen"
     },
     {
       "relation": "contains",
@@ -3142,9 +3318,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_leaderboardscreenprops",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_leaderboardscreenprops"
     },
     {
       "relation": "contains",
@@ -3153,9 +3329,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_rank_badge_colors",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_rank_badge_colors"
     },
     {
       "relation": "calls",
@@ -3165,9 +3341,9 @@
       "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_formattimestamp",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_formattimestamp"
     },
     {
       "relation": "imports",
@@ -3230,9 +3406,9 @@
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_startscreen",
-      "target": "src_components_game_startscreen_startscreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_startscreen_startscreen"
     },
     {
       "relation": "contains",
@@ -3241,9 +3417,9 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_startscreen",
-      "target": "src_components_game_startscreen_startscreenprops",
-      "confidence_score": 1.0
+      "target": "src_components_game_startscreen_startscreenprops"
     },
     {
       "relation": "imports",
@@ -6270,182 +6446,6 @@
       "target": "ref_node_modules"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_github_issue_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_11_merge_always_ask_first"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_12_confirm_prod_deploy"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L70",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_13_close_the_issue"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L74",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_14_cleanup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_1_trigger"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_2_fetch_the_issue"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_3_clone_into_a_fresh_per_issue_subfolder"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_4_branch"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_5_make_the_changes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_6_commit_push"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L33",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_7_open_the_pr"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L77",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_why_this_exists"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -6928,5 +6928,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "9f6b2629bfebea15110209fb260732ba992dd7d1"
+  "built_at_commit": "60152b6c0f47e96bfdb231e79357762db0379d0b"
 }
