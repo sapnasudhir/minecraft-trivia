@@ -68,6 +68,12 @@ ArivMinecraftTrivia/   # Sibling folder (not this repo) — Python ETL pipeline 
 - **GameOverScreen**: Wood-plank/parchment background (matches Start/Game screens), hero image, score display, PLAY AGAIN button, leaderboard link button, parchment performance box
 - **LeaderboardScreen**: Wood-plank/parchment background, ranked top-10 list (gold/silver/bronze badges), BACK button returns to whichever screen linked here
 
+### Mobile Layout Conventions (all four screens)
+- Use `min-h-dvh`, not `min-h-screen` (100vh) — 100vh is measured against the max viewport (browser chrome collapsed), taller than what's actually visible on load, which pushes centered content above the fold on mobile
+- On flex-centered full-height wrappers, use `justify-start sm:justify-center` — centering with `justify-center` on a viewport shorter than the content pushes the overflow *above* `y=0`, where it's unreachable by scroll; top-aligning on mobile keeps any overflow reachable by scrolling down
+- Avoid unbreakable long single words at large pixel-font sizes (e.g. a 48px `'Press Start 2P'` title) without a responsive size — flex items don't shrink below their content's min-content width by default, so an unbreakable word can force the whole centered container wider than the viewport and clip evenly on both edges with no scrollbar to reach it. Use responsive Tailwind text sizes (mobile-first) or `fontSize: 'clamp(...)'` for inline-styled headings, plus `break-words` as a safety net
+- Add `overflow-x-hidden` on the screen root as a defensive backstop against any remaining horizontal bleed
+
 ### Common Tasks
 
 #### Adding/Updating Block Data

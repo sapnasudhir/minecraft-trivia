@@ -37,59 +37,191 @@
   },
   "nodes": [
     {
-      "label": "route.ts",
-      "file_type": "code",
-      "source_file": "app/api/leaderboard/route.ts",
+      "label": "github-issue-workflow.md",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "app_api_leaderboard_route",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "route.ts"
+      "id": "claude_agents_github_issue_workflow",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "github-issue-workflow.md"
     },
     {
-      "label": "GET()",
-      "file_type": "code",
-      "source_file": "app/api/leaderboard/route.ts",
+      "label": "GitHub Issue Workflow",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "github issue workflow"
+    },
+    {
+      "label": "1. Trigger",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_1_trigger",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "1. trigger"
+    },
+    {
+      "label": "2. Fetch the issue",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "app_api_leaderboard_route_get",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "get()"
+      "id": "claude_agents_github_issue_workflow_2_fetch_the_issue",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "2. fetch the issue"
     },
     {
-      "label": "POST()",
-      "file_type": "code",
-      "source_file": "app/api/leaderboard/route.ts",
-      "source_location": "L18",
+      "label": "3. Work directly in the existing checked-out repo",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L12",
       "_origin": "ast",
-      "id": "app_api_leaderboard_route_post",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "post()"
+      "id": "claude_agents_github_issue_workflow_3_work_directly_in_the_existing_checked_out_repo",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "3. work directly in the existing checked-out repo"
     },
     {
-      "label": "GameContainer.tsx",
-      "file_type": "code",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L1",
+      "label": "4. Branch",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L17",
       "_origin": "ast",
-      "id": "src_components_game_gamecontainer",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamecontainer.tsx"
+      "id": "claude_agents_github_issue_workflow_4_branch",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "4. branch"
     },
     {
-      "label": "GameContainer()",
-      "file_type": "code",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L10",
+      "label": "5. Make the changes",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L21",
       "_origin": "ast",
-      "id": "src_components_game_gamecontainer_gamecontainer",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamecontainer()"
+      "id": "claude_agents_github_issue_workflow_5_make_the_changes",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "5. make the changes"
+    },
+    {
+      "label": "6. Commit & push",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_6_commit_push",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "6. commit & push"
+    },
+    {
+      "label": "7. Open the PR",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_7_open_the_pr",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "7. open the pr"
+    },
+    {
+      "label": "8. QA on the Vercel preview",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "8. qa on the vercel preview"
+    },
+    {
+      "label": "9. Structured PR QA (self-review, before merge)",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "9. structured pr qa (self-review, before merge)"
+    },
+    {
+      "label": "10. Documentation & tooling refresh \u2014 before merge",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L48",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "10. documentation & tooling refresh \u2014 before merge"
+    },
+    {
+      "label": "11. Merge \u2014 always ask first",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L59",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_11_merge_always_ask_first",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "11. merge \u2014 always ask first"
+    },
+    {
+      "label": "12. Confirm prod deploy",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L64",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_12_confirm_prod_deploy",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "12. confirm prod deploy"
+    },
+    {
+      "label": "13. Close the issue",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L68",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_13_close_the_issue",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "13. close the issue"
+    },
+    {
+      "label": "14. Cleanup",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L72",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_14_cleanup",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "14. cleanup"
+    },
+    {
+      "label": "Why this exists",
+      "file_type": "document",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L76",
+      "_origin": "ast",
+      "id": "claude_agents_github_issue_workflow_why_this_exists",
+      "community": 8,
+      "community_name": "TS Ambient Type References",
+      "norm_label": "why this exists"
     },
     {
       "label": "GameOverScreen.tsx",
@@ -97,10 +229,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gameoverscreen.tsx"
+      "norm_label": "gameoverscreen.tsx",
+      "id": "src_components_game_gameoverscreen"
     },
     {
       "label": "GameOverScreenProps",
@@ -108,10 +240,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_gameoverscreenprops",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gameoverscreenprops"
+      "norm_label": "gameoverscreenprops",
+      "id": "src_components_game_gameoverscreen_gameoverscreenprops"
     },
     {
       "label": "ConfettiPiece",
@@ -119,10 +251,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L14",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_confettipiece",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "confettipiece"
+      "norm_label": "confettipiece",
+      "id": "src_components_game_gameoverscreen_confettipiece"
     },
     {
       "label": "CONFETTI_COLORS",
@@ -130,10 +262,10 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L23",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_confetti_colors",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "confetti_colors"
+      "norm_label": "confetti_colors",
+      "id": "src_components_game_gameoverscreen_confetti_colors"
     },
     {
       "label": "GameOverScreen()",
@@ -141,10 +273,32 @@
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "src_components_game_gameoverscreen_gameoverscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "gameoverscreen()"
+      "norm_label": "gameoverscreen()",
+      "id": "src_components_game_gameoverscreen_gameoverscreen"
+    },
+    {
+      "label": "GameScreen.tsx",
+      "file_type": "code",
+      "source_file": "src/components/Game/GameScreen.tsx",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Game UI Screens & Audio",
+      "norm_label": "gamescreen.tsx",
+      "id": "src_components_game_gamescreen"
+    },
+    {
+      "label": "GameScreen()",
+      "file_type": "code",
+      "source_file": "src/components/Game/GameScreen.tsx",
+      "source_location": "L11",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Game UI Screens & Audio",
+      "norm_label": "gamescreen()",
+      "id": "src_components_game_gamescreen_gamescreen"
     },
     {
       "label": "LeaderboardScreen.tsx",
@@ -152,10 +306,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboardscreen.tsx"
+      "norm_label": "leaderboardscreen.tsx",
+      "id": "src_components_game_leaderboardscreen"
     },
     {
       "label": "LeaderboardScreenProps",
@@ -163,10 +317,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L7",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_leaderboardscreenprops",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboardscreenprops"
+      "norm_label": "leaderboardscreenprops",
+      "id": "src_components_game_leaderboardscreen_leaderboardscreenprops"
     },
     {
       "label": "RANK_BADGE_COLORS",
@@ -174,10 +328,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L11",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_rank_badge_colors",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "rank_badge_colors"
+      "norm_label": "rank_badge_colors",
+      "id": "src_components_game_leaderboardscreen_rank_badge_colors"
     },
     {
       "label": "formatTimestamp()",
@@ -185,10 +339,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L17",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_formattimestamp",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "formattimestamp()"
+      "norm_label": "formattimestamp()",
+      "id": "src_components_game_leaderboardscreen_formattimestamp"
     },
     {
       "label": "LeaderboardScreen()",
@@ -196,10 +350,10 @@
       "source_file": "src/components/Game/LeaderboardScreen.tsx",
       "source_location": "L25",
       "_origin": "ast",
-      "id": "src_components_game_leaderboardscreen_leaderboardscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboardscreen()"
+      "norm_label": "leaderboardscreen()",
+      "id": "src_components_game_leaderboardscreen_leaderboardscreen"
     },
     {
       "label": "StartScreen.tsx",
@@ -207,10 +361,10 @@
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_components_game_startscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "startscreen.tsx"
+      "norm_label": "startscreen.tsx",
+      "id": "src_components_game_startscreen"
     },
     {
       "label": "StartScreenProps",
@@ -218,10 +372,10 @@
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_components_game_startscreen_startscreenprops",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "startscreenprops"
+      "norm_label": "startscreenprops",
+      "id": "src_components_game_startscreen_startscreenprops"
     },
     {
       "label": "StartScreen()",
@@ -229,230 +383,43 @@
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "id": "src_components_game_startscreen_startscreen",
       "community": 1,
       "community_name": "Game UI Screens & Audio",
-      "norm_label": "startscreen()"
+      "norm_label": "startscreen()",
+      "id": "src_components_game_startscreen_startscreen"
     },
     {
-      "label": "schema.ts",
+      "label": "route.ts",
       "file_type": "code",
-      "source_file": "src/db/schema.ts",
+      "source_file": "app/api/leaderboard/route.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "src_db_schema",
       "community": 6,
       "community_name": "Database & API Layer",
-      "norm_label": "schema.ts"
+      "norm_label": "route.ts",
+      "id": "app_api_leaderboard_route"
     },
     {
-      "label": "entityType",
+      "label": "GET()",
       "file_type": "code",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L13",
-      "_origin": "ast",
-      "id": "src_db_schema_entitytype",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "entitytype"
-    },
-    {
-      "label": "entities",
-      "file_type": "code",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_db_schema_entities",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "entities"
-    },
-    {
-      "label": "triviaHooks",
-      "file_type": "code",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "src_db_schema_triviahooks",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "triviahooks"
-    },
-    {
-      "label": "questionBank",
-      "file_type": "code",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L54",
-      "_origin": "ast",
-      "id": "src_db_schema_questionbank",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "questionbank"
-    },
-    {
-      "label": "leaderboard",
-      "file_type": "code",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L80",
-      "_origin": "ast",
-      "id": "src_db_schema_leaderboard",
-      "community": 6,
-      "community_name": "Database & API Layer",
-      "norm_label": "leaderboard"
-    },
-    {
-      "label": "gameStore.ts",
-      "file_type": "code",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_store_gamestore",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamestore.ts"
-    },
-    {
-      "label": "TOOL_TIER_COLORS",
-      "file_type": "code",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L12",
-      "_origin": "ast",
-      "id": "src_store_gamestore_tool_tier_colors",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "tool_tier_colors"
-    },
-    {
-      "label": "extractToolTier()",
-      "file_type": "code",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "src_store_gamestore_extracttooltier",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "extracttooltier()"
-    },
-    {
-      "label": "useGameStore",
-      "file_type": "code",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L34",
-      "_origin": "ast",
-      "id": "src_store_gamestore_usegamestore",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "usegamestore"
-    },
-    {
-      "label": "game.ts",
-      "file_type": "code",
-      "source_file": "src/types/game.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_types_game",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "game.ts"
-    },
-    {
-      "label": "GameQuestion",
-      "file_type": "code",
-      "source_file": "src/types/game.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_types_game_gamequestion",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamequestion"
-    },
-    {
-      "label": "PlayerAnswer",
-      "file_type": "code",
-      "source_file": "src/types/game.ts",
-      "source_location": "L15",
-      "_origin": "ast",
-      "id": "src_types_game_playeranswer",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "playeranswer"
-    },
-    {
-      "label": "FilledSlot",
-      "file_type": "code",
-      "source_file": "src/types/game.ts",
-      "source_location": "L23",
-      "_origin": "ast",
-      "id": "src_types_game_filledslot",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "filledslot"
-    },
-    {
-      "label": "PlayerScore",
-      "file_type": "code",
-      "source_file": "src/types/game.ts",
-      "source_location": "L30",
-      "_origin": "ast",
-      "id": "src_types_game_playerscore",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "playerscore"
-    },
-    {
-      "label": "GameState",
-      "file_type": "code",
-      "source_file": "src/types/game.ts",
-      "source_location": "L37",
-      "_origin": "ast",
-      "id": "src_types_game_gamestate",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "gamestate"
-    },
-    {
-      "label": "leaderboard.ts",
-      "file_type": "code",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L1",
-      "_origin": "ast",
-      "id": "src_utils_leaderboard",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "leaderboard.ts"
-    },
-    {
-      "label": "SubmitScoreResult",
-      "file_type": "code",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L3",
-      "_origin": "ast",
-      "id": "src_utils_leaderboard_submitscoreresult",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "submitscoreresult"
-    },
-    {
-      "label": "fetchLeaderboard()",
-      "file_type": "code",
-      "source_file": "src/utils/leaderboard.ts",
+      "source_file": "app/api/leaderboard/route.ts",
       "source_location": "L8",
       "_origin": "ast",
-      "id": "src_utils_leaderboard_fetchleaderboard",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "fetchleaderboard()"
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "get()",
+      "id": "app_api_leaderboard_route_get"
     },
     {
-      "label": "submitScore()",
+      "label": "POST()",
       "file_type": "code",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L16",
+      "source_file": "app/api/leaderboard/route.ts",
+      "source_location": "L18",
       "_origin": "ast",
-      "id": "src_utils_leaderboard_submitscore",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
-      "norm_label": "submitscore()"
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "post()",
+      "id": "app_api_leaderboard_route_post"
     },
     {
       "label": "route.ts",
@@ -1153,8 +1120,8 @@
       "source_file": "scripts/precompute_questions.ts",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 6,
-      "community_name": "Database & API Layer",
+      "community": 3,
+      "community_name": "Question Generation Pipeline",
       "norm_label": "precompute_questions.ts",
       "id": "scripts_precompute_questions"
     },
@@ -1241,8 +1208,8 @@
       "source_file": "src/components/Game/CraftingGrid.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "craftinggrid.tsx",
       "id": "src_components_game_craftinggrid"
     },
@@ -1252,8 +1219,8 @@
       "source_file": "src/components/Game/CraftingGrid.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "craftinggridprops",
       "id": "src_components_game_craftinggrid_craftinggridprops"
     },
@@ -1263,8 +1230,8 @@
       "source_file": "src/components/Game/CraftingGrid.tsx",
       "source_location": "L14",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "craftinggrid()",
       "id": "src_components_game_craftinggrid_craftinggrid"
     },
@@ -1302,26 +1269,26 @@
       "id": "src_components_game_feedbackpanel_feedbackpanel"
     },
     {
-      "label": "GameScreen.tsx",
+      "label": "GameContainer.tsx",
       "file_type": "code",
-      "source_file": "src/components/Game/GameScreen.tsx",
+      "source_file": "src/components/Game/GameContainer.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "Crafting Game Mechanics",
-      "norm_label": "gamescreen.tsx",
-      "id": "src_components_game_gamescreen"
+      "community": 1,
+      "community_name": "Game UI Screens & Audio",
+      "norm_label": "gamecontainer.tsx",
+      "id": "src_components_game_gamecontainer"
     },
     {
-      "label": "GameScreen()",
+      "label": "GameContainer()",
       "file_type": "code",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L11",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L10",
       "_origin": "ast",
-      "community": 7,
-      "community_name": "Crafting Game Mechanics",
-      "norm_label": "gamescreen()",
-      "id": "src_components_game_gamescreen_gamescreen"
+      "community": 1,
+      "community_name": "Game UI Screens & Audio",
+      "norm_label": "gamecontainer()",
+      "id": "src_components_game_gamecontainer_gamecontainer"
     },
     {
       "label": "QuestionCard.tsx",
@@ -1329,8 +1296,8 @@
       "source_file": "src/components/Game/QuestionCard.tsx",
       "source_location": "L1",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "questioncard.tsx",
       "id": "src_components_game_questioncard"
     },
@@ -1340,8 +1307,8 @@
       "source_file": "src/components/Game/QuestionCard.tsx",
       "source_location": "L6",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "questioncardprops",
       "id": "src_components_game_questioncard_questioncardprops"
     },
@@ -1351,8 +1318,8 @@
       "source_file": "src/components/Game/QuestionCard.tsx",
       "source_location": "L12",
       "_origin": "ast",
-      "community": 1,
-      "community_name": "Game UI Screens & Audio",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "questioncard()",
       "id": "src_components_game_questioncard_questioncard"
     },
@@ -1421,6 +1388,116 @@
       "community_name": "Database & API Layer",
       "norm_label": "db",
       "id": "src_db_index_db"
+    },
+    {
+      "label": "schema.ts",
+      "file_type": "code",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "schema.ts",
+      "id": "src_db_schema"
+    },
+    {
+      "label": "entityType",
+      "file_type": "code",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L13",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "entitytype",
+      "id": "src_db_schema_entitytype"
+    },
+    {
+      "label": "entities",
+      "file_type": "code",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "entities",
+      "id": "src_db_schema_entities"
+    },
+    {
+      "label": "triviaHooks",
+      "file_type": "code",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "triviahooks",
+      "id": "src_db_schema_triviahooks"
+    },
+    {
+      "label": "questionBank",
+      "file_type": "code",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L54",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "questionbank",
+      "id": "src_db_schema_questionbank"
+    },
+    {
+      "label": "leaderboard",
+      "file_type": "code",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L80",
+      "_origin": "ast",
+      "community": 6,
+      "community_name": "Database & API Layer",
+      "norm_label": "leaderboard",
+      "id": "src_db_schema_leaderboard"
+    },
+    {
+      "label": "gameStore.ts",
+      "file_type": "code",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "gamestore.ts",
+      "id": "src_store_gamestore"
+    },
+    {
+      "label": "TOOL_TIER_COLORS",
+      "file_type": "code",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L12",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "tool_tier_colors",
+      "id": "src_store_gamestore_tool_tier_colors"
+    },
+    {
+      "label": "extractToolTier()",
+      "file_type": "code",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "extracttooltier()",
+      "id": "src_store_gamestore_extracttooltier"
+    },
+    {
+      "label": "useGameStore",
+      "file_type": "code",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L34",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Game UI Screens & Audio",
+      "norm_label": "usegamestore",
+      "id": "src_store_gamestore_usegamestore"
     },
     {
       "label": "block.ts",
@@ -1577,6 +1654,72 @@
       "id": "src_types_block_corpusfile"
     },
     {
+      "label": "game.ts",
+      "file_type": "code",
+      "source_file": "src/types/game.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "game.ts",
+      "id": "src_types_game"
+    },
+    {
+      "label": "GameQuestion",
+      "file_type": "code",
+      "source_file": "src/types/game.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "gamequestion",
+      "id": "src_types_game_gamequestion"
+    },
+    {
+      "label": "PlayerAnswer",
+      "file_type": "code",
+      "source_file": "src/types/game.ts",
+      "source_location": "L15",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "playeranswer",
+      "id": "src_types_game_playeranswer"
+    },
+    {
+      "label": "FilledSlot",
+      "file_type": "code",
+      "source_file": "src/types/game.ts",
+      "source_location": "L23",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "filledslot",
+      "id": "src_types_game_filledslot"
+    },
+    {
+      "label": "PlayerScore",
+      "file_type": "code",
+      "source_file": "src/types/game.ts",
+      "source_location": "L30",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "playerscore",
+      "id": "src_types_game_playerscore"
+    },
+    {
+      "label": "GameState",
+      "file_type": "code",
+      "source_file": "src/types/game.ts",
+      "source_location": "L37",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "gamestate",
+      "id": "src_types_game_gamestate"
+    },
+    {
       "label": "answerShuffler.ts",
       "file_type": "code",
       "source_file": "src/utils/answerShuffler.ts",
@@ -1621,6 +1764,50 @@
       "id": "src_utils_answershuffler_getrandomelements"
     },
     {
+      "label": "leaderboard.ts",
+      "file_type": "code",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L1",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "leaderboard.ts",
+      "id": "src_utils_leaderboard"
+    },
+    {
+      "label": "SubmitScoreResult",
+      "file_type": "code",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L3",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "submitscoreresult",
+      "id": "src_utils_leaderboard_submitscoreresult"
+    },
+    {
+      "label": "fetchLeaderboard()",
+      "file_type": "code",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L8",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "fetchleaderboard()",
+      "id": "src_utils_leaderboard_fetchleaderboard"
+    },
+    {
+      "label": "submitScore()",
+      "file_type": "code",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L16",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "gameStore.ts",
+      "norm_label": "submitscore()",
+      "id": "src_utils_leaderboard_submitscore"
+    },
+    {
       "label": "questionGenerator.ts",
       "file_type": "code",
       "source_file": "src/utils/questionGenerator.ts",
@@ -1637,8 +1824,8 @@
       "source_file": "src/utils/questionGenerator.ts",
       "source_location": "L11",
       "_origin": "ast",
-      "community": 3,
-      "community_name": "Question Generation Pipeline",
+      "community": 10,
+      "community_name": "gameStore.ts",
       "norm_label": "generategamequestions()",
       "id": "src_utils_questiongenerator_generategamequestions"
     },
@@ -2116,193 +2303,6 @@
       "id": "ref_node_modules"
     },
     {
-      "label": "github-issue-workflow.md",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "github-issue-workflow.md",
-      "id": "claude_agents_github_issue_workflow"
-    },
-    {
-      "label": "GitHub Issue Workflow",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L1",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "github issue workflow",
-      "id": "claude_agents_github_issue_workflow_github_issue_workflow"
-    },
-    {
-      "label": "1. Trigger",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L5",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "1. trigger",
-      "id": "claude_agents_github_issue_workflow_1_trigger"
-    },
-    {
-      "label": "2. Fetch the issue",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L8",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "2. fetch the issue",
-      "id": "claude_agents_github_issue_workflow_2_fetch_the_issue"
-    },
-    {
-      "label": "3. Clone into a fresh per-issue subfolder",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L12",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "3. clone into a fresh per-issue subfolder",
-      "id": "claude_agents_github_issue_workflow_3_clone_into_a_fresh_per_issue_subfolder"
-    },
-    {
-      "label": "4. Branch",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L19",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "4. branch",
-      "id": "claude_agents_github_issue_workflow_4_branch"
-    },
-    {
-      "label": "5. Make the changes",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L23",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "5. make the changes",
-      "id": "claude_agents_github_issue_workflow_5_make_the_changes"
-    },
-    {
-      "label": "6. Commit & push",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L28",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "6. commit & push",
-      "id": "claude_agents_github_issue_workflow_6_commit_push"
-    },
-    {
-      "label": "7. Open the PR",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L33",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "7. open the pr",
-      "id": "claude_agents_github_issue_workflow_7_open_the_pr"
-    },
-    {
-      "label": "8. QA on the Vercel preview",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L37",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "8. qa on the vercel preview",
-      "id": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview"
-    },
-    {
-      "label": "9. Structured PR QA (self-review, before merge)",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L42",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "9. structured pr qa (self-review, before merge)",
-      "id": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge"
-    },
-    {
-      "label": "10. Documentation & tooling refresh \u2014 before merge",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L50",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "10. documentation & tooling refresh \u2014 before merge",
-      "id": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge"
-    },
-    {
-      "label": "11. Merge \u2014 always ask first",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L61",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "11. merge \u2014 always ask first",
-      "id": "claude_agents_github_issue_workflow_11_merge_always_ask_first"
-    },
-    {
-      "label": "12. Confirm prod deploy",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L66",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "12. confirm prod deploy",
-      "id": "claude_agents_github_issue_workflow_12_confirm_prod_deploy"
-    },
-    {
-      "label": "13. Close the issue",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L70",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "13. close the issue",
-      "id": "claude_agents_github_issue_workflow_13_close_the_issue"
-    },
-    {
-      "label": "14. Cleanup",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L74",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "14. cleanup",
-      "id": "claude_agents_github_issue_workflow_14_cleanup"
-    },
-    {
-      "label": "Why this exists",
-      "file_type": "document",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L77",
-      "_origin": "ast",
-      "community": 8,
-      "community_name": "TS Ambient Type References",
-      "norm_label": "why this exists",
-      "id": "claude_agents_github_issue_workflow_why_this_exists"
-    },
-    {
       "label": "AGENTS.md \u2014 Next.js Agent Rules Note",
       "file_type": "document",
       "source_file": "AGENTS.md",
@@ -2325,9 +2325,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "claude.md \u2014 minecraft block trivia development guide",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "claude"
     },
     {
@@ -2339,9 +2339,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 1,
       "norm_label": "gamerules.md \u2014 minecraft block trivia game rules",
-      "community_name": "Crafting Game Mechanics",
+      "community_name": "Game UI Screens & Audio",
       "id": "gamerules"
     },
     {
@@ -2437,9 +2437,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "rationale: answertype-based distractor sampling",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "prd_answertype_distractor_design"
     },
     {
@@ -2451,9 +2451,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "rationale: per-block texture resolution via wiki file: namespace",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "claude_texture_resolution_rationale"
     },
     {
@@ -2465,9 +2465,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 10,
       "norm_label": "streak-weighted scoring system",
-      "community_name": "Game UI Screens & Audio",
+      "community_name": "gameStore.ts",
       "id": "gamerules_streak_weighted_scoring"
     },
     {
@@ -2479,9 +2479,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 1,
+      "community": 10,
       "norm_label": "8-slot crafting table win condition",
-      "community_name": "Game UI Screens & Audio",
+      "community_name": "gameStore.ts",
       "id": "gamerules_crafting_table_win_condition"
     },
     {
@@ -2493,9 +2493,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "answertype taxonomy (tooltier/blastresistance/ylevelrange/lightlevel/boolean)",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "gamerules_answer_type_taxonomy"
     },
     {
@@ -2507,9 +2507,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "trivia hook categories (mechanical/generation/crafting/special/variants)",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "gamerules_trivia_hook_categories"
     },
     {
@@ -2577,9 +2577,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 7,
+      "community": 1,
       "norm_label": "rules.md (superseded prototype spec: fixed 5-question quiz, no penalties, 25-block corpus)",
-      "community_name": "Crafting Game Mechanics",
+      "community_name": "Game UI Screens & Audio",
       "id": "gamerules_rules_md_prototype"
     },
     {
@@ -2703,9 +2703,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 0,
+      "community": 7,
       "norm_label": "web audio api",
-      "community_name": "Project Docs & Data Pipeline",
+      "community_name": "Crafting Game Mechanics",
       "id": "prd_tech_web_audio_api"
     },
     {
@@ -2759,9 +2759,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "src/data/minecraft_block_trivia_corpus_100.json (pipeline output artifact)",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "src_data_minecraft_block_trivia_corpus_100"
     },
     {
@@ -2773,9 +2773,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "arivminecrafttrivia/pipeline/texture_resolver.py",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "arivminecrafttrivia_pipeline_texture_resolver"
     },
     {
@@ -2787,9 +2787,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 6,
+      "community": 0,
       "norm_label": "arivminecrafttrivia/pipeline/merge.py",
-      "community_name": "Database & API Layer",
+      "community_name": "Project Docs & Data Pipeline",
       "id": "arivminecrafttrivia_pipeline_merge"
     },
     {
@@ -2951,201 +2951,178 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/api/leaderboard/route.ts",
-      "source_location": "L8",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L1",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "app_api_leaderboard_route",
-      "target": "app_api_leaderboard_route_get",
+      "source": "claude_agents_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_github_issue_workflow",
       "confidence_score": 1.0
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/api/leaderboard/route.ts",
-      "source_location": "L18",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "app_api_leaderboard_route",
-      "target": "app_api_leaderboard_route_post",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge",
       "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/leaderboard/route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_api_leaderboard_route",
-      "target": "src_db_schema",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/leaderboard/route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "app_api_leaderboard_route",
-      "target": "src_db_schema_leaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "build-output.txt",
-      "source_location": null,
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_page",
-      "target": "src_components_game_gamecontainer"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "prd",
-      "target": "src_components_game_gamecontainer"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L10",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_gamecontainer_gamecontainer",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_11_merge_always_ask_first",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L7",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L64",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_gameoverscreen",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_12_confirm_prod_deploy",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L7",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L68",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_gameoverscreen_gameoverscreen",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_13_close_the_issue",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L8",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_leaderboardscreen",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_14_cleanup",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_leaderboardscreen_leaderboardscreen",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_startscreen",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_1_trigger",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L5",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_components_game_startscreen_startscreen",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_2_fetch_the_issue",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports_from",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L4",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_store_gamestore",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_3_work_directly_in_the_existing_checked_out_repo",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L4",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer",
-      "target": "src_store_gamestore_usegamestore",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_4_branch",
       "confidence_score": 1.0
     },
     {
-      "relation": "imports",
-      "context": "import",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "app/page.tsx",
-      "source_location": "L3",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L21",
       "weight": 1.0,
       "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_page",
-      "target": "src_components_game_gamecontainer_gamecontainer"
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_5_make_the_changes",
+      "confidence_score": 1.0
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "contains",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/Game/GameContainer.tsx",
-      "source_location": "L11",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamecontainer_gamecontainer",
-      "target": "src_store_gamestore_usegamestore"
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_6_commit_push",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_7_open_the_pr",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".claude/Agents/github-issue-workflow.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
+      "target": "claude_agents_github_issue_workflow_why_this_exists",
+      "confidence_score": 1.0
     },
     {
       "relation": "references",
@@ -3178,15 +3155,27 @@
       "target": "src_components_game_gameoverscreen"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_gameoverscreen"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Game/GameOverScreen.tsx",
       "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_confetti_colors",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_confetti_colors"
     },
     {
       "relation": "contains",
@@ -3195,9 +3184,9 @@
       "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_confettipiece",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_confettipiece"
     },
     {
       "relation": "contains",
@@ -3206,9 +3195,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_gameoverscreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_gameoverscreen"
     },
     {
       "relation": "contains",
@@ -3217,45 +3206,88 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_gameoverscreen",
-      "target": "src_components_game_gameoverscreen_gameoverscreenprops",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameOverScreen.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_gameoverscreen",
-      "target": "src_store_gamestore",
-      "confidence_score": 1.0
+      "target": "src_components_game_gameoverscreen_gameoverscreenprops"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameOverScreen.tsx",
-      "source_location": "L5",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gameoverscreen",
-      "target": "src_store_gamestore_usegamestore",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_gameoverscreen_gameoverscreen"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/components/Game/GameOverScreen.tsx",
-      "source_location": "L26",
+      "source_file": "GameRules.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "gamerules",
+      "target": "src_components_game_gamescreen"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "prd",
+      "target": "src_components_game_gamescreen"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gameoverscreen_gameoverscreen",
-      "target": "src_store_gamestore_usegamestore"
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_gamescreen"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/GameScreen.tsx",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamescreen",
+      "target": "src_components_game_gamescreen_gamescreen"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_gamescreen_gamescreen"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_leaderboardscreen"
     },
     {
       "relation": "contains",
@@ -3264,9 +3296,9 @@
       "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_formattimestamp",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_formattimestamp"
     },
     {
       "relation": "contains",
@@ -3275,9 +3307,9 @@
       "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_leaderboardscreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_leaderboardscreen"
     },
     {
       "relation": "contains",
@@ -3286,9 +3318,9 @@
       "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_leaderboardscreenprops",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_leaderboardscreenprops"
     },
     {
       "relation": "contains",
@@ -3297,57 +3329,9 @@
       "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_rank_badge_colors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/LeaderboardScreen.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_leaderboardscreen",
-      "target": "src_types_game",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/LeaderboardScreen.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_leaderboardscreen",
-      "target": "src_types_game_playerscore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/LeaderboardScreen.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_leaderboardscreen",
-      "target": "src_utils_leaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/LeaderboardScreen.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_leaderboardscreen",
-      "target": "src_utils_leaderboard_fetchleaderboard",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_rank_badge_colors"
     },
     {
       "relation": "calls",
@@ -3357,21 +3341,21 @@
       "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_leaderboardscreen_leaderboardscreen",
-      "target": "src_components_game_leaderboardscreen_formattimestamp",
-      "confidence_score": 1.0
+      "target": "src_components_game_leaderboardscreen_formattimestamp"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/Game/LeaderboardScreen.tsx",
-      "source_location": "L31",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_leaderboardscreen_leaderboardscreen",
-      "target": "src_utils_leaderboard_fetchleaderboard"
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_leaderboardscreen_leaderboardscreen"
     },
     {
       "relation": "references",
@@ -3404,15 +3388,27 @@
       "target": "src_components_game_startscreen"
     },
     {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_startscreen"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/components/Game/StartScreen.tsx",
       "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_startscreen",
-      "target": "src_components_game_startscreen_startscreen",
-      "confidence_score": 1.0
+      "target": "src_components_game_startscreen_startscreen"
     },
     {
       "relation": "contains",
@@ -3421,707 +3417,91 @@
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
+      "confidence_score": 1.0,
       "source": "src_components_game_startscreen",
-      "target": "src_components_game_startscreen_startscreenprops",
-      "confidence_score": 1.0
+      "target": "src_components_game_startscreen_startscreenprops"
     },
     {
-      "relation": "imports_from",
+      "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/StartScreen.tsx",
+      "source_file": "src/components/Game/GameContainer.tsx",
       "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_startscreen",
-      "target": "src_store_gamestore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/StartScreen.tsx",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_startscreen",
-      "target": "src_store_gamestore_usegamestore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/StartScreen.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_startscreen",
-      "target": "src_utils_leaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/StartScreen.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_startscreen",
-      "target": "src_utils_leaderboard_fetchleaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/components/Game/StartScreen.tsx",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_startscreen_startscreen",
-      "target": "src_store_gamestore_usegamestore"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/Game/StartScreen.tsx",
-      "source_location": "L21",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_startscreen_startscreen",
-      "target": "src_utils_leaderboard_fetchleaderboard"
-    },
-    {
-      "relation": "shares_data_with",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "app_api_questions_route",
-      "target": "src_db_schema"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "claude",
-      "target": "src_db_schema"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "prd",
-      "target": "src_db_schema"
-    },
-    {
-      "relation": "shares_data_with",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_precompute_questions",
-      "target": "src_db_schema"
-    },
-    {
-      "relation": "shares_data_with",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_seed",
-      "target": "src_db_schema"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/db/index.ts",
-      "source_location": "L3",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_db_index",
-      "target": "src_db_schema"
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_startscreen_startscreen"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_db_schema",
-      "target": "src_db_schema_entities",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L13",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_db_schema",
-      "target": "src_db_schema_entitytype",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L80",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_db_schema",
-      "target": "src_db_schema_leaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L54",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_db_schema",
-      "target": "src_db_schema_questionbank",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/db/schema.ts",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_db_schema",
-      "target": "src_db_schema_triviahooks",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/precompute_questions.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_precompute_questions",
-      "target": "src_db_schema_entities"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/seed.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_seed",
-      "target": "src_db_schema_entities"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/precompute_questions.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_precompute_questions",
-      "target": "src_db_schema_triviahooks"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/seed.ts",
-      "source_location": "L10",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_seed",
-      "target": "src_db_schema_triviahooks"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/precompute_questions.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "scripts_precompute_questions",
-      "target": "src_db_schema_questionbank"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "claude",
-      "target": "src_store_gamestore"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "prd",
-      "target": "src_store_gamestore"
-    },
-    {
-      "relation": "conceptually_related_to",
-      "confidence": "INFERRED",
-      "confidence_score": 0.65,
-      "source_file": "public/gameover-hero.png",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "public_gameover_hero_image",
-      "target": "src_store_gamestore"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_store_gamestore"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "src_store_gamestore",
-      "target": "gamerules_crafting_table_win_condition"
-    },
-    {
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CLAUDE.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "src_store_gamestore",
-      "target": "gamerules_streak_weighted_scoring"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_store_gamestore_extracttooltier",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_store_gamestore_tool_tier_colors",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L34",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_store_gamestore_usegamestore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_types_game",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_types_game_gamequestion",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_types_game_gamestate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_types_game_playeranswer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_utils_leaderboard",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/store/gameStore.ts",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_store_gamestore",
-      "target": "src_utils_leaderboard_submitscore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_store_gamestore_usegamestore"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L24",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_components_game_gamescreen_gamescreen",
-      "target": "src_store_gamestore_usegamestore"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/questions/route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_api_questions_route",
-      "target": "src_types_game"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "prd.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "prd",
-      "target": "src_types_game"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/CraftingGrid.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_craftinggrid",
-      "target": "src_types_game"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/QuestionCard.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_questioncard",
-      "target": "src_types_game"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/game.ts",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_types_game",
-      "target": "src_types_game_filledslot",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/game.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_types_game",
-      "target": "src_types_game_gamequestion",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/game.ts",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_types_game",
-      "target": "src_types_game_gamestate",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/game.ts",
-      "source_location": "L15",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_types_game",
-      "target": "src_types_game_playeranswer",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/types/game.ts",
-      "source_location": "L30",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_types_game",
-      "target": "src_types_game_playerscore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_utils_leaderboard",
-      "target": "src_types_game",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/questionGenerator.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_utils_questiongenerator",
-      "target": "src_types_game"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "app/api/questions/route.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "app_api_questions_route",
-      "target": "src_types_game_gamequestion"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/QuestionCard.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_questioncard",
-      "target": "src_types_game_gamequestion"
-    },
-    {
-      "relation": "references",
-      "context": "field",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/QuestionCard.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_questioncard_questioncardprops",
-      "target": "src_types_game_gamequestion"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/questionGenerator.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_utils_questiongenerator",
-      "target": "src_types_game_gamequestion"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/CraftingGrid.tsx",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_craftinggrid",
-      "target": "src_types_game_filledslot"
-    },
-    {
-      "relation": "references",
-      "context": "field",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/CraftingGrid.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_craftinggrid_craftinggridprops",
-      "target": "src_types_game_filledslot"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_utils_leaderboard",
-      "target": "src_types_game_playerscore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "references",
-      "context": "field",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L4",
-      "weight": 1.0,
-      "_origin": "ast",
-      "source": "src_utils_leaderboard_submitscoreresult",
-      "target": "src_types_game_playerscore",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "src/utils/leaderboard.ts",
+      "source_file": "app/api/leaderboard/route.ts",
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_utils_leaderboard",
-      "target": "src_utils_leaderboard_fetchleaderboard",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "app_api_leaderboard_route",
+      "target": "app_api_leaderboard_route_get"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/utils/leaderboard.ts",
-      "source_location": "L16",
+      "source_file": "app/api/leaderboard/route.ts",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_utils_leaderboard",
-      "target": "src_utils_leaderboard_submitscore",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "app_api_leaderboard_route",
+      "target": "app_api_leaderboard_route_post"
     },
     {
-      "relation": "contains",
+      "relation": "imports_from",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/utils/leaderboard.ts",
+      "source_file": "app/api/leaderboard/route.ts",
       "source_location": "L3",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_utils_leaderboard",
-      "target": "src_utils_leaderboard_submitscoreresult",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "app_api_leaderboard_route",
+      "target": "src_db_index"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/leaderboard/route.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_api_leaderboard_route",
+      "target": "src_db_index_db"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/leaderboard/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_api_leaderboard_route",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/leaderboard/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_api_leaderboard_route",
+      "target": "src_db_schema_leaderboard"
     },
     {
       "relation": "contains",
@@ -4168,6 +3548,40 @@
       "confidence_score": 1.0,
       "source": "app_api_questions_route",
       "target": "src_db_index_db"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "app_api_questions_route",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/questions/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_api_questions_route",
+      "target": "src_types_game"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/api/questions/route.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_api_questions_route",
+      "target": "src_types_game_gamequestion"
     },
     {
       "relation": "references",
@@ -4295,6 +3709,30 @@
       "confidence_score": 1.0,
       "source": "app_page",
       "target": "app_page_home"
+    },
+    {
+      "relation": "references",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "build-output.txt",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_page",
+      "target": "src_components_game_gamecontainer"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "app/page.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "app_page",
+      "target": "src_components_game_gamecontainer_gamecontainer"
     },
     {
       "relation": "references",
@@ -4956,6 +4394,54 @@
       "target": "src_db_index_db"
     },
     {
+      "relation": "shares_data_with",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_precompute_questions",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/precompute_questions.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_precompute_questions",
+      "target": "src_db_schema_entities"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/precompute_questions.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_precompute_questions",
+      "target": "src_db_schema_questionbank"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/precompute_questions.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_precompute_questions",
+      "target": "src_db_schema_triviahooks"
+    },
+    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -5188,6 +4674,42 @@
       "target": "src_db_index_db"
     },
     {
+      "relation": "shares_data_with",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_seed",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/seed.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_seed",
+      "target": "src_db_schema_entities"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/seed.ts",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "scripts_seed",
+      "target": "src_db_schema_triviahooks"
+    },
+    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5254,18 +4776,6 @@
       "target": "src_utils_sounds_playclicksound"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_answeroptions"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -5276,18 +4786,6 @@
       "_origin": "ast",
       "source": "src_components_game_answeroptions_answeroptions",
       "target": "src_utils_sounds_playclicksound"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_answeroptions_answeroptions"
     },
     {
       "relation": "contains",
@@ -5315,25 +4813,37 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L8",
+      "source_file": "src/components/Game/CraftingGrid.tsx",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_craftinggrid"
+      "source": "src_components_game_craftinggrid",
+      "target": "src_types_game"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L8",
+      "source_file": "src/components/Game/CraftingGrid.tsx",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_craftinggrid_craftinggrid"
+      "source": "src_components_game_craftinggrid",
+      "target": "src_types_game_filledslot"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/CraftingGrid.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_craftinggrid_craftinggridprops",
+      "target": "src_types_game_filledslot"
     },
     {
       "relation": "references",
@@ -5414,18 +4924,6 @@
       "target": "src_utils_sounds_playincorrectsound"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_feedbackpanel"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -5450,28 +4948,6 @@
       "target": "src_utils_sounds_playincorrectsound"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L7",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_feedbackpanel_feedbackpanel"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "GameRules.md",
-      "source_location": null,
-      "weight": 1.0,
-      "source": "gamerules",
-      "target": "src_components_game_gamescreen"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -5479,78 +4955,54 @@
       "source_location": null,
       "weight": 1.0,
       "source": "prd",
-      "target": "src_components_game_gamescreen"
+      "target": "src_components_game_gamecontainer"
     },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L11",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_gamescreen_gamescreen"
+      "source": "src_components_game_gamecontainer",
+      "target": "src_components_game_gamecontainer_gamecontainer"
     },
     {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L5",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_questioncard"
+      "source": "src_components_game_gamecontainer",
+      "target": "src_store_gamestore"
     },
     {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L5",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L4",
       "weight": 1.0,
       "_origin": "ast",
       "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_components_game_questioncard_questioncard"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_utils_sounds"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L9",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "src_components_game_gamescreen",
-      "target": "src_utils_sounds_playnextquestionsound"
+      "source": "src_components_game_gamecontainer",
+      "target": "src_store_gamestore_usegamestore"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "src/components/Game/GameScreen.tsx",
-      "source_location": "L45",
+      "source_file": "src/components/Game/GameContainer.tsx",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast",
-      "source": "src_components_game_gamescreen_gamescreen",
-      "target": "src_utils_sounds_playnextquestionsound"
+      "source": "src_components_game_gamecontainer_gamecontainer",
+      "target": "src_store_gamestore_usegamestore"
     },
     {
       "relation": "references",
@@ -5583,6 +5035,42 @@
       "confidence_score": 1.0,
       "source": "src_components_game_questioncard",
       "target": "src_components_game_questioncard_questioncardprops"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/QuestionCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_questioncard",
+      "target": "src_types_game"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/QuestionCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_questioncard",
+      "target": "src_types_game_gamequestion"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/components/Game/QuestionCard.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_components_game_questioncard_questioncardprops",
+      "target": "src_types_game_gamequestion"
     },
     {
       "relation": "references",
@@ -5647,6 +5135,272 @@
       "confidence_score": 1.0,
       "source": "src_db_index",
       "target": "src_db_index_sql"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/index.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_db_index",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "prd",
+      "target": "src_db_schema"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_db_schema",
+      "target": "src_db_schema_entities"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_db_schema",
+      "target": "src_db_schema_entitytype"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L80",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_db_schema",
+      "target": "src_db_schema_leaderboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_db_schema",
+      "target": "src_db_schema_questionbank"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/db/schema.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_db_schema",
+      "target": "src_db_schema_triviahooks"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude",
+      "target": "src_store_gamestore"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "prd",
+      "target": "src_store_gamestore"
+    },
+    {
+      "relation": "conceptually_related_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.65,
+      "source_file": "public/gameover-hero.png",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "public_gameover_hero_image",
+      "target": "src_store_gamestore"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_store_gamestore",
+      "target": "gamerules_crafting_table_win_condition"
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "src_store_gamestore",
+      "target": "gamerules_streak_weighted_scoring"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_store_gamestore_extracttooltier"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_store_gamestore_tool_tier_colors"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_store_gamestore_usegamestore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_types_game"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_types_game_gamequestion"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_types_game_gamestate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_types_game_playeranswer"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_utils_leaderboard"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_utils_leaderboard_submitscore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_utils_questiongenerator"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/store/gameStore.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_store_gamestore",
+      "target": "src_utils_questiongenerator_generategamequestions"
     },
     {
       "relation": "references",
@@ -5857,6 +5611,131 @@
       "source_location": null,
       "weight": 1.0,
       "source": "prd",
+      "target": "src_types_game"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/game.ts",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_types_game",
+      "target": "src_types_game_filledslot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/game.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_types_game",
+      "target": "src_types_game_gamequestion"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/game.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_types_game",
+      "target": "src_types_game_gamestate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/game.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_types_game",
+      "target": "src_types_game_playeranswer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/types/game.ts",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_types_game",
+      "target": "src_types_game_playerscore"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_leaderboard",
+      "target": "src_types_game"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/questionGenerator.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_questiongenerator",
+      "target": "src_types_game"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/questionGenerator.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_questiongenerator",
+      "target": "src_types_game_gamequestion"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_leaderboard",
+      "target": "src_types_game_playerscore"
+    },
+    {
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_leaderboard_submitscoreresult",
+      "target": "src_types_game_playerscore"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "prd.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "prd",
       "target": "src_utils_answershuffler"
     },
     {
@@ -5939,6 +5818,39 @@
       "_origin": "ast",
       "source": "src_utils_questiongenerator_generatedistractors",
       "target": "src_utils_answershuffler_getrandomelements"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_leaderboard",
+      "target": "src_utils_leaderboard_fetchleaderboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_leaderboard",
+      "target": "src_utils_leaderboard_submitscore"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/utils/leaderboard.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast",
+      "confidence_score": 1.0,
+      "source": "src_utils_leaderboard",
+      "target": "src_utils_leaderboard_submitscoreresult"
     },
     {
       "relation": "references",
@@ -6534,182 +6446,6 @@
       "target": "ref_node_modules"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_github_issue_workflow"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L50",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_10_documentation_tooling_refresh_before_merge"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L61",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_11_merge_always_ask_first"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L66",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_12_confirm_prod_deploy"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L70",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_13_close_the_issue"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L74",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_14_cleanup"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L5",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_1_trigger"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L8",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_2_fetch_the_issue"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L12",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_3_clone_into_a_fresh_per_issue_subfolder"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L19",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_4_branch"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L23",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_5_make_the_changes"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L28",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_6_commit_push"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L33",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_7_open_the_pr"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L37",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_8_qa_on_the_vercel_preview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L42",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_9_structured_pr_qa_self_review_before_merge"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".claude/Agents/github-issue-workflow.md",
-      "source_location": "L77",
-      "weight": 1.0,
-      "_origin": "ast",
-      "confidence_score": 1.0,
-      "source": "claude_agents_github_issue_workflow_github_issue_workflow",
-      "target": "claude_agents_github_issue_workflow_why_this_exists"
-    },
-    {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
@@ -7192,5 +6928,5 @@
       "source_file": "CLAUDE.md"
     }
   ],
-  "built_at_commit": "e40da69abb4a9188447cd7a62538f85bb62f946f"
+  "built_at_commit": "60152b6c0f47e96bfdb231e79357762db0379d0b"
 }

@@ -9,16 +9,14 @@ Only start this flow when explicitly asked to work a specific GitHub Issue (e.g.
 - `issue_read` (method `get`) for title/body/acceptance criteria; `get_comments` if there's prior discussion.
 - Confirm scope with the user only if the issue is ambiguous — otherwise proceed.
 
-## 3. Clone into a fresh per-issue subfolder
-- Root: `C:\Users\sapna\OneDrive\Documents\Claude\.claude\Projects\minecraft-trivia\src\`
-- Subfolder per issue: `src\issue-<N>-<short-slug>\`
-  - e.g. `src\issue-8-fix-scoreboard\`
-- Clone via `gh repo clone sapnasudhir/minecraft-trivia "issue-<N>-<short-slug>"` run inside `src\`.
-- Every issue's working copy is isolated and disposable — never reuse or overwrite another issue's clone.
+## 3. Work directly in the existing checked-out repo
+- The project root (`C:\Users\sapna\OneDrive\Documents\Claude\.claude\Projects\minecraft-trivia\`) is itself the checked-out clone of `sapnasudhir/minecraft-trivia` — `src\` inside it is the app's real source folder, not a place to nest per-issue clones.
+- No separate clone step needed: `git fetch origin` and `git checkout master && git pull` to sync, then branch (step 4) directly here.
+- (A prior version of this doc said to clone into `src\issue-<N>-<short-slug>\`; that collided with the real `src\` and was never actually how issues #3+ were branched — corrected per issue #8.)
 
 ## 4. Branch
 - From the repo's default branch (`master` for minecraft-trivia — confirm via `list_branches` rather than assuming for other repos).
-- Branch name: `issue-<N>-<short-slug>` (matches the folder name).
+- Branch name: `issue-<N>-<short-slug>`.
 
 ## 5. Make the changes
 - Reuse existing patterns/components found in the repo rather than introducing new ones.
@@ -72,7 +70,8 @@ Merging to `master` auto-deploys to Vercel production. This is high blast-radius
 - If auto-close didn't fire, manually close via `issue_write` (`state: closed`, `state_reason: completed`).
 
 ## 14. Cleanup
-- Local folder deletion is manual/on-request, never automatic — always run `git status` in the issue subfolder first and flag any uncommitted/untracked files before removing it.
+- After merge, switch back to `master` and `git pull`; delete the local issue branch (`git branch -d issue-<N>-<short-slug>`) only after confirming it merged and `git status` shows nothing uncommitted on it.
+- The remote branch is deleted automatically if "Delete branch" is used on the merged PR (GitHub's default prompt) — otherwise delete it explicitly (`git push origin --delete issue-<N>-<short-slug>`).
 
 ## Why this exists
-Issues #4 and #5 were shipped with ad hoc local-repo handling: two different clone locations got created in one session, one accumulated uncommitted work, and cleanup needed manual intervention. This workflow fixes that — fixed clone root, fixed naming, an explicit Vercel preview QA gate before merge, and merge always requires explicit confirmation since it deploys straight to prod.
+Issues #4 and #5 were shipped with ad hoc local-repo handling: two different clone locations got created in one session, one accumulated uncommitted work, and cleanup needed manual intervention. This workflow fixes that — one fixed working copy (this checked-out repo), fixed branch naming, an explicit Vercel preview QA gate before merge, and merge always requires explicit confirmation since it deploys straight to prod. (Step 3 originally called for a per-issue clone under `src\`; that was corrected during issue #8 once it turned out to collide with the real source folder and didn't match how issues were actually branched.)

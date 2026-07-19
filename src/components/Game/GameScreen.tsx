@@ -60,7 +60,7 @@ export function GameScreen() {
 
   return (
     <div
-      className="min-h-screen p-4 py-8"
+      className="min-h-dvh overflow-x-hidden p-4 py-6"
       style={{
         background: 'repeating-linear-gradient(90deg, #b98a52, #b98a52 38px, #a97b45 38px, #a97b45 40px)',
       }}
@@ -68,7 +68,7 @@ export function GameScreen() {
       <div className="max-w-md mx-auto">
         {/* Parchment panel container */}
         <div
-          className="rounded-none p-7"
+          className="rounded-none p-5"
           style={{
             background: '#f3e6c8',
             border: '3px solid #6b4a2b',

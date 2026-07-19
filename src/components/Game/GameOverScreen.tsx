@@ -64,11 +64,10 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
 
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen p-4"
+      className="flex flex-col items-center justify-start sm:justify-center min-h-dvh overflow-x-hidden p-4 py-6"
       style={{
         background: 'repeating-linear-gradient(90deg, #b98a52, #b98a52 38px, #a97b45 38px, #a97b45 40px)',
         position: 'relative',
-        overflow: 'hidden',
       }}
     >
       {isTop3 && (
@@ -101,14 +100,14 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
         </div>
       )}
 
-      <div className="text-center max-w-md animate-slide-up">
+      <div className="w-full text-center max-w-md animate-slide-up">
         <h1
           className="animate-bounce-sm"
           style={{
             fontFamily: "'Press Start 2P', cursive",
-            fontSize: '28px',
+            fontSize: 'clamp(20px, 7vw, 28px)',
             color: 'white',
-            margin: '0 0 20px',
+            margin: '0 0 16px',
             textShadow: '2px 2px 0 rgba(0,0,0,0.5)',
           }}
         >
@@ -134,12 +133,12 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
           </div>
         )}
 
-        <div className="my-8">
+        <div className="my-4">
           <p
             className="animate-pulse-sm"
             style={{
               fontFamily: "'Press Start 2P', cursive",
-              fontSize: '52px',
+              fontSize: 'clamp(34px, 12vw, 52px)',
               color: '#facc15',
               margin: '0 0 8px',
               textShadow: '2px 2px 0 rgba(0,0,0,0.5)',
@@ -153,19 +152,19 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
               fontFamily: "'Press Start 2P', cursive",
               fontSize: '14px',
               color: 'white',
-              margin: '0 0 16px',
+              margin: '0 0 12px',
               textShadow: '1px 1px 0 rgba(0,0,0,0.5)',
             }}
           >
             TOTAL SCORE
           </p>
-          <p className="animate-fade-in" style={{ fontSize: '15px', color: 'white', margin: '0 0 24px' }}>
+          <p className="animate-fade-in" style={{ fontSize: '15px', color: 'white', margin: '0 0 16px' }}>
             {performanceMessage}
           </p>
         </div>
 
         <div
-          className="relative w-full max-w-md aspect-video mb-8 animate-fade-in"
+          className="relative w-full max-w-md aspect-video mb-4 animate-fade-in"
           style={{ border: '3px solid #6b4a2b' }}
         >
           <Image
@@ -179,7 +178,7 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
 
         <button
           onClick={resetGame}
-          className="w-full font-bold py-4 px-6 transition duration-200 text-lg mb-6"
+          className="w-full font-bold py-3 px-6 transition duration-200 text-lg mb-4"
           style={{
             background: '#5b8a3a',
             color: 'white',
@@ -198,7 +197,7 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
             style={{
               color: '#facc15',
               fontSize: '13px',
-              margin: '0 0 10px',
+              margin: '0 0 8px',
               textShadow: '1px 1px 0 rgba(0,0,0,0.5)',
             }}
           >
@@ -212,7 +211,7 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
           style={{
             padding: '12px 24px',
             fontSize: '11px',
-            marginBottom: '20px',
+            marginBottom: '14px',
             background: 'transparent',
             color: '#facc15',
             fontFamily: "'Press Start 2P', cursive",
@@ -224,11 +223,11 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
         </button>
 
         <div
-          className="p-6 animate-fade-in"
+          className="p-4 animate-fade-in"
           style={{ background: '#f3e6c8', border: '3px solid #6b4a2b' }}
         >
           <h3
-            className="mb-3"
+            className="mb-2"
             style={{
               color: '#3d2b1c',
               fontWeight: 'bold',
@@ -238,7 +237,7 @@ export function GameOverScreen({ score, totalQuestions, onShowLeaderboard }: Gam
           >
             YOUR PERFORMANCE
           </h3>
-          <div className="text-left space-y-2" style={{ color: '#3d2b1c', fontSize: '13px' }}>
+          <div className="text-left space-y-1" style={{ color: '#3d2b1c', fontSize: '13px' }}>
             <p className="font-semibold">✓ Correct: {correctCount}</p>
             <p className="font-semibold">✗ Incorrect: {incorrectCount}</p>
           </div>
