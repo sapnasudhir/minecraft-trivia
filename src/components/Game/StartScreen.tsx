@@ -42,14 +42,14 @@ export function StartScreen({ onShowLeaderboard }: StartScreenProps) {
 
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen p-4 py-8"
+      className="flex flex-col items-center justify-start sm:justify-center min-h-dvh overflow-x-hidden p-4 py-6"
       style={{
         background: 'repeating-linear-gradient(90deg, #b98a52, #b98a52 38px, #a97b45 38px, #a97b45 40px)',
       }}
     >
-      <div className="text-center max-w-md animate-slide-up">
+      <div className="w-full text-center max-w-md animate-slide-up">
         <h1
-          className="text-5xl md:text-6xl font-bold text-white mb-2 animate-bounce-sm"
+          className="text-2xl sm:text-4xl md:text-6xl font-bold text-white mb-2 animate-bounce-sm break-words"
           style={{
             fontFamily: "'Press Start 2P', cursive",
             textShadow: '2px 2px 0 rgba(0,0,0,0.5)',
@@ -58,7 +58,7 @@ export function StartScreen({ onShowLeaderboard }: StartScreenProps) {
           MINECRAFT
         </h1>
         <h2
-          className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in"
+          className="text-lg sm:text-2xl md:text-4xl font-bold mb-4 sm:mb-6 animate-fade-in break-words"
           style={{
             fontFamily: "'Press Start 2P', cursive",
             color: '#facc15',

@@ -5,9 +5,9 @@
     "semantic_hash": "d3ad679933d113c3c04480e940c08f6f"
   },
   "app/layout.tsx": {
-    "mtime": 1784466054.4457064,
-    "ast_hash": "e7595f79a62a5fbce0df374a5657c756",
-    "semantic_hash": "e7595f79a62a5fbce0df374a5657c756"
+    "mtime": 1784487082.2256978,
+    "ast_hash": "82bc3c4313f0d603a06383c5a9349799",
+    "semantic_hash": ""
   },
   "app/page.tsx": {
     "mtime": 1784466054.44723,

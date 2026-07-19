@@ -45,13 +45,13 @@ export function LeaderboardScreen({ onBack }: LeaderboardScreenProps) {
 
   return (
     <div
-      className="flex flex-col items-center min-h-screen p-4 py-8"
+      className="flex flex-col items-center min-h-dvh overflow-x-hidden p-4 py-6"
       style={{
         background: 'repeating-linear-gradient(90deg, #b98a52, #b98a52 38px, #a97b45 38px, #a97b45 40px)',
       }}
     >
       <div
-        className="w-full"
+        className="w-full min-w-0"
         style={{
           maxWidth: '420px',
           background: '#f3e6c8',
