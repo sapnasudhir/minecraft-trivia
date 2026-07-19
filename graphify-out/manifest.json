@@ -190,9 +190,9 @@
     "semantic_hash": "9346a4897ff955555ddedb7bebf77adb"
   },
   "CLAUDE.md": {
-    "mtime": 1784467241.4277544,
-    "ast_hash": "ca86944c7a367e39b39e986f045f5f39",
-    "semantic_hash": "ca86944c7a367e39b39e986f045f5f39"
+    "mtime": 1784480740.989078,
+    "ast_hash": "e818d1e56c30380fa58b9aeb05afbb7f",
+    "semantic_hash": ""
   },
   "GameRules.md": {
     "mtime": 1784466926.3962004,
@@ -210,9 +210,9 @@
     "semantic_hash": "12ac75295345e6b3b944248bdab518f6"
   },
   "prd.md": {
-    "mtime": 1784467249.3418524,
-    "ast_hash": "3eedec2509d1008a03ea2be1f7c46ec7",
-    "semantic_hash": "3eedec2509d1008a03ea2be1f7c46ec7"
+    "mtime": 1784480734.9081664,
+    "ast_hash": "07d8ec8de66deb6cd3efbad778179610",
+    "semantic_hash": ""
   },
   "tools/image_check.html": {
     "mtime": 1784466054.5749485,
@@ -253,5 +253,10 @@
     "mtime": 1784466054.5306532,
     "ast_hash": "a2760511c65806022ad20adf74370ff3",
     "semantic_hash": "a2760511c65806022ad20adf74370ff3"
+  },
+  ".claude/Agents/github-issue-workflow.md": {
+    "mtime": 1784480715.5905652,
+    "ast_hash": "ac0aa7e243ff6c6745cd16fed0eb1356",
+    "semantic_hash": ""
   }
 }
