@@ -4,6 +4,7 @@ import {
   text,
   jsonb,
   smallint,
+  integer,
   serial,
   timestamp,
   index,
@@ -75,3 +76,10 @@ export const questionBank = pgTable(
     ),
   ]
 )
+
+export const leaderboard = pgTable('leaderboard', {
+  id: serial('id').primaryKey(),
+  playerName: text('player_name').notNull(),
+  score: integer('score').notNull(),
+  createdAt: timestamp('created_at', { withTimezone: true }).defaultNow(),
+})

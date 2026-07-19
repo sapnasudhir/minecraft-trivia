@@ -216,3 +216,53 @@ button:active:not(:disabled) {
 .progress-bar {
   transition: width 0.4s ease-in-out;
 }
+
+/* Leaderboard rank celebration */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(250, 204, 21, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 18px 4px rgba(250, 204, 21, 0.9);
+  }
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-confetti {
+  animation-name: confettiFall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+.animate-glow {
+  animation: glowPulse 1.4s ease-in-out infinite;
+}
+
+.animate-badge-pop {
+  animation: badgePop 0.5s ease-out;
+}

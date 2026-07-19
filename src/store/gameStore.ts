@@ -3,6 +3,7 @@
 import { create } from 'zustand'
 import { GameState, GameQuestion, PlayerAnswer } from '@/types/game'
 import { generateGameQuestions } from '@/utils/questionGenerator'
+import { submitScore } from '@/utils/leaderboard'
 
 const INITIAL_BATCH_SIZE = 5
 const REFETCH_THRESHOLD = 2 // Fetch more when we have 2 or fewer questions left
@@ -41,9 +42,15 @@ export const useGameStore = create<GameState>((set, get) => ({
   filledSlots: Array(8).fill(null),
   consecutiveCount: 0,
   lastResultWasCorrect: undefined,
+  playerName: '',
+  leaderboardRank: null,
 
   setQuestions: (questions: GameQuestion[]) => {
     set({ questions })
+  },
+
+  setPlayerName: (name: string) => {
+    set({ playerName: name })
   },
 
   startGame: async () => {
@@ -61,6 +68,7 @@ export const useGameStore = create<GameState>((set, get) => ({
         consecutiveCount: 0,
         lastResultWasCorrect: undefined,
         totalQuestionsPerGame: 0, // Will track actual questions answered
+        leaderboardRank: null,
       })
     } catch {
       set({ gameStatus: 'error' })
@@ -141,7 +149,7 @@ export const useGameStore = create<GameState>((set, get) => ({
     const isBoardComplete = filledSlots.every(Boolean)
 
     if (isBoardComplete) {
-      set({ gameStatus: 'finished' })
+      get().endGame()
       return
     }
 
@@ -172,9 +180,15 @@ export const useGameStore = create<GameState>((set, get) => ({
   },
 
   endGame: () => {
-    set({
-      gameStatus: 'finished',
-    })
+    const { playerName, score } = get()
+    set({ gameStatus: 'finished' })
+    submitScore(playerName, score)
+      .then((result) => {
+        set({ leaderboardRank: result.rank })
+      })
+      .catch((err) => {
+        console.error('Failed to submit score:', err)
+      })
   },
 
   resetGame: () => {

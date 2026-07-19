@@ -1,9 +1,11 @@
 'use client'
 
+import { useState } from 'react'
 import { useGameStore } from '@/store/gameStore'
 import { StartScreen } from './StartScreen'
 import { GameScreen } from './GameScreen'
 import { GameOverScreen } from './GameOverScreen'
+import { LeaderboardScreen } from './LeaderboardScreen'
 
 export function GameContainer() {
   const gameStatus = useGameStore((state) => state.gameStatus)
@@ -11,9 +13,14 @@ export function GameContainer() {
   const answers = useGameStore((state) => state.answers)
   const startGame = useGameStore((state) => state.startGame)
   const resetGame = useGameStore((state) => state.resetGame)
+  const [showLeaderboard, setShowLeaderboard] = useState(false)
+
+  if (showLeaderboard) {
+    return <LeaderboardScreen onBack={() => setShowLeaderboard(false)} />
+  }
 
   if (gameStatus === 'idle') {
-    return <StartScreen />
+    return <StartScreen onShowLeaderboard={() => setShowLeaderboard(true)} />
   }
 
   if (gameStatus === 'loading') {
@@ -54,6 +61,7 @@ export function GameContainer() {
       <GameOverScreen
         score={score}
         totalQuestions={answers.length}
+        onShowLeaderboard={() => setShowLeaderboard(true)}
       />
     )
   }

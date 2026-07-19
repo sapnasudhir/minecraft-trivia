@@ -40,10 +40,12 @@ Before any PR/issue is approved to merge into `master`:
 
 ### Data Structure
 - **Corpus**: Neon Postgres, 3 tables — `entities` (block/mob/structure + JSONB properties), `trivia_hooks` (question seeds, tagged with `answerType`), `question_bank` (precomputed ready-to-serve MC questions)
+- **Leaderboard**: Neon Postgres, `leaderboard` table (`player_name`, `score`, `created_at`) — persisted, free-text player names, no auth. Pruned to the top 10 rows by score on every insert (`app/api/leaderboard/route.ts`'s `POST` handler), so duplicates-per-player are allowed but the table itself never holds more than 10 rows
 - **DB client/schema**: `src/db/index.ts`, `src/db/schema.ts` (Drizzle)
 - **Types**: All TypeScript types in src/types/ (block.ts, game.ts)
-- **API**: `app/api/questions/route.ts` — `GET /api/questions?count=5` returns random precomputed questions, one per unique block
+- **API**: `app/api/questions/route.ts` — `GET /api/questions?count=5` returns random precomputed questions, one per unique block; `app/api/leaderboard/route.ts` — `GET` returns the top 10 scores desc, `POST` submits `{playerName, score}` and prunes back to 10
 - **Question generation**: `src/utils/questionGenerator.ts` — `generateGameQuestions()` fetches from the API (client-side, async); `generateDistractors()`/`generateExplanation()` are the reusable pieces called offline by `scripts/precompute_questions.ts`
+- **Leaderboard fetch/submit**: `src/utils/leaderboard.ts` — `fetchLeaderboard()`/`submitScore()`, called from `gameStore.endGame()` (submission) and `StartScreen`/`LeaderboardScreen` (fetch)
 - **Corpus JSON**: `src/data/minecraft_block_trivia_corpus_100.json` is the pipeline's output artifact, loaded only by `scripts/seed.ts` — never bundled into the client
 
 ### Code Organization
@@ -61,9 +63,10 @@ tools/                # Dev-only diagnostics (generate_image_check.py), not part
 ArivMinecraftTrivia/   # Sibling folder (not this repo) — Python ETL pipeline + raw data artifacts
 
 ### Design Consistency
-- **StartScreen**: Blue gradient, pixel font title, hero image, green START GAME button, yellow features box
+- **StartScreen**: Wood-plank/parchment background, pixel font title, player name field with leaderboard autocomplete, hero image, green START GAME button (disabled until a name is entered), leaderboard link button, yellow features box
 - **GameScreen**: Blue gradient, score board at top, question card with block image, answer options, feedback panel
-- **GameOverScreen**: Purple gradient, hero image, score display, PLAY AGAIN button, yellow performance box
+- **GameOverScreen**: Wood-plank/parchment background (matches Start/Game screens), hero image, score display, PLAY AGAIN button, leaderboard link button, parchment performance box
+- **LeaderboardScreen**: Wood-plank/parchment background, ranked top-10 list (gold/silver/bronze badges), BACK button returns to whichever screen linked here
 
 ### Common Tasks
 
@@ -116,7 +119,7 @@ Actions: startGame() [async], selectAnswer(), showFeedback(), nextQuestion() [as
 ## Known Limitations & Future Work
 - Game is currently limited to 100 blocks (Release 2 target: 10,000 records across Blocks + Mobs + Structures)
 - Non-boolean questions show 3 options, boolean (True/False) show 2 — distractors are guaranteed contextually consistent (same answerType as the correct answer) with a numeric-perturbation fallback for thin distractor pools (e.g. Y-level range currently has only 2 resolved blocks)
-- No user authentication or score persistence
+- No user authentication — the leaderboard's player names are free-text with no ownership/identity check (anyone can submit under any name); scores themselves are now persisted (top 10, Neon Postgres `leaderboard` table)
 - No difficulty selection or category filter in the UI (data supports it — `difficulty`/`category` columns already exist on `question_bank`)
 - Environment variable env-file quirk: `next dev`/`next build` auto-load `.env.local`, but standalone scripts (`drizzle-kit`, `scripts/*.ts`) need `node --env-file=.env.local ...` explicitly since they don't go through Next.js's own env loading
 - See prd.md for technical roadmap

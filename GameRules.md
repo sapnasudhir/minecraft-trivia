@@ -9,11 +9,13 @@ Answer Minecraft block trivia questions correctly to fill an 8-slot crafting tab
 
 ### 1. Start Screen
 - **Display**: "MINECRAFT / BLOCK TRIVIA" title (pixel font) with hero image
+- **Player name**: a required text field with autocomplete suggestions drawn from the current Top 10 leaderboard's unique names (case-insensitive substring match, max 6 shown). Selecting a suggestion fills the field; typing an unmatched name is fine (new players just aren't on the board yet). "START GAME" is disabled until a name is entered.
 - **Callout box**: "FILL THE CRAFTING TABLE TO WIN!"
   - Answer trivia to fill grid slots
   - Earn points for correct answers
   - Complete the table to finish
 - **Action**: Click "START GAME" to begin
+- **"🏆 TOP 10 LEADERBOARD"** button opens the Leaderboard Screen (see below); Back returns here.
 
 ### 2. The Crafting Table (core loop)
 The game board is a 3×3 crafting grid, Minecraft-style:
@@ -65,6 +67,17 @@ Reached when the crafting table is completed, or the player terminates early.
   - Below 60%: "📚 Try again to improve your knowledge!"
 - **Your Performance** box: ✓ Correct: X, ✗ Incorrect: Y
 - **"PLAY AGAIN"** resets to the Start Screen
+- **"🏆 TOP 10 LEADERBOARD"** button opens the Leaderboard Screen; Back returns to this Game Over screen
+- The current player's score is submitted to the leaderboard automatically when the game ends (whether the table was completed or the player terminated early), including zero/negative scores — no minimum threshold
+- **Rank celebration**: if the just-submitted score made the top 10, a badge appears ("🏆 TOP 10 SCORE!") and the leaderboard button pulses/glows with a "See where you rank!" nudge. If it made the **top 3**, the badge becomes more emphatic ("🎉 #N ON THE LEADERBOARD!") and falling confetti animates across the screen.
+
+## Leaderboard
+
+A persistent, shared Top 10 list of the highest scores across all players (Neon Postgres, not per-browser).
+- **Duplicates are allowed**: if one player has 3 of the top 10 scores, they appear as 3 separate rows — the list of 10 scores can represent as few as 1 unique name.
+- **Pruning**: every finished game submits a `{playerName, score}` row; the leaderboard table is immediately re-sorted and truncated back to the top 10, so a new high score can bump a former top-10 entry off entirely.
+- **No identity/ownership check**: player names are free-text. Autocomplete on the Start Screen is a convenience, not an enforced identity — anyone can play under any name.
+- **Leaderboard Screen**: ranked list (rank badge, name, score) sorted descending by score, gold/silver/bronze badges for ranks 1–3, "No scores yet — be the first!" shown when the table is empty. Each row shows an abbreviated date/time (e.g. "7/19 6:24 PM") in small muted text under the score, from the row's `created_at`. Reachable from both the Start Screen and the Game Over Screen; Back returns to whichever one opened it.
 
 ## Question Generation
 
@@ -110,5 +123,5 @@ For each question:
 ## Not Yet Implemented
 - Difficulty selection or category filtering in the UI (data supports it — `difficulty`/`category` already exist on `question_bank`)
 - Mob and structure questions (schema supports it, corpus doesn't populate it yet)
-- User authentication or persisted/leaderboard scores across sessions
+- User authentication — the Top 10 leaderboard (persisted in Neon Postgres) uses free-text player names with no login/ownership check
 - Daily challenges, streak tracking beyond in-session scoring, hint system

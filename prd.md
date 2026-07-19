@@ -30,35 +30,38 @@ minecraft-trivia/
 │   ├── layout.tsx              # Root layout with metadata
 │   ├── page.tsx                # Entry point (renders GameContainer)
 │   ├── globals.css             # Global styles + animations
-│   └── api/questions/route.ts  # GET /api/questions?count=5 -- serves precomputed questions
+│   ├── api/questions/route.ts  # GET /api/questions?count=5 -- serves precomputed questions
+│   └── api/leaderboard/route.ts # GET top 10 scores desc; POST submits {playerName, score}, prunes to top 10
 │
 ├── src/
 │   ├── components/Game/
 │   │   ├── GameContainer.tsx   # Routes between screens based on game status (incl. loading/error)
-│   │   ├── StartScreen.tsx     # Landing: title, hero image, features, START button
+│   │   ├── StartScreen.tsx     # Landing: title, hero image, player name + autocomplete, features, START button
 │   │   ├── GameScreen.tsx      # Main game loop: question, answers, score
 │   │   ├── QuestionCard.tsx    # Question display with block image
 │   │   ├── AnswerOptions.tsx   # 3 (or 2 for True/False) clickable answer buttons
 │   │   ├── FeedbackPanel.tsx   # Correct/incorrect feedback + explanation
 │   │   ├── ScoreBoard.tsx      # Live score + accuracy display
-│   │   └── GameOverScreen.tsx  # Final score, performance message, play again
+│   │   ├── GameOverScreen.tsx  # Final score, performance message, play again
+│   │   └── LeaderboardScreen.tsx # Top 10 ranked list, reachable from Start and Game Over
 │   │
 │   ├── data/
 │   │   └── minecraft_block_trivia_corpus_100.json  # Pipeline output; read only by scripts/seed.ts
 │   │
 │   ├── db/
-│   │   ├── schema.ts           # Drizzle schema: entities, trivia_hooks, question_bank
+│   │   ├── schema.ts           # Drizzle schema: entities, trivia_hooks, question_bank, leaderboard
 │   │   └── index.ts            # Neon serverless DB client
 │   │
 │   ├── store/
-│   │   └── gameStore.ts        # Zustand store (game state + actions; startGame() is async)
+│   │   └── gameStore.ts        # Zustand store (game state + actions; startGame() is async; endGame() submits score to leaderboard)
 │   │
 │   ├── types/
 │   │   ├── block.ts            # Block, TriviaHook (incl. answerType), Properties interfaces
-│   │   └── game.ts             # GameQuestion, GameState (incl. loading/error), PlayerAnswer
+│   │   └── game.ts             # GameQuestion, GameState (incl. loading/error), PlayerAnswer, PlayerScore
 │   │
 │   └── utils/
 │       ├── questionGenerator.ts # generateGameQuestions() fetches from API; generateDistractors()/generateExplanation() are the offline-reusable pieces
+│       ├── leaderboard.ts      # fetchLeaderboard()/submitScore() -- client-side fetch wrappers for /api/leaderboard
 │       ├── answerShuffler.ts   # Fisher-Yates shuffle algorithm
 │       └── sounds.ts           # Web Audio API sound synthesis
 │
@@ -259,6 +262,15 @@ CREATE TABLE question_bank (
   explanation TEXT,
   created_at TIMESTAMPTZ DEFAULT now()
 );
+
+CREATE TABLE leaderboard (
+  id SERIAL PRIMARY KEY,
+  player_name TEXT NOT NULL,
+  score INTEGER NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT now()
+);
+-- Pruned to the top 10 rows by score on every insert (see app/api/leaderboard/route.ts) --
+-- duplicates per player are allowed, so this table never represents more than 10 unique names.
 `
 
 ## UI/UX Specifications
@@ -266,11 +278,12 @@ CREATE TABLE question_bank (
 ### Screens & Layouts
 
 #### StartScreen
-- Full-screen blue gradient (from-blue-600 to-blue-800)
+- Wood-plank/parchment background (repeating-linear-gradient stripe), matches GameScreen/GameOverScreen/LeaderboardScreen
 - Centered content container (max-w-md)
-- Hero image: aspect-video (16:9), rounded corners
+- Required player name field (parchment input) with an autocomplete dropdown sourced from the leaderboard's unique names; START GAME disabled until a name is entered
+- Hero image: aspect-video (16:9)
 - Yellow feature box: high-contrast dark text on yellow background
-- Green START GAME button: full-width, pixel font
+- Brown START GAME button (full-width, pixel font) + outlined "🏆 TOP 10 LEADERBOARD" link button
 
 #### GameScreen
 - Blue gradient background
@@ -281,11 +294,18 @@ CREATE TABLE question_bank (
 - Progress bar under question number
 
 #### GameOverScreen
-- Purple gradient (from-purple-600 to-purple-800)
+- Wood-plank/parchment background (matches Start/Game/Leaderboard screens) — no longer a purple gradient
 - Centered content
-- Large percentage display (text-6xl)
+- Large score display (pixel font, 52px, yellow), "TOTAL SCORE" label, performance message
 - Hero image: aspect-video
-- Yellow performance box: same contrast design as StartScreen
+- Green PLAY AGAIN button + outlined "🏆 TOP 10 LEADERBOARD" link button
+- Parchment performance box (same contrast design as StartScreen's feature box)
+
+#### LeaderboardScreen
+- Wood-plank/parchment background, parchment inner panel, "TOP 10 / LEADERBOARD" title
+- Ranked rows (rank badge, name, score) sorted descending by score, top 10 only; gold/silver/bronze badges for ranks 1–3, zebra striping
+- Empty state: "No scores yet — be the first!"
+- BACK button returns to whichever screen linked here (Start or Game Over)
 
 ### Typography
 - **Pixel Font** (Press Start 2P): Titles only ("MINECRAFT BLOCK TRIVIA")
@@ -337,11 +357,11 @@ Since merging to master triggers an immediate production deploy, every PR/issue 
 
 ## API Endpoints (Current)
 - `GET /api/questions?count=5` → returns `count` random precomputed questions (one per unique block), `force-dynamic` (never cached — must stay random every call)
+- `GET /api/leaderboard` → top 10 scores, descending, `force-dynamic`
+- `POST /api/leaderboard` → submits `{playerName, score}` (no auth), inserts and prunes the table back to the top 10, returns the fresh top 10
 
 **Future Endpoints**:
 - `GET /api/questions?difficulty=easy&category=mechanical&type=mob` → filtered game modes (Release 2)
-- `POST /api/scores` → Save game result (requires auth)
-- `GET /api/leaderboard` → Top scores
 
 ## Browser Support
 - Chrome 90+
@@ -386,8 +406,7 @@ No automated test suite exists yet (aspirational, not yet built):
 ## Known Issues & Limitations
 
 ### Current Limitations
-- No persistent high scores (game state resets on page reload)
-- No user accounts or authentication
+- No user accounts or authentication — the Top 10 leaderboard (persisted, Neon Postgres) uses free-text player names with no ownership/identity check
 - No difficulty selector in the UI (all questions mixed) — data already supports it, `question_bank.difficulty` is populated
 - No category filter in the UI — same, `question_bank.category` already exists
 - Only 100 of ~1,200+ blocks covered; Mobs/Structures not started
@@ -414,9 +433,9 @@ No automated test suite exists yet (aspirational, not yet built):
 - [ ] Add structure trivia (loot tables, generation biome, size) — wiki-only, no structured dataset available
 
 ### Phase 3: User Engagement (Q1 2027)
+- [x] Score persistence + Top 10 leaderboard (Postgres, free-text names, no auth) — see GitHub issue #3
 - [ ] User authentication (OAuth via Discord/Microsoft)
-- [ ] Score persistence (Postgres + JWT)
-- [ ] Leaderboard (global + weekly)
+- [ ] Weekly/rolling leaderboard (current leaderboard is all-time)
 - [ ] Daily challenge (same 5 questions for all players)
 - [ ] Streak tracking (consecutive correct answers)
 - [ ] Hint system (reveal one incorrect answer)

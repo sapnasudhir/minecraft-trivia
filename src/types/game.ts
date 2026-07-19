@@ -27,6 +27,13 @@ export interface FilledSlot {
   toolColor?: string // tool tier color
 }
 
+export interface PlayerScore {
+  id: number
+  playerName: string
+  score: number
+  createdAt: string | null
+}
+
 export interface GameState {
   gameStatus: 'idle' | 'loading' | 'playing' | 'feedback' | 'finished' | 'error'
   currentQuestionIndex: number
@@ -38,6 +45,8 @@ export interface GameState {
   filledSlots: (FilledSlot | null)[] // 8-element array for crafting grid
   consecutiveCount: number // track correct/incorrect streak
   lastResultWasCorrect?: boolean // track if previous answer was correct
+  playerName: string
+  leaderboardRank: number | null // 1-indexed top-10 rank for the just-submitted score, set async after endGame()
 
   // Actions
   startGame: () => Promise<void>
@@ -47,4 +56,5 @@ export interface GameState {
   endGame: () => void
   resetGame: () => void
   setQuestions: (questions: GameQuestion[]) => void
+  setPlayerName: (name: string) => void
 }
