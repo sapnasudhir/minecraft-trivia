@@ -105,14 +105,14 @@
     "semantic_hash": ""
   },
   "src/components/Game/GameOverScreen.tsx": {
-    "mtime": 1784485293.147579,
-    "ast_hash": "056da05d7b06918f9fb50e2cf6fbfcda",
+    "mtime": 1784492600.2186131,
+    "ast_hash": "267f9427fe0c45fa673fbfc0290cb1bc",
     "semantic_hash": ""
   },
   "src/components/Game/GameScreen.tsx": {
-    "mtime": 1784466054.5482967,
-    "ast_hash": "e8a38d44eb343e1a7ae3892e161b261c",
-    "semantic_hash": "e8a38d44eb343e1a7ae3892e161b261c"
+    "mtime": 1784492600.219622,
+    "ast_hash": "b755e90e8c6d92aa61b61f3f5ca49b4c",
+    "semantic_hash": ""
   },
   "src/components/Game/QuestionCard.tsx": {
     "mtime": 1784466054.5502982,
@@ -125,8 +125,8 @@
     "semantic_hash": "281b79bdfab26ecec960858894664b39"
   },
   "src/components/Game/StartScreen.tsx": {
-    "mtime": 1784482632.510944,
-    "ast_hash": "32f24d65b30cbd43a5d97b307f4d1e67",
+    "mtime": 1784492600.2236376,
+    "ast_hash": "1b1f1f8480902332e8e3bb5bf4b6eb0f",
     "semantic_hash": ""
   },
   "src/data/minecraft_block_trivia_corpus_100.json": {
@@ -275,8 +275,8 @@
     "semantic_hash": ""
   },
   "src/components/Game/LeaderboardScreen.tsx": {
-    "mtime": 1784485845.649802,
-    "ast_hash": "307bcc2e8f30befc03775ef0abddf06f",
+    "mtime": 1784492600.2216449,
+    "ast_hash": "9601ac51f3fbb4f303c836acdee30b51",
     "semantic_hash": ""
   },
   "src/utils/leaderboard.ts": {

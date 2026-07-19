@@ -1,16 +1,16 @@
 # Graph Report - minecraft-trivia  (2026-07-19)
 
 ## Corpus Check
-- 48 files · ~202,989 words
+- 48 files · ~203,006 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 252 nodes · 388 edges · 19 communities (11 shown, 8 thin omitted)
-- Extraction: 97% EXTRACTED · 2% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.79)
+- 252 nodes · 357 edges · 19 communities (11 shown, 8 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 9 edges (avg confidence: 0.79)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5113af41`
+- Built from commit: `9f6b2629`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -40,12 +40,12 @@
 2. `compilerOptions` - 16 edges
 3. `GitHub Issue Workflow` - 16 edges
 4. `CLAUDE.md — Minecraft Block Trivia Development Guide` - 16 edges
-5. `useGameStore` - 9 edges
-6. `scripts` - 8 edges
-7. `include` - 7 edges
-8. `GameRules.md — Minecraft Block Trivia Game Rules` - 7 edges
-9. `GameQuestion` - 6 edges
-10. `getAudioContext()` - 6 edges
+5. `scripts` - 8 edges
+6. `include` - 7 edges
+7. `GameRules.md — Minecraft Block Trivia Game Rules` - 7 edges
+8. `GameQuestion` - 6 edges
+9. `getAudioContext()` - 6 edges
+10. `db` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Rationale: Per-Block Texture Resolution via Wiki File: Namespace` --semantically_similar_to--> `Rationale: answerType-Based Distractor Sampling`  [INFERRED] [semantically similar]
@@ -70,11 +70,11 @@
 
 ### Community 0 - "Project Docs & Data Pipeline"
 Cohesion: 0.07
-Nodes (33): Warning: This Next.js Version Has Breaking Changes vs Training Data, ArivMinecraftTrivia/pipeline/fetch_minecraft_data.py, ArivMinecraftTrivia/pipeline/merge.py, ArivMinecraftTrivia/pipeline/select_blocks.py, ArivMinecraftTrivia/pipeline/texture_resolver.py, ArivMinecraftTrivia/pipeline/wiki_scraper.py, build-output.txt — Next.js Build Log (failed build), CLAUDE.md — Minecraft Block Trivia Development Guide (+25 more)
+Nodes (32): Warning: This Next.js Version Has Breaking Changes vs Training Data, ArivMinecraftTrivia/pipeline/fetch_minecraft_data.py, ArivMinecraftTrivia/pipeline/merge.py, ArivMinecraftTrivia/pipeline/select_blocks.py, ArivMinecraftTrivia/pipeline/texture_resolver.py, ArivMinecraftTrivia/pipeline/wiki_scraper.py, build-output.txt — Next.js Build Log (failed build), CLAUDE.md — Minecraft Block Trivia Development Guide (+24 more)
 
 ### Community 1 - "Game UI Screens & Audio"
-Cohesion: 0.15
-Nodes (17): Game Over Hero Image (gameover-hero.png), Minecraft Hero Image (Surfing Character Scene), GameContainer(), CONFETTI_COLORS, ConfettiPiece, GameOverScreen(), GameOverScreenProps, GameScreen() (+9 more)
+Cohesion: 0.12
+Nodes (17): GameRules.md — Minecraft Block Trivia Game Rules, Rules.md (superseded prototype spec: fixed 5-question quiz, no penalties, 25-block corpus), Game Over Hero Image (gameover-hero.png), Minecraft Hero Image (Surfing Character Scene), GameContainer(), CONFETTI_COLORS, ConfettiPiece, GameOverScreen() (+9 more)
 
 ### Community 2 - "Runtime Package Dependencies"
 Cohesion: 0.08
@@ -97,8 +97,8 @@ Cohesion: 0.13
 Nodes (14): GET(), QuestionRow, Batch Question Fetching (batches of 5, silent background refill), DB-Backed Scaling Architecture (Phase A, completed), Rationale: Offline-Precomputed Questions over Runtime Generation, Release 2 Roadmap: Scaling to 10,000 Records (Blocks+Mobs+Structures), CorpusBlock, db (+6 more)
 
 ### Community 7 - "Crafting Game Mechanics"
-Cohesion: 0.30
-Nodes (11): GameRules.md — Minecraft Block Trivia Game Rules, Rules.md (superseded prototype spec: fixed 5-question quiz, no penalties, 25-block corpus), AnswerOptions(), AnswerOptionsProps, FeedbackPanel(), FeedbackPanelProps, getAudioContext(), playClickSound() (+3 more)
+Cohesion: 0.26
+Nodes (11): Web Audio API, AnswerOptions(), AnswerOptionsProps, FeedbackPanel(), FeedbackPanelProps, getAudioContext(), playClickSound(), playCorrectSound() (+3 more)
 
 ### Community 8 - "TS Ambient Type References"
 Cohesion: 0.12
@@ -109,15 +109,15 @@ Cohesion: 0.40
 Nodes (3): geistMono, geistSans, metadata
 
 ### Community 10 - "gameStore.ts"
-Cohesion: 0.15
-Nodes (15): 8-Slot Crafting Table Win Condition, Streak-Weighted Scoring System, CraftingGrid(), CraftingGridProps, QuestionCard(), QuestionCardProps, TOOL_TIER_COLORS, FilledSlot (+7 more)
+Cohesion: 0.14
+Nodes (13): 8-Slot Crafting Table Win Condition, Streak-Weighted Scoring System, CraftingGridProps, QuestionCardProps, TOOL_TIER_COLORS, FilledSlot, GameQuestion, GameState (+5 more)
 
 ## Ambiguous Edges - Review These
 - `build-output.txt — Next.js Build Log (failed build)` → `Warning: This Next.js Version Has Breaking Changes vs Training Data`  [AMBIGUOUS]
   build-output.txt · relation: conceptually_related_to
 
 ## Knowledge Gaps
-- **114 isolated node(s):** `QuestionRow`, `geistSans`, `geistMono`, `metadata`, `eslintConfig` (+109 more)
+- **114 isolated node(s):** `GameOverScreenProps`, `ConfettiPiece`, `CONFETTI_COLORS`, `LeaderboardScreenProps`, `RANK_BADGE_COLORS` (+109 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -127,14 +127,14 @@ _Questions this graph is uniquely positioned to answer:_
 - **What is the exact relationship between `build-output.txt — Next.js Build Log (failed build)` and `Warning: This Next.js Version Has Breaking Changes vs Training Data`?**
   _Edge tagged AMBIGUOUS (relation: conceptually_related_to) - confidence is low._
 - **Why does `prd.md — Minecraft Block Trivia Technical PRD` connect `Project Docs & Data Pipeline` to `Game UI Screens & Audio`, `Question Generation Pipeline`, `Database & API Layer`, `Crafting Game Mechanics`, `gameStore.ts`?**
-  _High betweenness centrality (0.197) - this node is a cross-community bridge._
+  _High betweenness centrality (0.216) - this node is a cross-community bridge._
 - **Why does `devDependencies` connect `Dev Tooling & Type Dependencies` to `Runtime Package Dependencies`?**
   _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Why does `CLAUDE.md — Minecraft Block Trivia Development Guide` connect `Project Docs & Data Pipeline` to `gameStore.ts`, `Question Generation Pipeline`, `Database & API Layer`, `Crafting Game Mechanics`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **What connects `QuestionRow`, `geistSans`, `geistMono` to the rest of the system?**
+- **Why does `CLAUDE.md — Minecraft Block Trivia Development Guide` connect `Project Docs & Data Pipeline` to `Game UI Screens & Audio`, `gameStore.ts`, `Question Generation Pipeline`, `Database & API Layer`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **What connects `GameOverScreenProps`, `ConfettiPiece`, `CONFETTI_COLORS` to the rest of the system?**
   _114 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Project Docs & Data Pipeline` be split into smaller, more focused modules?**
-  _Cohesion score 0.07017543859649122 - nodes in this community are weakly interconnected._
-- **Should `Runtime Package Dependencies` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07254623044096728 - nodes in this community are weakly interconnected._
+- **Should `Game UI Screens & Audio` be split into smaller, more focused modules?**
+  _Cohesion score 0.11956521739130435 - nodes in this community are weakly interconnected._
