@@ -324,6 +324,12 @@ pm run build
 4. Artifacts deployed to edge network
 5. Live within 1-2 minutes
 
+### Pre-Merge Documentation Check
+Since merging to master triggers an immediate production deploy, every PR/issue must pass a documentation gate before merge (enforced as step 10 of `.claude/Agents/github-issue-workflow.md`):
+- Update `prd.md`, `GameRules.md`, and `CLAUDE.md` so they match the shipped change.
+- Review `.claude/Agents/` and `.claude/Skills/` for staleness, and propose a new skill/agent if the issue revealed a repeatable pattern worth codifying (to reduce token use / turnaround time on similar future issues).
+- Confirm `graphify-out/` is current. A git post-commit hook (`graphify hook install`) rebuilds `graphify-out/graph.json` and `GRAPH_REPORT.md` automatically after every commit (step 6 of the same workflow doc), so this is normally just a `git status` check, not manual work.
+
 ### Monitoring & Alerts
 - Vercel Analytics: Page load time, Core Web Vitals
 - Error tracking: Via Vercel deployment logs

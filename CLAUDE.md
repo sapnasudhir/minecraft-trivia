@@ -25,6 +25,13 @@ This is a Next.js-based web game where players test their Minecraft block knowle
 - **Development**: Use phase-a-db-scaling for feature work if needed
 - Always ensure changes are on master before deploying
 
+### Pre-Merge Documentation Check
+Before any PR/issue is approved to merge into `master`:
+- Review and update project documentation to match the change — `prd.md`, `GameRules.md`, and this file (`CLAUDE.md`).
+- Review `.claude/Agents/` and `.claude/Skills/` for staleness given the change.
+- Consider whether a new skill or agent should be added to reduce token use / speed up similar work next time — propose one if a clear repeatable pattern emerged from the issue.
+- This is enforced as step 10 of `.claude/Agents/github-issue-workflow.md` — see that file for the full merge process.
+
 ### Image Handling
 - Hero/UI images (minecraft-hero.png, gameover-hero.png) go in /public
 - Block textures are resolved per-block at pipeline time via minecraft.wiki's File: namespace (MediaWiki imageinfo API) — NOT a fixed URL pattern; many blocks (fences, gates, carpets) don't have a standalone texture and need this resolution rather than a guessed filename. See `ArivMinecraftTrivia/pipeline/texture_resolver.py`.
@@ -85,16 +92,20 @@ npm run build        # Build for production (verifies no errors)
 npm run lint         # TypeScript type checking
 
 ### State Management (Zustand Store)
-The game state includes:
+See `GameRules.md` for the full gameplay rules this state drives (8-slot crafting-table win condition, streak-weighted scoring). The store (`src/store/gameStore.ts`) includes:
 - gameStatus: 'idle' | 'loading' | 'playing' | 'feedback' | 'finished' | 'error' (`loading`/`error` exist because `startGame()` now awaits a network fetch to `/api/questions`)
-- currentQuestionIndex: 0-4 (5 questions per game)
+- currentQuestionIndex: uncapped — questions are fetched in batches of 5 and refetched as the queue runs low; there is no fixed question count (`totalQuestionsPerGame` is unused/vestigial)
 - questions: Generated question array
 - selectedAnswerIndex: Player's choice
-- score: Cumulative correct answers
+- score: Cumulative streak-weighted points (+10/-5 base with streak bonus/penalty) — not a correct-answer count, and can go negative
+- filledSlots: 8-element crafting-grid array; the game reaches `finished` once every slot is filled (or the player terminates early via `endGame()`)
+- consecutiveCount / lastResultWasCorrect: track the correct/incorrect streak that drives scoring
 
-Actions: startGame() [async], selectAnswer(), showFeedback(), nextQuestion(), endGame(), resetGame()
+Actions: startGame() [async], selectAnswer(), showFeedback(), nextQuestion() [async — may fetch more questions], endGame(), resetGame()
 
 ## Deployment Checklist
+- [ ] Documentation refreshed per [Pre-Merge Documentation Check](#pre-merge-documentation-check) (prd.md, GameRules.md, CLAUDE.md, agents/skills)
+- [ ] `graphify-out/` reflects the final diff (auto-rebuilt by the post-commit hook — `git status` should show it clean; if not, run `/graphify --update`)
 - [ ] All changes committed to master
 - [ ] npm run build succeeds locally
 - [ ] Image files in /public are committed to git
@@ -109,3 +120,13 @@ Actions: startGame() [async], selectAnswer(), showFeedback(), nextQuestion(), en
 - No difficulty selection or category filter in the UI (data supports it — `difficulty`/`category` columns already exist on `question_bank`)
 - Environment variable env-file quirk: `next dev`/`next build` auto-load `.env.local`, but standalone scripts (`drizzle-kit`, `scripts/*.ts`) need `node --env-file=.env.local ...` explicitly since they don't go through Next.js's own env loading
 - See prd.md for technical roadmap
+
+## graphify
+
+This project has a knowledge graph at graphify-out/ with god nodes, community structure, and cross-file relationships.
+
+Rules:
+- For codebase questions, first run `graphify query "<question>"` when graphify-out/graph.json exists. Use `graphify path "<A>" "<B>"` for relationships and `graphify explain "<concept>"` for focused concepts. These return a scoped subgraph, usually much smaller than GRAPH_REPORT.md or raw grep output.
+- If graphify-out/wiki/index.md exists, use it for broad navigation instead of raw source browsing.
+- Read graphify-out/GRAPH_REPORT.md only for broad architecture review or when query/path/explain do not surface enough context.
+- After modifying code, run `graphify update .` to keep the graph current (AST-only, no API cost).
