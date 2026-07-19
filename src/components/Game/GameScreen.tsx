@@ -20,6 +20,7 @@ export function GameScreen() {
     nextQuestion,
     filledSlots,
     answers,
+    endGame,
   } = useGameStore()
 
   const currentQuestion = questions[currentQuestionIndex]
@@ -50,6 +51,12 @@ export function GameScreen() {
   }
 
   const filledCount = filledSlots.filter(Boolean).length
+
+  const handleTerminate = () => {
+    if (window.confirm('End the game now? Your progress will be saved as-is.')) {
+      endGame()
+    }
+  }
 
   return (
     <div
@@ -183,6 +190,22 @@ export function GameScreen() {
               )}
             </div>
           )}
+
+          {/* Terminate button */}
+          <button
+            onClick={handleTerminate}
+            className="w-full font-bold py-3 px-6 mt-4 transition duration-200"
+            style={{
+              background: 'transparent',
+              color: '#8a3a3a',
+              fontFamily: "'Press Start 2P', cursive",
+              fontSize: '9px',
+              border: '2px solid #8a3a3a',
+              cursor: 'pointer',
+            }}
+          >
+            TERMINATE GAME
+          </button>
         </div>
       </div>
     </div>

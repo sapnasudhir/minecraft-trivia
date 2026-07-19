@@ -12,13 +12,16 @@ interface GameOverScreenProps {
 
 export function GameOverScreen({ score, totalQuestions }: GameOverScreenProps) {
   const resetGame = useGameStore((state) => state.resetGame)
+  const answers = useGameStore((state) => state.answers)
 
   // Play game over sound when component mounts
   useEffect(() => {
     playGameOverSound()
   }, [])
 
-  const percentage = Math.round((score / totalQuestions) * 100)
+  const correctCount = answers.filter((a) => a.isCorrect).length
+  const incorrectCount = answers.length - correctCount
+  const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0
   const performanceMessage =
     percentage === 100
       ? '🎉 Perfect! You are a Minecraft master!'
@@ -36,9 +39,9 @@ export function GameOverScreen({ score, totalQuestions }: GameOverScreenProps) {
         </h1>
 
         <div className="my-8">
-          <p className="text-6xl font-bold text-yellow-300 mb-2 animate-pulse-sm">{percentage}%</p>
+          <p className="text-6xl font-bold text-yellow-300 mb-2 animate-pulse-sm">{score}</p>
           <p className="text-2xl font-semibold text-white mb-4 animate-fade-in">
-            {score} out of {totalQuestions}
+            TOTAL SCORE
           </p>
           <p className="text-xl text-white mb-8 animate-fade-in">{performanceMessage}</p>
         </div>
@@ -63,8 +66,8 @@ export function GameOverScreen({ score, totalQuestions }: GameOverScreenProps) {
         <div className="bg-yellow-400 rounded-lg p-6 animate-fade-in">
           <h3 className="text-gray-900 font-bold mb-3">Your Performance</h3>
           <div className="text-gray-900 text-left space-y-2">
-            <p className="font-semibold">✓ Correct: {score}</p>
-            <p className="font-semibold">✗ Incorrect: {totalQuestions - score}</p>
+            <p className="font-semibold">✓ Correct: {correctCount}</p>
+            <p className="font-semibold">✗ Incorrect: {incorrectCount}</p>
           </div>
         </div>
       </div>
